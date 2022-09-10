@@ -192,6 +192,10 @@ main {
     font-size: 50px;
  }
 
+ hr {
+  margin-bottom: 30px;
+ }
+
  #chapter {
     padding: 5px;
     text-align: center;
