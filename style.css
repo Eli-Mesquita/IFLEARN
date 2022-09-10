@@ -158,7 +158,7 @@ main {
     background-color: white;
     width: 600px;
     padding: 30px;
-    margin: 50px;
+    margin-top: 20px;
     border-radius: 3%;
     box-shadow: 3px 3px 15px #333333;
  }
@@ -316,10 +316,4 @@ div.gallery {
      width: 80%;
      
    }
- }
-
- .clearfix:after {
-   content: "";
-   display: table;
-   clear: both;
  }
