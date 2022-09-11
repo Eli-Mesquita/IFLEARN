@@ -55,9 +55,9 @@
 
             <p>You are in a small plane, going across the Rocky Mountains. Suddenly, the engine starts to make strange noises... Soon you are alone, in the snow, at the top of a mountain, and it is very, very cold. Can you find your way out of the mountain?</p>
             
-            <a href="Index.html"><img class="icon" src="images/icons8-back-arrow-100.png" alt="Voltar"></a>
-            <a href="p001.html" data-toggle="tooltip" title="Play"  data-placement="auto" ><img class="icon" src="images/icons8-play-100.png" alt="começar leitura"></a>
-            <a href="#"><img class="icon" src="images/icons8-about-100.png" alt="informações sobre o livro" onclick="document.getElementById('id01').style.display='block'"></a>
+            <a href="biblioteca.html" data-toggle="tooltip" title="Back"  data-placement="auto"><img class="icon" src="images/icons8-back-arrow-100.png" alt="Voltar"></a>
+            <a href="p001.html" data-toggle="tooltip" title="Play"  data-placement="auto"><img class="icon" src="images/icons8-play-100.png" alt="começar leitura"></a>
+            <a href="#" data-toggle="tooltip" title="Info"  data-placement="auto"><img class="icon" src="images/icons8-about-100.png" alt="informações sobre o livro" onclick="document.getElementById('id01').style.display='block'"></a>
 
             <img id="capa" src="images/Survive - capa.png" alt="Survive! - capa">
         </main>
@@ -73,27 +73,19 @@
             </header>
           
             <div class="w3-bar w3-border-bottom">
-             <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'London')">London</button>
-             <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Paris')">Paris</button>
-             <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+             <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Oxford')">Oxford</button>
+             <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'book')">Book</button>
              <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'author')">Author</button>
             </div>
           
-            <div id="London" class="w3-container city">
-             <h1>London</h1>
-             <p>London is the most populous city in the United Kingdom, with a metropolitan area of over 9 million inhabitants.</p>
-             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div id="Oxford" class="w3-container city">
+             <h1>Oxford Bookworms Library</h1>
+             <p>The <a href="https://elt.oup.com/catalogue/items/global/graded_readers/oxford_bookworms_library/?cc=br&selLanguage=pt&mode=hub" target="_blank">Oxford Bookworms Library</a>  provides enjoyable reading in English, with a wide range of classic and modern fiction, non-fiction, and plays. It includes original and adapted texts in seven carefully graded stages, which take learners from beginner to advanced level.</p>
             </div>
           
-            <div id="Paris" class="w3-container city">
-             <h1>Paris</h1>
-             <p>Paris is the capital of France.</p>
-             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-          
-            <div id="Tokyo" class="w3-container city">
-             <h1>Tokyo</h1>
-             <p>Tokyo is the capital of Japan.</p><br>
+            <div id="book" class="w3-container city">
+             <h1>About the book</h1>
+             <p>This is an interactive story. You can choose what part to read next. Listen to audio and look at the pictures to make a decision.Follow the numbers and examine the options at the end of each section.</p><br>
             </div>
 
             <div id="author" class="w3-container city">
