@@ -17,3 +17,8 @@ function myFunction() {
   $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip();   
   });  
+
+    function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'pt-br'}, 'google_translate_element');
+    }
+ 
