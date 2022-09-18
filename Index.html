@@ -8,219 +8,162 @@
     <link rel="stylesheet" href="style.css">
     <script src="myscripts.js"></script>
 
-     <!-- Swiper CSS -->
-     <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
 
-     <!-- CSS -->
-     <link rel="stylesheet" href="css/style.css">
-    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
-        <div class="header"><a href="Index.html"><img width="100" src="images/Logo IFCE learn.png" alt="logo IFCE"></a></div>
+    <div class="header">
+        <a href="Index.html"><img width="100" src="images/Logo IFCE learn.png" alt="logo IFCE"></a>
+    </div>
+    <ul class="navbar">
+        <li><a class="active" href="Index.html">Home</a></li>
         
-        <ul>
-            <li><a class="active" href="Index.html">Home</a></li>
-            
-            <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Conteúdo</a>
-                <div class="dropdown-content">
-                  <a href="capa.html">Livro interativo</a>
-                  <a href="atv002.html">Videoaulas</a>
-                  <a href="ex001.html">Online Quiz</a>
-                  <a href="games.html">Games</a>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Conteúdo</a>
+            <div class="dropdown-content">
+            <a href="capa.html">Livro interativo</a>
+            <a href="atv002.html">Videoaulas</a>
+            <a href="ex001.html">Online Quiz</a>
+            <a href="games.html">Games</a>
+            </div>
+        </li>
+        
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Ferramentas</a>
+            <div class="dropdown-content">
+            <a href="https://www.oxfordlearnersdictionaries.com/">Dicionário Oxford</a>
+            <a href="https://lyricstraining.com/">Lyrics Trainning</a>
+        </li>
+        
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Questionário</a>
+            <div class="dropdown-content">
+            <a href="Quest001.html">Professor</a>
+            <a href="Quest002.html">Aluno</a>
+        </li>
+
+        <li><a href="contato.html">Sobre o autor</a></li>
+
+    </ul>
+    <main class="box">
+        <h2>Hello, everybody!</h2>
+
+        <p>Sejam muito bem vindos ao IFlearn! Este ambiente virtual de aprendizagem foi desenvolvido com o intuito de ajudar professores e alunos a sistematizar os estudos em língua inglesa<span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+
+        <button href="javascript:void(0)" onclick="myFunction()" id="myBtn">read more</button> 
+    </main>
+    <div class="slide-container swiper">
+        <div class="slide-content">
+            <div class="card-wrapper swiper-wrapper">
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+
+                        <div class="card-image">
+                            <a href="biblioteca.html"><img src="images/mystery on london - thumb.jpg" alt="" class="card-img"></a>
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name">Biblioteca  interativa</h2>
+                        <p class="description">Pesquisas mostram que quanto mais você lê em língua inglesa, mais você desenvolve suas habilidades comunicativas.
+                        </p>
+
+                        <div class="bookbuttons">
+                            <a href="biblioteca.html"><button class="button" style="vertical-align:middle"><span>Read</span></button></a>
+                        </div>
+                    </div>
                 </div>
-              </li>
-              <li><a href="https://www.oxfordlearnersdictionaries.com/" target="_blank" rel="external" >Dicionário</a></li>
-            <li><a href="contato.html">Contato</a></li>
-            <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Questionário</a>
-                <div class="dropdown-content">
-                  <a href="Quest001.html">Professor</a>
-                  <a href="Quest002.html">Aluno</a>
-                  
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+
+                        <div class="card-image">
+                            <img src="images/youtube thumb.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name">Videoaulas</h2>
+                        <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+
+                        <div class="bookbuttons"><a href="atv002.html"><button class="button" style="vertical-align:middle"><span>Watch</span></button></a></div>
+                    </div>
                 </div>
-              </li>
-          </ul>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
 
-        <main class="box">
-
-            <h2>Hello, everybody!</h2>
-
-            <p>Sejam muito bem vindos ao IFlearn! Este ambiente virtual de aprendizagem foi desenvolvido com o intuito de ajudar professores e alunos a sistematizar os estudos em língua inglesa<span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-
-            <button href="javascript:void(0)" onclick="myFunction()" id="myBtn">read more</button> 
-        </main>
-
-          <div class="slide-container swiper">
-            <div class="slide-content">
-                <div class="card-wrapper swiper-wrapper">
-                    <div class="card swiper-slide">
-                        <div class="image-content">
-                            <span class="overlay"></span>
-
-                            <div class="card-image">
-                                <a href="biblioteca.html"><img src="images/mystery on london - thumb.jpg" alt="" class="card-img"></a>
-                            </div>
-                        </div>
-
-                        <div class="card-content">
-                            <h2 class="name">Biblioteca  interativa</h2>
-                            <p class="description">Pesquisas mostram que quanto mais você lê em língua inglesa, mais você desenvolve suas habilidades comunicativas.
-                            </p>
-
-                            <div class="bookbuttons"><a href="biblioteca.html"><button class="button" style="vertical-align:middle"><span>Read</span></button></a></div>
+                        <div class="card-image">
+                            <img src="images/Atividade - thumb.jpg" alt="" class="card-img">
                         </div>
                     </div>
-                    <div class="card swiper-slide">
-                        <div class="image-content">
-                            <span class="overlay"></span>
 
-                            <div class="card-image">
-                                <img src="images/youtube thumb.jpg" alt="" class="card-img">
-                            </div>
-                        </div>
+                    <div class="card-content">
+                        <h2 class="name">Teste seu conhecimento</h2>
+                        <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
 
-                        <div class="card-content">
-                            <h2 class="name">Videoaulas</h2>
-                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="bookbuttons"><a href="ex001.html"><button class="button" style="vertical-align:middle"><span>Take</span></button></a></div>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
 
-                            <button class="button">View More</button>
+                        <div class="card-image">
+                            <img src="images/games - thumb.jpg" alt="" class="card-img">
                         </div>
                     </div>
-                    <div class="card swiper-slide">
-                        <div class="image-content">
-                            <span class="overlay"></span>
 
-                            <div class="card-image">
-                                <img src="images/Atividade - thumb.jpg" alt="" class="card-img">
-                            </div>
-                        </div>
+                    <div class="card-content">
+                        <h2 class="name">Amplie o vocabulário</h2>
+                        <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
 
-                        <div class="card-content">
-                            <h2 class="name">Online Quiz</h2>
-                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="bookbuttons"><a href="games.html"><button class="button" style="vertical-align:middle"><span>Play</span></button></a></div>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
 
-                            <button class="button">View More</button>
+                        <div class="card-image">
+                            <img src="images/profile5.jpg" alt="" class="card-img">
                         </div>
                     </div>
-                    <div class="card swiper-slide">
-                        <div class="image-content">
-                            <span class="overlay"></span>
 
-                            <div class="card-image">
-                                <img src="images/games - thumb.jpg" alt="" class="card-img">
-                            </div>
-                        </div>
-
-                        <div class="card-content">
-                            <h2 class="name">Games</h2>
-                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-
-                            <button class="button">View More</button>
-                        </div>
-                    </div>
-                    <div class="card swiper-slide">
-                        <div class="image-content">
-                            <span class="overlay"></span>
-
-                            <div class="card-image">
-                                <img src="images/profile5.jpg" alt="" class="card-img">
-                            </div>
-                        </div>
-
-                        <div class="card-content">
-                            <h2 class="name">David Dell</h2>
-                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-
-                            <button class="button">View More</button>
-                        </div>
-                    </div>
-                    <div class="card swiper-slide">
-                        <div class="image-content">
-                            <span class="overlay"></span>
-
-                            <div class="card-image">
-                                <img src="images/profile6.jpg" alt="" class="card-img">
-                            </div>
-                        </div>
-
-                        <div class="card-content">
-                            <h2 class="name">David Dell</h2>
-                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-
-                            <button class="button">View More</button>
-                        </div>
-                    </div>
-                    <div class="card swiper-slide">
-                        <div class="image-content">
-                            <span class="overlay"></span>
-
-                            <div class="card-image">
-                                <img src="images/profile7.jpg" alt="" class="card-img">
-                            </div>
-                        </div>
-
-                        <div class="card-content">
-                            <h2 class="name">David Dell</h2>
-                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-
-                            <button class="button">View More</button>
-                        </div>
-                    </div>
-                    <div class="card swiper-slide">
-                        <div class="image-content">
-                            <span class="overlay"></span>
-
-                            <div class="card-image">
-                                <img src="images/profile8.jpg" alt="" class="card-img">
-                            </div>
-                        </div>
-
-                        <div class="card-content">
-                            <h2 class="name">David Dell</h2>
-                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-
-                            <button class="button">View More</button>
-                        </div>
-                    </div>
-                    <div class="card swiper-slide">
-                        <div class="image-content">
-                            <span class="overlay"></span>
-
-                            <div class="card-image">
-                                <img src="images/profile9.jpg" alt="" class="card-img">
-                            </div>
-                        </div>
-
-                        <div class="card-content">
-                            <h2 class="name">David Dell</h2>
-                            <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
-
-                            <button class="button">View More</button>
+                    <div class="card-content">
+                        <h2 class="name">Materiais para baixar</h2>
+                        <p class="description">The lorem text the section that contains header with having open functionality. Lorem dolor sit amet consectetur adipisicing elit.</p>
+                        <div class="bookbuttons">
+                            <a href="games.html"><button class="button" style="vertical-align:middle"><span>Play</span></button></a>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="swiper-button-next swiper-navBtn"></div>
-            <div class="swiper-button-prev swiper-navBtn"></div>
-            <div class="swiper-pagination"></div>
         </div>
 
-    <!-- Swiper JS -->
-    <script src="js/swiper-bundle.min.js"></script>
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+        <div class="swiper-pagination"></div>
+        <!-- Swiper JS -->
+        <script src="js/swiper-bundle.min.js"></script>
 
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
+        <!-- JavaScript -->
+        <script src="js/script.js"></script>
+    </div>
+    <div class="footer">
+        <a href="https://ifce.edu.br/" target="_blank" rel="external" ><img width="130" src="images/Logo IFCE (2).png" alt="logo IFCE"></a>
+        
+        <div id="google_translate_element"></div>
+        
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-    <br>
-
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-        <div class="footer">
-            <a href="https://ifce.edu.br/" target="_blank" rel="external" ><img width="130" src="images/Logo IFCE (2).png" alt="logo IFCE"></a>
-            <div id="google_translate_element"></div>
-            <a href="https://ifce.edu.br/fortaleza/profept" target="_blank" rel="external"><img width="130" src="images/profept logo.png" alt=""></a></div>
+        <a href="https://ifce.edu.br/fortaleza/profept" target="_blank" rel="external"><img width="130" src="images/profept logo.png" alt=""></a>
+    </div>
 
 </body>
 </html>
