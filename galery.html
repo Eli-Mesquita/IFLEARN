@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Video gallery</title> 
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>>
+
+    lin
+    
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+    </style>
+
+    
+  </head>
+  <body>
+    
+<header>
+  <nav class="navbar navbar-dark text-bg-success fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="Index.html"><img src="images/Logo IFCE - white.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-top"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+            <a class="navbar-brand" href="Index.html"><img src="images/Logo IFCE - white.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-top"></a>
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Conteúdo
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="biblioteca.html">Biblioteca interativa</a></li>
+                <li><a class="dropdown-item" href="atv002.html">Videoaulas</a></li>
+                <li><a class="dropdown-item" href="ex001.html">Teste seu conhecimento</a></li>
+                <li><a class="dropdown-item" href="games.html">Amplie seu vocabulário</a></li>
+                <li><a class="dropdown-item" href="">Materiais para baixar</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Ferramentas
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="https://www.oxfordlearnersdictionaries.com" target="_blank">Oxford Learner's Dictionary </a></li>
+                  <li><a class="dropdown-item" href="https://lyricstraining.com/" target="_blank">Lyrics Trainning</a></li>
+                  <li><a class="dropdown-item" href="https://writeandimprove.com/workbooks#/wi-workbooks/7485eb41-a047-4d23-ae25-5afb7387eba9" target="_blank">Write & Improve</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Questionário
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="Quest001.html">Professor</a></li>
+                  <li><a class="dropdown-item" href="Quest002.html">Aluno</a></li>
+                </ul>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contato.html">Sobre o Autor</a>
+              </li>
+              <li><hr></li>
+              <li><div id="google_translate_element"></div>
+    
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script></li>
+                <li><hr></li>
+          </ul>
+          <br>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success" type="submit">Pesquisar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+</nav>
+</header>
+
+<br>
+
+<main>
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Videoaulas</h1>
+        <p class="lead text-muted">Nesse espaço você pode assistir ao conteúdo criado para te ajudar a revisar os conceitos que você viu em sala de aula. Escolha o nível que deseja ou </p>
+        <p>
+          <a href="#" class="btn btn-outline-success my-2">Voltar</a>
+          <a href="#" class="btn btn-outline-danger my-2">Atividades</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="images/videothumb01.png" alt="" class="bd-placeholder-img card-img-top" width="100%" >
+            
+
+            <div class="card-body">
+              <h5 class="card-text">Beginner</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-danger">View</button>
+                </div>
+                <small class="text-muted">10 aulas</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="images/videothumb02.png" alt="" class="bd-placeholder-img card-img-top" width="100%" >
+            
+
+            <div class="card-body">
+              <h5 class="card-text">Intermediate</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-danger">View</button>
+                </div>
+                <small class="text-muted">10 aulas</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="images/videothumb0.png" alt="" class="bd-placeholder-img card-img-top" width="100%">
+            
+
+            <div class="card-body">
+              <h5 class="card-text">Advanced</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-danger">View</button>
+                </div>
+                <small class="text-muted">10 aulas</small>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="text-muted py-5">
+  <div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Back to top</a>
+    </p>
+    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>
+  </div>
+</footer>
+
+  </body>
+</html>
