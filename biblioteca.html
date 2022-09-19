@@ -1,176 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IFlearn</title>
+  	<title>Iflearn</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i&display=swap" rel="stylesheet">
+		
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
     
-    <script src="myscripts.js"></script>
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+	
+	<link rel="stylesheet" href="estilo/style.css">
 
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-
-
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 
 </head>
 <body>
 
-  <header>
-    <nav class="navbar navbar-dark text-bg-success fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="Index.html"><img src="images/Logo IFCE - white.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-top"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-          <div class="offcanvas-header">
-              <a class="navbar-brand" href="Index.html"><img src="images/Logo IFCE - white.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-top"></a>
-          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="Index.html">Home</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Conteúdo
-                </a>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item" href="biblioteca.html">Biblioteca interativa</a></li>
-                  <li><a class="dropdown-item" href="atv002.html">Videoaulas</a></li>
-                  <li><a class="dropdown-item" href="ex001.html">Teste seu conhecimento</a></li>
-                  <li><a class="dropdown-item" href="games.html">Amplie seu vocabulário</a></li>
-                  <li><a class="dropdown-item" href="">Materiais para baixar</a></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Ferramentas
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item" href="https://www.oxfordlearnersdictionaries.com" target="_blank">Oxford Learner's Dictionary </a></li>
-                    <li><a class="dropdown-item" href="https://lyricstraining.com/" target="_blank">Lyrics Trainning</a></li>
-                    <li><a class="dropdown-item" href="https://writeandimprove.com/workbooks#/wi-workbooks/7485eb41-a047-4d23-ae25-5afb7387eba9" target="_blank">Write & Improve</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Questionário
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item" href="Quest001.html">Professor</a></li>
-                    <li><a class="dropdown-item" href="Quest002.html">Aluno</a></li>
-                  </ul>
-                </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="contato.html">Sobre o Autor</a>
-                </li>
-                <li><hr></li>
-                <li><div id="google_translate_element"></div>
-      
-                  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script></li>
-                  <li><hr></li>
-            </ul>
-            <br>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-success" type="submit">Pesquisar</button>
-            </form>
-          </div>
-        </div>
-      </div>
-  </nav>
-  </header>
+	<header>
+		<nav class="navbar navbar-dark text-bg-success fixed-top">
+		  <div class="container-fluid">
+			<a class="navbar-brand" href="Index.html"><img src="images/Logo IFCE - white.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-top"></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+			  <div class="offcanvas-header">
+				  <a class="navbar-brand" href="Index.html"><img src="images/Logo IFCE - white.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-top"></a>
+			  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h5>
+			  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+			  </div>
+			  <div class="offcanvas-body">
+			  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+				  <li class="nav-item">
+				  <a class="nav-link active" aria-current="page" href="Index.html">Home</a>
+				  </li>
+				  <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+					  Conteúdo
+					</a>
+					<ul class="dropdown-menu dropdown-menu-dark">
+					  <li><a class="dropdown-item" href="biblioteca.html">Biblioteca interativa</a></li>
+					  <li><a class="dropdown-item" href="atv002.html">Videoaulas</a></li>
+					  <li><a class="dropdown-item" href="ex001.html">Teste seu conhecimento</a></li>
+					  <li><a class="dropdown-item" href="games.html">Amplie seu vocabulário</a></li>
+					  <li><a class="dropdown-item" href="">Materiais para baixar</a></li>
+					</ul>
+				  </li>
+				  <li class="nav-item dropdown">
+					  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Ferramentas
+					  </a>
+					  <ul class="dropdown-menu dropdown-menu-dark">
+						<li><a class="dropdown-item" href="https://www.oxfordlearnersdictionaries.com" target="_blank">Oxford Learner's Dictionary </a></li>
+						<li><a class="dropdown-item" href="https://lyricstraining.com/" target="_blank">Lyrics Trainning</a></li>
+						<li><a class="dropdown-item" href="https://writeandimprove.com/workbooks#/wi-workbooks/7485eb41-a047-4d23-ae25-5afb7387eba9" target="_blank">Write & Improve</a></li>
+					  </ul>
+					</li>
+					<li class="nav-item dropdown">
+					  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Questionário
+					  </a>
+					  <ul class="dropdown-menu dropdown-menu-dark">
+						<li><a class="dropdown-item" href="Quest001.html">Professor</a></li>
+						<li><a class="dropdown-item" href="Quest002.html">Aluno</a></li>
+					  </ul>
+					</li>
+				  <li class="nav-item">
+					  <a class="nav-link" href="contato.html">Sobre o Autor</a>
+					</li>
+					<li><hr></li>
+					<li><div id="google_translate_element"></div>
+		  
+					  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script></li>
+					  <li><hr></li>
+				</ul>
+				<br>
+				<form class="d-flex" role="search">
+				  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+				  <button class="btn btn-success" type="submit">Pesquisar</button>
+				</form>
+			  </div>
+			</div>
+		  </div>
+	  </nav>
+	</header>
+	
+	<section class="py-5 mt-5 text-center container">
+		<div class="row py-lg-5">
+		  <div class="col-lg-6 col-md-8 mx-auto">
+			<h1 class="fw-light">Biblioteca interativa</h1>
+			<p class="lead text-muted">Ler em Inglês desenvolve suas hailidades de produção e compreesão oral, leitura, escrita, pronucia, fluência e até melhora sua autoconfiança Os títulos abaixo são histórias interativas e foram adaptados para a web com a finalidade de ampliar suas capacidades. Você pode </p>
+			<div class="text-center">
+			  <a href="Index.html" class="btn btn-outline-danger my-2">Voltar</a>
+			</div>
+		  </div>
+		</div>
+	</section>
+		
+	
+		<div class="container">
+			<div class="row-mt-0">
+				<div class="col-md-12">
+					<div class="featured-carousel owl-carousel">
+						<div class="item">
+							<div class="work">
+								<div class="img d-flex align-items-end justify-content-center" style="background-image: url(images/Survive\ -\ capa.png);">
+									<div class="text w-100">
+										<span class="cat">Livro interativo</span>
+										<h3><a href="capa2.html">Survive!</a></h3>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="work">
+								<div class="img d-flex align-items-end justify-content-center" style="background-image: url(images/Mystery\ in\ London\ -\ capa.jpg);">
+									<div class="text w-100">
+										<span class="cat">Livro interativo</span>
+										<h3><a href="capa.html">Mystery on London</a></h3>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="work">
+								<div class="img d-flex align-items-end justify-content-center" style="background-image: url();">
+									<div class="text w-100">
+										<span class="cat">Livro interatico</span>
+										<h3><a href="#">Em breve</a></h3>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="work">
+								<div class="img d-flex align-items-end justify-content-center" style="background-image: url();">
+									<div class="text w-100">
+										<span class="cat">Livro interatico</span>
+										<h3><a href="#">Em breve</a></h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-  <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Biblioteca interativa</h1>
-        <p class="lead text-muted">Ler em Inglês desenvolve suas hailidades de produção e compreesão oral, leitura, escrita, pronucia, fluência e até melhora sua autoconfiança Os títulos abaixo são histórias interativas e foram adaptados para a web com a finalidade de ampliar suas capacidades. Você pode </p>
-        <div class="text-center">
-          <a href="Index.html" class="btn btn-outline-danger my-2">Voltar</a>
-        </div>
-      </div>
-    </div>
-  </section>
+	<br>
 
-<div class="footer">
-  <a href="https://ifce.edu.br/" target="_blank" rel="external" ><img width="130" src="images/Logo IFCE (2).png" alt="logo IFCE"></a>
-  
-  <a href="https://ifce.edu.br/fortaleza/profept" target="_blank" rel="external"><img width="130" src="images/profept logo.png" alt=""></a>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script> 
-
-<script>
-$num = $('.my-card').length;
-$even = $num / 2;
-$odd = ($num + 1) / 2;
-
-if ($num % 2 == 0) {
-  $('.my-card:nth-child(' + $even + ')').addClass('active');
-  $('.my-card:nth-child(' + $even + ')').prev().addClass('prev');
-  $('.my-card:nth-child(' + $even + ')').next().addClass('next');
-} else {
-  $('.my-card:nth-child(' + $odd + ')').addClass('active');
-  $('.my-card:nth-child(' + $odd + ')').prev().addClass('prev');
-  $('.my-card:nth-child(' + $odd + ')').next().addClass('next');
-}
-
-$('.my-card').click(function() {
-  $slide = $('.active').width();
-  console.log($('.active').position().left);
-  
-  if ($(this).hasClass('next')) {
-    $('.card-carousel').stop(false, true).animate({left: '-=' + $slide});
-  } else if ($(this).hasClass('prev')) {
-    $('.card-carousel').stop(false, true).animate({left: '+=' + $slide});
-  }
-  
-  $(this).removeClass('prev next');
-  $(this).siblings().removeClass('prev active next');
-  
-  $(this).addClass('active');
-  $(this).prev().addClass('prev');
-  $(this).next().addClass('next');
-});
-
-
-// Keyboard nav
-$('html body').keydown(function(e) {
-  if (e.keyCode == 37) { // left
-    $('.active').prev().trigger('click');
-  }
-  else if (e.keyCode == 39) { // right
-    $('.active').next().trigger('click');
-  }
-});
-</script>
-
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-36251023-1']);
-  _gaq.push(['_setDomainName', 'jqueryscript.net']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-  </script>
-
-</body>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
