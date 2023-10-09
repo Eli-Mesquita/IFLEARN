@@ -3,23 +3,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
 }
 
 .footer {
-  background-color: rgb(255, 255, 255);
-  padding: 20px;
-  margin: 0px;
-  width: 100vw;
-  display: flex;
-  flex-flow: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: auto;
-  box-shadow: -1px -1px 15px #1c314460;
+   
+background-color: rgb(255, 255, 255);
+padding: 20px;
+margin: 0;
+width: 100%;
+display: flex;
+flex-flow: row;
+justify-content: space-between;
+align-items: center;
+margin-top: auto;
+box-shadow: -1px -1px 15px #1c314460;
 }
 
 body {
@@ -288,18 +289,18 @@ div.gallery {
    border: 1px solid #ccc;
    padding: 0 6px;
    border-radius: 5px;
- }
- 
- div.gallery:hover {
+}
+
+div.gallery:hover {
    border: 1px solid #777;
    box-shadow: 2px 2px 15px #33333385;
    transition: 0.5s;
 }
 
 div.gallery img {
-  padding-top: 6px;
-  width: 100%;
-  height: auto;
+padding-top: 6px;
+width: 100%;
+height: auto;
 }
 
 div.desc {
@@ -313,10 +314,3 @@ div.desc {
   flex-flow: wrap;
   justify-content: space-evenly;
 }
-
-@media screen and (max-width: 600px) {
-  .container {
-    flex-direction: column;
-  }
-}
-
