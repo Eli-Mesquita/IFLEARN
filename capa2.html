@@ -13,118 +13,180 @@
 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
     <style>
         #more {display: none;}
         .city {display:none}
-        </style>
+      </style>
 </head>
 <body>
-  <div class="header"><a href="Index.html"><img width="100" src="images/Logo IFCE learn.png" alt="logo IFCE"></a></div>
-        
-  <ul>
-      <li><a class="active" href="Index.html">Home</a></li>
-      
-      <li class="dropdown">
-          <a href="javascript:void(0)" class="dropbtn">Conteúdo</a>
-          <div class="dropdown-content">
-            <a href="capa.html">Livro interativo</a>
-            <a href="atv002.html">Videoaulas</a>
-            <a href="ex001.html">Online Quiz</a>
-            <a href="games.html">Games</a>
-          </div>
-        </li>
-        <li><a href="https://www.oxfordlearnersdictionaries.com/" target="_blank" rel="external" >Dicionário</a></li>
-      <li><a href="contato.html">Contato</a></li>
-      <li class="dropdown">
-          <a href="javascript:void(0)" class="dropbtn">Questionário</a>
-          <div class="dropdown-content">
-            <a href="Quest001.html">Professor</a>
-            <a href="Quest002.html">Aluno</a>
+  
+  <!-- navbar -->
+  <nav class="navbar navbar-dark text-bg-success fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="Index.html"><img src="images/Logo IFCE - white.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-top"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+            <a class="navbar-brand" href="Index.html"><img src="images/Logo IFCE - white.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-top"></a>
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Conteúdo
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="biblioteca.html">Biblioteca interativa</a></li>
+                <li><a class="dropdown-item" href="atv002.html">Videoaulas</a></li>
+                <li><a class="dropdown-item" href="ex001.html">Teste seu conhecimento</a></li>
+                <li><a class="dropdown-item" href="games.html">Amplie seu vocabulário</a></li>
+                <li><a class="dropdown-item" href="">Materiais para baixar</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Ferramentas
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="https://www.oxfordlearnersdictionaries.com" target="_blank">Oxford Learner's Dictionary </a></li>
+                  <li><a class="dropdown-item" href="https://lyricstraining.com/" target="_blank">Lyrics Trainning</a></li>
+                  <li><a class="dropdown-item" href="https://writeandimprove.com/workbooks#/wi-workbooks/7485eb41-a047-4d23-ae25-5afb7387eba9" target="_blank">Write & Improve</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Questionário
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="Quest001.html">Professor</a></li>
+                  <li><a class="dropdown-item" href="Quest002.html">Aluno</a></li>
+                </ul>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contato.html">Sobre o Autor</a>
+              </li>
+              <li><hr></li>
+              <li><div id="google_translate_element"></div>
+    
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script></li>
+                <li><hr></li>
+          </ul>
+          <br>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success" type="submit">Pesquisar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+</nav>
+  
+  <div class="container-fluid text-center">
+    
+          <main class="container">
+              <div class="container-fluid px-5">
+                <h1 id="title">Survive!</h1>
+                <hr>
+                <p>You are in a small plane, going across the Rocky Mountains. Suddenly, the engine starts to make strange noises... Soon you are alone, in the snow, at the top of a mountain, and it is very, very cold. Can you find your way out of the mountain? </p>
+              </div>
+    
+              <a href="biblioteca.html" data-toggle="tooltip" title="Back"  data-placement="auto"><button class="btn btn-block btn-danger btn-md px-4">Library <i class="fas fa-backward"></i></button></a>
+              
+              <a href="p001.html" data-toggle="tooltip" title="Play"  data-placement="auto" >
+              <button class="btn btn-block btn-success btn-md px-4">Play <i class="fas fa-play"></i></button></a>
+              
+              <a href="#" data-toggle="tooltip" title="Info"  data-placement="auto">
+              <button class="btn btn-block btn-info btn-md px-4" onclick="document.getElementById('id01').style.display='block'">Info <i class="fas fa-info-circle"></i></button></a>
+              
+              <br>
+              
+              <a href="p001.html"><img class="image-responsive py-2 my-2" id="capa" src="images/Survive - capa.png" alt="Capa survive"></a>
+
+          </main>
+
+          <!-- Modal -->
+          <div class="w3-container">
+
+            <div id="id01" class="w3-modal">
+             <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+              <header class="w3-container w3-blue"> 
+               <span onclick="document.getElementById('id01').style.display='none'" 
+               class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
+               <h2>INFORMATION</h2>
+              </header>
             
-          </div>
-        </li>
-    </ul>
-
-    <br>
-        
-        <main id="quadro">
-
-            <h1 id="title">Survive!</h1>
-
-            <hr>
-
-            <p>You are in a small plane, going across the Rocky Mountains. Suddenly, the engine starts to make strange noises... Soon you are alone, in the snow, at the top of a mountain, and it is very, very cold. Can you find your way out of the mountain?</p>
+              <div class="w3-bar w3-border-bottom">
+               <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Oxford')">Oxford</button>
+               <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'book')">Book</button>
+               <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'author')">Author</button>
+              </div>
             
-            <a href="biblioteca.html" data-toggle="tooltip" title="Back"  data-placement="auto"><img class="icon" src="images/icons8-back-arrow-100.png" alt="Voltar"></a>
-            <a href="p001.html" data-toggle="tooltip" title="Play"  data-placement="auto"><img class="icon" src="images/icons8-play-100.png" alt="começar leitura"></a>
-            <a href="#" data-toggle="tooltip" title="Info"  data-placement="auto"><img class="icon" src="images/icons8-about-100.png" alt="informações sobre o livro" onclick="document.getElementById('id01').style.display='block'"></a>
-
-            <img id="capa" src="images/Survive - capa.png" alt="Survive! - capa">
-        </main>
-
-        <div class="w3-container">
-
-          <div id="id01" class="w3-modal">
-           <div class="w3-modal-content w3-card-4 w3-animate-zoom">
-            <header class="w3-container w3-blue"> 
-             <span onclick="document.getElementById('id01').style.display='none'" 
-             class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
-             <h2>INFORMATION</h2>
-            </header>
-          
-            <div class="w3-bar w3-border-bottom">
-             <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Oxford')">Oxford</button>
-             <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'book')">Book</button>
-             <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'author')">Author</button>
-            </div>
-          
-            <div id="Oxford" class="w3-container city">
-             <h1>Oxford Bookworms Library</h1>
-             <p>The <a href="https://elt.oup.com/catalogue/items/global/graded_readers/oxford_bookworms_library/?cc=br&selLanguage=pt&mode=hub" target="_blank">Oxford Bookworms Library</a>  provides enjoyable reading in English, with a wide range of classic and modern fiction, non-fiction, and plays. It includes original and adapted texts in seven carefully graded stages, which take learners from beginner to advanced level.</p>
-            </div>
-          
-            <div id="book" class="w3-container city">
-             <h1>About the book</h1>
-             <p>This is an interactive story. You can choose what part to read next. Listen to audio and look at the pictures to make a decision.Follow the numbers and examine the options at the end of each section.</p><br>
-            </div>
-
-            <div id="author" class="w3-container city">
-              <h1>About the author</h1>
-              <p>Helen Brooke was born in the north of England. She has worked in many different jobs, in many different countries, all around the world. She now lives near Oxford in England. She is very interested in interactive reading. She has also written <a href="#">Survive!</a> for the <a href="https://elt.oup.com/catalogue/items/global/graded_readers/oxford_bookworms_library/?cc=br&selLanguage=pt&mode=hub" target="_blank">Oxford Bookworms Library</a>.</p><br>
+              <div id="Oxford" class="w3-container city">
+               <h1>Oxford Bookworms Library</h1>
+               <p>The <a href="https://elt.oup.com/catalogue/items/global/graded_readers/oxford_bookworms_library/?cc=br&selLanguage=pt&mode=hub" target="_blank">Oxford Bookworms Library</a>  provides enjoyable reading in English, with a wide range of classic and modern fiction, non-fiction, and plays. It includes original and adapted texts in seven carefully graded stages, which take learners from beginner to advanced level.</p>
+              </div>
+            
+              <div id="book" class="w3-container city">
+               <h1>About the book</h1>
+               <p>This is an interactive story. You can choose what part to read next. Listen to audio and look at the pictures to make a decision.Follow the numbers and examine the options at the end of each section.</p><br>
+              </div>
+  
+              <div id="author" class="w3-container city">
+                <h1>About the author</h1>
+                <p>Helen Brooke was born in the north of England. She has worked in many different jobs, in many different countries, all around the world. She now lives near Oxford in England. She is very interested in interactive reading. She has also written <a href="capa.html">Mystery in London</a> for the <a href="https://elt.oup.com/catalogue/items/global/graded_readers/oxford_bookworms_library/?cc=br&selLanguage=pt&mode=hub" target="_blank">Oxford Bookworms Library</a>.</p><br>
+               </div>
+              
+            
+              <div class="w3-container w3-light-grey w3-padding">
+               <button class="w3-button w3-right w3-white w3-border" 
+               onclick="document.getElementById('id01').style.display='none'">Close</button>
+              </div>
              </div>
-            
-          
-            <div class="w3-container w3-light-grey w3-padding">
-             <button class="w3-button w3-right w3-white w3-border" 
-             onclick="document.getElementById('id01').style.display='none'">Close</button>
             </div>
-           </div>
-          </div>
-          
-          </div>
-          
-          <script>
-          document.getElementsByClassName("tablink")[0].click();
-          
-          function openCity(evt, cityName) {
-            var i, x, tablinks;
-            x = document.getElementsByClassName("city");
-            for (i = 0; i < x.length; i++) {
-              x[i].style.display = "none";
+            
+            </div>
+    
+            <script>
+            document.getElementsByClassName("tablink")[0].click();
+    
+            function openCity(evt, cityName) {
+              var i, x, tablinks;
+              x = document.getElementsByClassName("city");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablink");
+              for (i = 0; i < x.length; i++) {
+                tablinks[i].classList.remove("w3-light-grey");
+              }
+              document.getElementById(cityName).style.display = "block";
+              evt.currentTarget.classList.add("w3-light-grey");
             }
-            tablinks = document.getElementsByClassName("tablink");
-            for (i = 0; i < x.length; i++) {
-              tablinks[i].classList.remove("w3-light-grey");
-            }
-            document.getElementById(cityName).style.display = "block";
-            evt.currentTarget.classList.add("w3-light-grey");
-          }
-          </script>
-
-        <br>
-
-        <div class="footer">
-          <a href="https://ifce.edu.br/" target="_blank" rel="external" ><img width="130" src="images/Logo IFCE (2).png" alt="logo IFCE"></a><a href="https://ifce.edu.br/fortaleza/profept" target="_blank" rel="external"><img width="130" src="images/profept logo.png" alt=""></a></div>
+            
+            </script>
+            
+            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
           
+          <!-- footer -->
+          <div class="footer">
+            <a href="https://ifce.edu.br/" target="_blank" rel="external" ><img width="130" src="images/Logo IFCE (2).png" alt="logo IFCE"></a>
+            <div id="google_translate_element"></div>
+            <a href="https://ifce.edu.br/fortaleza/profept" target="_blank" rel="external"><img width="130" src="images/profept logo.png" alt=""></a></div>
+    
+  </div>   
 </body>
 </html>
