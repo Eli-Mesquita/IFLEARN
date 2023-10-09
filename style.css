@@ -213,4 +213,110 @@ div.desc {
   flex-wrap: wrap;
   flex-flow: wrap;
   justify-content: space-evenly;
+#chapter {
+   .option {
+      padding: 5px;
+   }
+    text-align: center;
+    background-color: #FAD4D8;
+    width: fit-content;
+    display: inline;
+ }
+
+ audio {
+    margin: 5%;
+ }
+ 
+ p{
+    font-size: 1.2em;
+    text-align: justify;
+ }
+
+ #choice {
+    padding: 5px;
+    text-align: center;
+    background-color: #FAD4D8;
+    width: 50%;
+    margin: auto;
+    
+ }
+
+ .option {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 5px;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #1C3144;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+ }
+
+#capa {
+  margin-top: 5%;
 }
+
+.pic {
+   max-width: 540px;
+}
+
+.thumbnail{
+   border-radius: 5%;
+}
+
+#quadro {
+   display: inline-block;
+   text-align: center;
+}
+
+.icon {
+   margin-left: 5%;
+   margin-right: 5%;
+   display: inline-block;
+   width: 60px;
+   
+}
+
+#botoes {
+   text-align: right;
+   margin-right: 5%;
+}
+
+div.gallery {
+   background-color: white;
+   border: 1px solid #ccc;
+   padding: 0 6px;
+   border-radius: 5px;
+ }
+ 
+ div.gallery:hover {
+   border: 1px solid #777;
+   box-shadow: 2px 2px 15px #33333385;
+   transition: 0.5s;
+}
+
+div.gallery img {
+  padding-top: 6px;
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
