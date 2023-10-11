@@ -1,13 +1,26 @@
 <!doctype html>
 <html lang="en">
-  <head>
+  <>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Video gallery</title> 
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+
+    <!--video modal script-->
+    <link rel="stylesheet" href=
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src=
+    "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+        </script>
+        <script src=
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+        </script>
+
     
     <style>
       .bd-placeholder-img {
@@ -42,14 +55,43 @@
         vertical-align: -.125em;
         fill: currentColor;
       }
+      .bs-example {
+            margin: 0px;
+            width: fit-content;
+        }
+         
+        .modal-content iframe {
+            margin: 0 auto;
+            display: block;
+            width: 80vh;
+        }
 
+        .modal-content {
+          position: fixed;
+          width: fit-content;
+          
+        }
     </style>
 
+<script>
+    $(document).ready(function() {
+        var url = $("#Geeks3").attr('src');
+        $("#Geeks2").on('hide.bs.modal', function() {
+            $("#Geeks3").attr('src', '');
+        });
+        $("#Geeks2").on('show.bs.modal', function() {
+            $("#Geeks3").attr('src', url);
+        });
+    });
+</script>
+
     
-  </head>
+</head>
   <body>
     
 <header>
+
+<!--Navbar-->
   <nav class="navbar navbar-dark text-bg-success fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="Index.html"><img src="images/Logo IFCE - white.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-top"></a>
@@ -121,20 +163,88 @@
 <br>
 
 <main>
+<!--Video gallery-->
+  <div class="album py-5 bg-light">
+    <div class="container">
 
-  <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Videoaulas</h1>
-        <p class="lead text-muted">Nesse espaço você pode assistir ao conteúdo criado para te ajudar a revisar os conceitos que você viu em sala de aula. Escolha o nível que deseja ou </p>
-        <p>
-          <a href="Index.html" class="btn btn-outline-danger my-2">Voltar</a>
-          <a href="ex001.html" class="btn btn-outline-success my-2">Atividades</a>
-        </p>
-      </div>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="images/youtube thumb.jpg" alt="" class="bd-placeholder-img card-img-top" width="100%" >
+            
+
+            <div class="card-body">
+              <h5 class="card-text">Beginner</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="container-fluid">
+                    <div class="bs-example ">
+                        <a href="#Geeks2"
+                        class="btn btn-lg btn-danger"
+                        data-toggle="modal">View</a>
+                        <div id="Geeks2" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button"
+                                                class="close btn-danger"
+                                                data-dismiss="modal"
+                                                aria-hidden="true">X</button>
+                                        <h4 class="modal-title">Aula 7 - Fame</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <iframe id="Geeks3" width="750" height="650"
+                                                src=
+                    "https://www.youtube.com/embed/CYuXZcP39YU"
+                                                frameborder="0" allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                        </div>
+                  </div>
+                <small class="text-muted">10 aulas</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="images/videothumb02.png" alt="" class="bd-placeholder-img card-img-top" width="100%" >
+            
+
+            <div class="card-body">
+              <h5 class="card-text">Intermediate</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-danger">View</button>
+                </div>
+                <small class="text-muted">10 aulas</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="images/videothumb0.png" alt="" class="bd-placeholder-img card-img-top" width="100%">
+            
+
+            <div class="card-body">
+              <h5 class="card-text">Advanced</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-danger">View</button>
+                </div>
+                <small class="text-muted">10 aulas</small>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
-  </section>
-
+  </div>
   <div class="album py-5 bg-light">
     <div class="container">
 
@@ -149,7 +259,7 @@
               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <a href="galery_begin.html"><button type="button" class="btn btn-sm btn-outline-danger">View</button></a>
+                  <button type="button" class="btn btn-sm btn-outline-danger">View</button>
                 </div>
                 <small class="text-muted">10 aulas</small>
               </div>
@@ -192,6 +302,16 @@
         </div>
     </div>
   </div>
+  <!--Back_buttons-->
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+          <a href="Index.html" class="btn btn-outline-danger my-2">Voltar</a>
+          <a href="ex001.html" class="btn btn-outline-success my-2">Atividades</a>
+        </p>
+      </div>
+    </div>
+  </section>
 
 </main>
 
