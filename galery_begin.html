@@ -1,26 +1,45 @@
 <!doctype html>
 <html lang="en">
-  <>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Video gallery</title> 
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>>
 
-
-    <!--video modal script-->
-    <link rel="stylesheet" href=
-    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <script src=
-    "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
-        </script>
-        <script src=
-    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-        </script>
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<style>
+    .bs-example{
+    	margin: auto;
+    }
+    .modal-dialog iframe{
+        margin: 0 auto;
+        display: block;
+    }
+</style>
+<script>
+$(document).ready(function(){
+    /* Get iframe src attribute value i.e. YouTube video url
+    and store it in a variable */
+    var url = $("#cartoonVideo").attr('src');
+    
+    /* Assign empty url value to the iframe src attribute when
+    modal hide, which stop the video playing */
+    $("#myModal").on('hide.bs.modal', function(){
+        $("#cartoonVideo").attr('src', '');
+    });
+    
+    /* Assign the initially stored url back to the iframe src
+    attribute when modal is displayed again */
+    $("#myModal").on('show.bs.modal', function(){
+        $("#cartoonVideo").attr('src', url);
+    });
+});
+</script>
     
     <style>
       .bd-placeholder-img {
@@ -55,41 +74,11 @@
         vertical-align: -.125em;
         fill: currentColor;
       }
-      .bs-example {
-            margin: 0px;
-            width: fit-content;
-        }
-         
-        .modal-content iframe {
-            margin: 0 auto;
-            display: block;
-            width: 80vh;
-        }
-
-        .modal-content {
-          position: fixed;
-          width: fit-content;
-          
-        }
     </style>
-
-<script>
-    $(document).ready(function() {
-        var url = $("#Geeks3").attr('src');
-        $("#Geeks2").on('hide.bs.modal', function() {
-            $("#Geeks3").attr('src', '');
-        });
-        $("#Geeks2").on('show.bs.modal', function() {
-            $("#Geeks3").attr('src', url);
-        });
-    });
-</script>
-
-    
-</head>
+  </head>
   <body>
+    
 
-<!--Navbar-->
   <nav class="navbar navbar-dark text-bg-success fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="Index.html"><img src="images/Logo IFCE - white.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-top"></a>
@@ -157,170 +146,231 @@
     </div>
 </nav>
 
+
 <br>
 
 <main>
-<!--Video gallery-->
+
   <div class="album py-5 bg-light">
     <div class="container">
 
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" style="padding-top: 10%;">
         <div class="col">
           <div class="card shadow-sm">
-            <img src="images/youtube thumb.jpg" alt="" class="bd-placeholder-img card-img-top" width="100%" >
+            <a href="galery_begin.html"><img src="images/youtube thumb.jpg" alt="" class="bd-placeholder-img card-img-top" width="100%" ></a>
             
 
             <div class="card-body">
-              <h5 class="card-text">Beginner</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <h5 class="card-text">Hello, Everybody!</h5>
+              <p class="card-text">Primeira aula do curso básico de inglês</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="container-fluid">
-                    <div class="bs-example ">
-                        <a href="#Geeks2"
-                        class="btn btn-lg btn-danger"
-                        data-toggle="modal">View</a>
-                        <div id="Geeks2" class="modal fade">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button"
-                                                class="close btn-danger"
-                                                data-dismiss="modal"
-                                                aria-hidden="true">X</button>
-                                        <h4 class="modal-title">Aula 7 - Fame</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <iframe id="Geeks3" width="750" height="650"
-                                                src=
-                    "https://www.youtube.com/embed/CYuXZcP39YU"
-                                                frameborder="0" allowfullscreen>
-                                        </iframe>
-                                    </div>
+                <div class="bs-example">
+                  <!-- Button HTML (to Trigger Modal) -->
+                  <a href="#myModal" class="btn btn-danger" data-toggle="modal">Watch</a>
+                  
+                  <!-- Modal HTML -->
+                  <div id="myModal" class="modal fade">
+                      <div class="modal-dialog">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title">Videoaula 01 - Hello Everybody!</h5>
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              </div>
+                              <div class="modal-body">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                  <iframe id="cartoonVideo" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/CYuXZcP39YU" allowfullscreen></iframe>
                                 </div>
-                            </div>
-                    </div>
-                        </div>
+                              </div>
+                          </div>
+                      </div>
                   </div>
-                <small class="text-muted">10 aulas</small>
+              </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col">
+
+<div class="col">
           <div class="card shadow-sm">
-            <img src="images/videothumb02.png" alt="" class="bd-placeholder-img card-img-top" width="100%" >
+            <a href="galery_begin.html"><img src="images/youtube thumb.jpg" alt="" class="bd-placeholder-img card-img-top" width="100%" ></a>
             
 
             <div class="card-body">
-              <h5 class="card-text">Intermediate</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <h5 class="card-text">Hello, Everybody!</h5>
+              <p class="card-text">Primeira aula do curso básico de inglês</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-danger">View</button>
-                </div>
-                <small class="text-muted">10 aulas</small>
+                <div class="bs-example">
+                  <!-- Button HTML (to Trigger Modal) -->
+                  <a href="#myModal" class="btn btn-danger" data-toggle="modal">Watch</a>
+                  
+                  <!-- Modal HTML -->
+                  <div id="myModal" class="modal fade">
+                      <div class="modal-dialog">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title">Videoaula 01 - Hello Everybody!</h5>
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              </div>
+                              <div class="modal-body">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                  <iframe id="cartoonVideo" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/CYuXZcP39YU" allowfullscreen></iframe>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
               </div>
             </div>
           </div>
         </div>
+
         <div class="col">
           <div class="card shadow-sm">
-            <img src="images/videothumb0.png" alt="" class="bd-placeholder-img card-img-top" width="100%">
+            <a href="galery_begin.html"><img src="images/youtube thumb.jpg" alt="" class="bd-placeholder-img card-img-top" width="100%" ></a>
             
 
             <div class="card-body">
-              <h5 class="card-text">Advanced</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <h5 class="card-text">Hello, Everybody!</h5>
+              <p class="card-text">Primeira aula do curso básico de inglês</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-danger">View</button>
-                </div>
-                <small class="text-muted">10 aulas</small>
+                <div class="bs-example">
+                  <!-- Button HTML (to Trigger Modal) -->
+                  <a href="#myModal" class="btn btn-danger" data-toggle="modal">Watch</a>
+                  
+                  <!-- Modal HTML -->
+                  <div id="myModal" class="modal fade">
+                      <div class="modal-dialog">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title">Videoaula 01 - Hello Everybody!</h5>
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              </div>
+                              <div class="modal-body">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                  <iframe id="cartoonVideo" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/CYuXZcP39YU" allowfullscreen></iframe>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
               </div>
             </div>
           </div>
         </div>
-    </div>
-  </div>
-  <div class="album py-5 bg-light">
-    <div class="container">
 
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <div class="col">
           <div class="card shadow-sm">
-            <img src="images/videothumb01.png" alt="" class="bd-placeholder-img card-img-top" width="100%" >
+            <a href="galery_begin.html"><img src="images/youtube thumb.jpg" alt="" class="bd-placeholder-img card-img-top" width="100%" ></a>
             
 
             <div class="card-body">
-              <h5 class="card-text">Beginner</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <h5 class="card-text">Hello, Everybody!</h5>
+              <p class="card-text">Primeira aula do curso básico de inglês</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-danger">View</button>
-                </div>
-                <small class="text-muted">10 aulas</small>
+                <div class="bs-example">
+                  <!-- Button HTML (to Trigger Modal) -->
+                  <a href="#myModal" class="btn btn-danger" data-toggle="modal">Watch</a>
+                  
+                  <!-- Modal HTML -->
+                  <div id="myModal" class="modal fade">
+                      <div class="modal-dialog">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title">Videoaula 01 - Hello Everybody!</h5>
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              </div>
+                              <div class="modal-body">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                  <iframe id="cartoonVideo" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/CYuXZcP39YU" allowfullscreen></iframe>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
               </div>
             </div>
           </div>
         </div>
+
         <div class="col">
           <div class="card shadow-sm">
-            <img src="images/videothumb02.png" alt="" class="bd-placeholder-img card-img-top" width="100%" >
+            <a href="galery_begin.html"><img src="images/youtube thumb.jpg" alt="" class="bd-placeholder-img card-img-top" width="100%" ></a>
             
 
             <div class="card-body">
-              <h5 class="card-text">Intermediate</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <h5 class="card-text">Hello, Everybody!</h5>
+              <p class="card-text">Primeira aula do curso básico de inglês</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-danger">View</button>
-                </div>
-                <small class="text-muted">10 aulas</small>
+                <div class="bs-example">
+                  <!-- Button HTML (to Trigger Modal) -->
+                  <a href="#myModal" class="btn btn-danger" data-toggle="modal">Watch</a>
+                  
+                  <!-- Modal HTML -->
+                  <div id="myModal" class="modal fade">
+                      <div class="modal-dialog">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title">Videoaula 01 - Hello Everybody!</h5>
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              </div>
+                              <div class="modal-body">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                  <iframe id="cartoonVideo" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/CYuXZcP39YU" allowfullscreen></iframe>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
               </div>
             </div>
           </div>
         </div>
+
         <div class="col">
           <div class="card shadow-sm">
-            <img src="images/videothumb0.png" alt="" class="bd-placeholder-img card-img-top" width="100%">
+            <a href="galery_begin.html"><img src="images/youtube thumb.jpg" alt="" class="bd-placeholder-img card-img-top" width="100%" ></a>
             
 
             <div class="card-body">
-              <h5 class="card-text">Advanced</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <h5 class="card-text">Hello, Everybody!</h5>
+              <p class="card-text">Primeira aula do curso básico de inglês</p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-danger">View</button>
-                </div>
-                <small class="text-muted">10 aulas</small>
+                <div class="bs-example">
+                  <!-- Button HTML (to Trigger Modal) -->
+                  <a href="#myModal" class="btn btn-danger" data-toggle="modal">Watch</a>
+                  
+                  <!-- Modal HTML -->
+                  <div id="myModal" class="modal fade">
+                      <div class="modal-dialog">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title">Videoaula 01 - Hello Everybody!</h5>
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              </div>
+                              <div class="modal-body">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                  <iframe id="cartoonVideo" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/CYuXZcP39YU" allowfullscreen></iframe>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
               </div>
             </div>
           </div>
         </div>
-    </div>
-  </div>
-  <!--Back_buttons-->
-  <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-          <a href="Index.html" class="btn btn-outline-danger my-2">Voltar</a>
-          <a href="ex001.html" class="btn btn-outline-success my-2">Atividades</a>
-        </p>
-      </div>
-    </div>
-  </section>
-
 </main>
 
-<footer class="text-muted py-5">
-  <div class="container">
-    <p class="float-end mb-1">
-      <a href="#">Back to top</a>
-    </p>
-    <p class="mb-1">Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-    <p class="mb-0">New to Bootstrap? <a href="/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>
-  </div>
-</footer>
+<div class="footer">
+  <a href="https://ifce.edu.br/" target="_blank" rel="external" ><img width="130" src="images/Logo IFCE (2).png" alt="logo IFCE"></a>
+
+  <a href="https://ifce.edu.br/fortaleza/profept" target="_blank" rel="external"><img width="130" src="images/profept logo.png" alt=""></a>
+</div>
 
   </body>
 </html>
