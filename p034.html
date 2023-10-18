@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=., initial-scale=1.0">
+    <title>Mystery in london</title>
+     <!-- CSS -->
+ <link rel="stylesheet" href="css/style.css">
+
+ <link rel="stylesheet" href="style.css">
+
+<script src="myscripts.js"></script>
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+<!-- CSS -->
+<link rel="stylesheet" href="css/style.css">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- NAVBAR -->
+<nav class="navbar navbar-dark text-bg-success fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="Index.html"><img src="images/Logo IFCE - white.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-top"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+          <a class="navbar-brand" href="Index.html"><img src="images/Logo IFCE - white.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-top"></a>
+      <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+      <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="Index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Conteúdo
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="biblioteca.html">Biblioteca interativa</a></li>
+              <li><a class="dropdown-item" href="atv002.html">Videoaulas</a></li>
+              <li><a class="dropdown-item" href="ex001.html">Teste seu conhecimento</a></li>
+              <li><a class="dropdown-item" href="games.html">Amplie seu vocabulário</a></li>
+              <li><a class="dropdown-item" href="">Materiais para baixar</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Ferramentas
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="https://www.oxfordlearnersdictionaries.com" target="_blank">Oxford Learner's Dictionary </a></li>
+                <li><a class="dropdown-item" href="https://lyricstraining.com/" target="_blank">Lyrics Trainning</a></li>
+                <li><a class="dropdown-item" href="https://writeandimprove.com/workbooks#/wi-workbooks/7485eb41-a047-4d23-ae25-5afb7387eba9" target="_blank">Write & Improve</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Questionário
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="Quest001.html">Professor</a></li>
+                <li><a class="dropdown-item" href="Quest002.html">Aluno</a></li>
+              </ul>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link" href="contato.html">Sobre o Autor</a>
+            </li>
+            <li><hr></li>
+            <li><div id="google_translate_element"></div>
+  
+              <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script></li>
+              <li><hr></li>
+        </ul>
+        <br>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-success" type="submit">Pesquisar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>
+<!--header-->
+<br>
+<h1 class="display-6" style="text-decoration: underline;padding-top: 10%;">Mystery in London</h1>
+<br>
+        <h1 class="display-6 fw-bold">34</h1>
+<br>
+<!--Audio-->
+        <audio src="audio/aud010.mp3" class="px-1 py-1 my-1" controls></audio>
+        <div class="container-fluid">
+          <div class="px-4 py-5 my-1 text-center">
+            <div class="col-lg-6 mx-auto">
+          <p> You talk to the old man. <br>
+            'Do you know a ship called the Californian?' you 
+            ask him. <br> 
+            'Yes,' he says. 'It's going to India today, so it's in the East India Dock.' <br> 
+            You must find the East India Dock. 
+            
+             </p>
+        <h2 id="choice">YOUR CHOICE</h2>
+        <br>
+<!--Choice_Buttons-->
+        <div class="bookbuttons" style="display: flex; flex-direction: column;">
+          <a href="p012.html"><button type="button" class="btn btn-outline-primary btn-lg">Look for the East India Dock</button></a>
+          <br>
+        </div>
+    </div>
+        <br>
+<!--Image-->
+        <img class="pic" src="images/img034.png" alt="">
+        <br>
+<!--Backbuttons-->
+<div class="bookbuttons" style="padding-bottom: 05%;">
+  <a onclick="history.back()"><button class="button" style="vertical-align:middle"><span>página anterior</span></button></a>
+
+  <a href="capa.html"><button class="button" style="vertical-align:middle"><span>Voltar para capa</span></button></a>
+</div>
+<!--footer-->
+<br>
+<div class="footer fixed-bottom" style="width: 100%;"> 
+<a href="https://ifce.edu.br/" target="_blank" rel="external" ><img width="130" src="images/Logo IFCE (2).png" alt="logo IFCE"></a>
+<!--Google translator-->
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<a href="https://ifce.edu.br/fortaleza/profept" target="_blank" rel="external"><img width="130" src="images/profept logo.png" alt=""></a>
+</div>
+</body>
+</html>
