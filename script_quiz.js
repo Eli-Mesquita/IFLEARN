@@ -45,7 +45,7 @@ const quizArray = [
         id: "4",
         question: "We _____ never eaten Mexican food.",
         options: ["has", "is", "have", "hasn't"],
-        correct: "Have",
+        correct: "have",
     },
     {
         id: "5",
@@ -198,7 +198,7 @@ function initial() {
     quizContainer.innerHTML = "";
     questionCount = 0;
     scoreCount = 0;
-    count = 11;
+    count = 61;
     clearInterval(countdown);
     timerDisplay();
     quizCreator();
