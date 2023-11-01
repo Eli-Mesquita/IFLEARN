@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+< lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IFlearn</title>
     <link rel="stylesheet" href="style.css">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <style>
+        .exerciseButton {
+          background-color: green;
+          border-radius: 10px;
+          font-size: 15px;
+          padding: 10px 10px;
+          color: white;
+          font-weight: bold;
+          margin-right: 10px;
+        }
+
+        .userInput {
+          width: 100%;
+          max-width: 500px; /* add this line to set a maximum width */
+        }
+      </style>
+    </style>
+
 </head>
 <body>
     
@@ -40,10 +62,7 @@
       <main>
         <h1>PRESENT PERFECT</h1>
 
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque similique molestiae esse facere provident suscipit unde, architecto repellendus aliquid veniam nesciunt ut necessitatibus maiores magnam autem in nisi velit quo?
-          
-        </p>
+  >
 
         <h3>Faça o quiz</h3>
         <a href="ex001.html"><img class="thumbnail" src="images/icons8-test-100.png" alt="atividade interativa"></a>
@@ -56,7 +75,274 @@
           <a href="Index.html"><button class="button" style="vertical-align:middle"><span>Voltar ao início</span></button></a>
       </div>
 
+      <section id="main-content">
+        <h2>Positive Form </h2>
+        <p>Make the positive present perfect tense.<br/>
+        <br/>
+        <div id="exercise"></div>
+    
+       
+
+   
+    </section>
+
+    <script id="sourceData" type="application/json">
+        {
+            "title": "Present Perfect - Positive 1",
+            "description": "Make the positive present perfect",
+            "questions": [{
+                "isQuestion": false,
+                "isTwoPart": true,
+                "parts": [{
+                    "type": "text",
+                    "value": "(I / study / French)"
+                }, {
+                    "type": "input",
+                    "answer": "I've studied French.",
+                    "answerList": ["I've studied French.", "I have studied French."],
+                    "verb": ""
+                }]
+            }, {
+                "isQuestion": false,
+                "isTwoPart": true,
+                "parts": [{
+                    "type": "text",
+                    "value": "(She / eat / octopus)"
+                }, {
+                    "type": "input",
+                    "answer": "She's eaten octopus.",
+                    "answerList": ["She's eaten octopus.", "She has eaten octopus."],
+                    "verb": ""
+                }]
+            }, {
+                "isQuestion": false,
+                "isTwoPart": true,
+                "parts": [{
+                    "type": "text",
+                    "value": "(They / go / to Scotland)"
+                }, {
+                    "type": "input",
+                    "answer": "They've gone to Scotland.",
+                    "answerList": ["They've gone to Scotland.", "They have gone to Scotland."],
+                    "verb": ""
+                }]
+            }, {
+                "isQuestion": false,
+                "isTwoPart": true,
+                "parts": [{
+                    "type": "text",
+                    "value": "(We / read / that book)"
+                }, {
+                    "type": "input",
+                    "answer": "We've read that book.",
+                    "answerList": ["We've read that book.", "We have read that book."],
+                    "verb": ""
+                }]
+            }, {
+                "isQuestion": false,
+                "isTwoPart": true,
+                "parts": [{
+                    "type": "text",
+                    "value": "(He / live / here for three years)"
+                }, {
+                    "type": "input",
+                    "answer": "He's lived here for three years.",
+                    "answerList": ["He's lived here for three years.", "He has lived here for three years."],
+                    "verb": ""
+                }]
+            }, {
+                "isQuestion": false,
+                "isTwoPart": true,
+                "parts": [{
+                    "type": "text",
+                    "value": "(You / know / David for ten years)"
+                }, {
+                    "type": "input",
+                    "answer": "You've known David for ten years.",
+                    "answerList": ["You've known David for ten years.", "You have known David for ten years."],
+                    "verb": ""
+                }]
+            }, {
+                "isQuestion": false,
+                "isTwoPart": true,
+                "parts": [{
+                    "type": "text",
+                    "value": "(We / be / here for two weeks)"
+                }, {
+                    "type": "input",
+                    "answer": "We've been here for two weeks.",
+                    "answerList": ["We've been here for two weeks.", "We have been here for two weeks."],
+                    "verb": ""
+                }]
+            }, {
+                "isQuestion": false,
+                "isTwoPart": true,
+                "parts": [{
+                    "type": "text",
+                    "value": "(I / lose / my keys)"
+                }, {
+                    "type": "input",
+                    "answer": "I've lost my keys.",
+                    "answerList": ["I've lost my keys.", "I have lost my keys."],
+                    "verb": ""
+                }]
+            }, {
+                "isQuestion": false,
+                "isTwoPart": true,
+                "parts": [{
+                    "type": "text",
+                    "value": "(He / drink / too much coffee)"
+                }, {
+                    "type": "input",
+                    "answer": "He's drunk too much coffee.",
+                    "answerList": ["He's drunk too much coffee.", "He has drunk too much coffee."],
+                    "verb": ""
+                }]
+            }, {
+                "isQuestion": false,
+                "isTwoPart": true,
+                "parts": [{
+                    "type": "text",
+                    "value": "(They / miss / the train)"
+                }, {
+                    "type": "input",
+                    "answer": "They've missed the train.",
+                    "answerList": ["They've missed the train.", "They have missed the train."],
+                    "verb": ""
+                }]
+            }, {
+                "isQuestion": false,
+                "isTwoPart": true,
+                "parts": [{
+                    "type": "text",
+                    "value": "(She / go / to Peru)"
+                }, {
+                    "type": "input",
+                    "answer": "She's gone to Peru.",
+                    "answerList": ["She's gone to Peru.", "She has gone to Peru."],
+                    "verb": ""
+                }]
+            }, {
+                "isQuestion": false,
+                "isTwoPart": true,
+                "parts": [{
+                    "type": "text",
+                    "value": "(We / eat / too much chocolate)"
+                }, {
+                    "type": "input",
+                    "answer": "We've eaten too much chocolate.",
+                    "answerList": ["We've eaten too much chocolate.", "We have eaten too much chocolate."],
+                    "verb": ""
+                }]
+            }, {
+                "isQuestion": false,
+                "isTwoPart": true,
+                "parts": [{
+                    "type": "text",
+                    "value": "(I / have / breakfast this morning)"
+                }, {
+                    "type": "input",
+                    "answer": "I've had breakfast this morning.",
+                    "answerList": ["I've had breakfast this morning.", "I have had breakfast this morning."],
+                    "verb": ""
+                }]
+            }, {
+                "isQuestion": false,
+                "isTwoPart": true,
+                "parts": [{
+                    "type": "text",
+                    "value": "(John / miss / the train)"
+                }, {
+                    "type": "input",
+                    "answer": "John's missed the train.",
+                    "answerList": ["John's missed the train.", "John has missed the train."],
+                    "verb": ""
+                }]
+            }, {
+                "isQuestion": false,
+                "isTwoPart": true,
+                "parts": [{
+                    "type": "text",
+                    "value": "(Lucy / cook / breakfast)"
+                }, {
+                    "type": "input",
+                    "answer": "Lucy's cooked breakfast.",
+                    "answerList": ["Lucy's cooked breakfast.", "Lucy has cooked breakfast."],
+                    "verb": ""
+                }]
+            }, {
+                "isQuestion": false,
+                "isTwoPart": true,
+                "parts": [{
+                    "type": "text",
+                    "value": "(They / write / to the politician)"
+                }, {
+                    "type": "input",
+                    "answer": "They've written to the politician.",
+                    "answerList": ["They've written to the politician.", "They have written to the politician."],
+                    "verb": ""
+                }]
+            }, {
+                "isQuestion": false,
+                "isTwoPart": true,
+                "parts": [{
+                    "type": "text",
+                    "value": "(You / find / your wallet)"
+                }, {
+                    "type": "input",
+                    "answer": "You've found your wallet.",
+                    "answerList": ["You've found your wallet.", "You have found your wallet."],
+                    "verb": ""
+                }]
+            }, {
+                "isQuestion": false,
+                "isTwoPart": true,
+                "parts": [{
+                    "type": "text",
+                    "value": "(I / meet / his mother)"
+                }, {
+                    "type": "input",
+                    "answer": "I've met his mother.",
+                    "answerList": ["I've met his mother.", "I have met his mother."],
+                    "verb": ""
+                }]
+            }, {
+                "isQuestion": false,
+                "isTwoPart": true,
+                "parts": [{
+                    "type": "text",
+                    "value": "(We / try / roller-skating)"
+                }, {
+                    "type": "input",
+                    "answer": "We've tried roller-skating.",
+                    "answerList": ["We've tried roller-skating.", "We have tried roller-skating."],
+                    "verb": ""
+                }]
+            }, {
+                "isQuestion": false,
+                "isTwoPart": true,
+                "parts": [{
+                    "type": "text",
+                    "value": "(She / pass / the exam)"
+                }, {
+                    "type": "input",
+                    "answer": "She's passed the exam.",
+                    "answerList": ["She's passed the exam.", "She has passed the exam."],
+                    "verb": ""
+                }]
+            }]
+        }
+    </script>
+    <script>
+        var json = document.getElementById('sourceData').innerHTML;
+        console.log(json);
+        window.initialData = JSON.parse(json);
+    </script>
+    <script src="https://www.perfect-english-grammar.com/support-files/bundle.js.pagespeed.jm.pc9JhvPNqA.js"></script>
+  
+
       </main>
     
 </body>
+
 </html>
