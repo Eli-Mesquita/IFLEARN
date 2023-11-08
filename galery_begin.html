@@ -8,39 +8,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <style>
     .bs-example{
     	margin: auto;
     }
     .modal-dialog iframe{
-        margin: 0 auto;
+        margin: auto;
         display: block;
     }
 </style>
-<script>
-$(document).ready(function(){
-    /* Get iframe src attribute value i.e. YouTube video url
-    and store it in a variable */
-    var url = $("#cartoonVideo").attr('src');
-    
-    /* Assign empty url value to the iframe src attribute when
-    modal hide, which stop the video playing */
-    $("#myModal").on('hide.bs.modal', function(){
-        $("#cartoonVideo").attr('src', '');
-    });
-    
-    /* Assign the initially stored url back to the iframe src
-    attribute when modal is displayed again */
-    $("#myModal").on('show.bs.modal', function(){
-        $("#cartoonVideo").attr('src', url);
-    });
-});
-</script>
-    
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -75,10 +51,43 @@ $(document).ready(function(){
         fill: currentColor;
       }
     </style>
+
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+    </script>
+
+ <!-- modal js -->
+<script>
+  $(document).ready(function(e) {
+     $('#myModal').modal({
+         backdrop: 'static',
+         keyboard: false,
+         show: false,
+     });
+     $(document).on("click", ".modalButton", function() {
+         var ClickedButton = $(this).data("name");
+         $(".modal-body").html('<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/'+ClickedButton+'" allowfullscreen></iframe></div>');
+         $('#myModal').modal('show');
+     });
+ 
+     $('#myModal').on('hidden.bs.modal', function (e) {
+         $('#myModal iframe').attr("src", $("#myModal iframe").attr("src"));
+     });
+ 
+     $('.modal').click(function(e) {
+         if( e.target == this ) {
+             $(this).modal('hide');
+         }
+     });
+ 
+ });
+ 
+ </script>
+
   </head>
   <body>
     
-
+<!--navbar-->
   <nav class="navbar navbar-dark text-bg-success fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="Index.html"><img src="images/Logo IFCE - white.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-top"></a>
@@ -146,8 +155,27 @@ $(document).ready(function(){
     </div>
 </nav>
 
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+     <div class="modal-content">
+        <div class="modal-header">
+           <h4 class="modal-title"> Beginner</h4>
+           <button type="button" class="btn-close" data-dismiss="modal" aria-label="close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="embed-responsive embed-responsive-16by9">
+           <!--Aula 01-->
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/CYuXZcP39YU" allowfullscreen></iframe>
+            <!--Aula 02-->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xpMpatEGU0k?si=dO--e4JR4krvqzGR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+           <!--Aula 03-->
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/-5H-Lfp6n2c?si=Gw1XrpIYUMtNDAVV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+     </div>
+  </div>
+</div>
 
-<br>
 
 <main>
 
@@ -162,8 +190,8 @@ $(document).ready(function(){
             <p class="lead text-muted">Nesse espaço você poderá assistir à videoaulas do nível básico para te ajudar a revisar os conceitos que você viu em sala de aula. Escolha uma das aulas e depois faça um pequeno quiz para verificar a sua aprendizagem. </p>
             <p>
                <!--buttons-->
-              <a href="galery.html" class="btn btn-outline-danger my-2">Voltar</a>
-              <a href="ex001.html" class="btn btn-outline-success my-2">Atividades</a>
+              <a href="galery.html" class="btn btn-outline-danger btn-lg my-2">Voltar</a>
+              <a href="ex001.html" class="btn btn-outline-success btn-lg my-2">Atividades</a>
             </p>
           </div>
         </div>
@@ -173,7 +201,8 @@ $(document).ready(function(){
         <div class="col">
           <div class="card shadow-sm">
              <!--image -->
-            <a href="galery_begin.html"><img src="images/video_begin_001.png" alt="" class="bd-placeholder-img card-img-top" width="100%" ></a>
+            <a class="modalButton" data-name="CYuXZcP39YU" data-toggle="modal"><img src="images/video_begin_001.png" alt="" class="bd-placeholder-img card-img-top" width="100%" ></a>
+
             <div class="card-body">
               <h5 class="card-text">Hello, Everybody!</h5>
               <p class="card-text">Present Simple - To be / affirmative sentences / Contractions / personal pronouns </p>
@@ -183,30 +212,13 @@ $(document).ready(function(){
                   <!--button group-->
                   <div class="btn-group" role="group" aria-label="Basic example">
                   <!-- Button HTML (to Trigger Modal) -->
-                  <a href="#myModal" class="btn btn-danger" data-toggle="modal">Watch</a>
+                  <button type="button" class="btn btn-danger btn-lg modalButton" data-name="CYuXZcP39YU" data-toggle="modal">Watch</button>
 
                   <!-- quiz button -->
-                  <a href="quiz001.html" class="btn btn-success">Quiz</a>
+                  <a href="quiz001.html" class="btn btn-success btn-lg">Quiz</a>
 
                   <!-- exercise button -->
-                  <a href="atv003.html" class="btn btn-primary">Exercise</a>
-                  </div>
-                  
-                  <!-- Modal HTML -->
-                  <div id="myModal" class="modal fade">
-                      <div class="modal-dialog">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h5 class="modal-title">Videoaula - Beginner </h5>
-                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                              </div>
-                              <div class="modal-body">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                  <iframe id="cartoonVideo" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/CYuXZcP39YU" allowfullscreen></iframe>
-                                </div>
-                              </div>
-                          </div>
-                      </div>
+                  <a href="atv001.html" class="btn btn-primary btn-lg">Exercise</a>
                   </div>
               </div>
               </div>
@@ -223,39 +235,20 @@ $(document).ready(function(){
             <div class="card-body">
               <h5 class="card-text">Meeting people</h5>
               <p class="card-text">Present Simple - To be / questions and negatives / short answers / possesion 
-                <br>
-                <br>
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="bs-example">
                      <!--button group-->
                      <div class="btn-group" role="group" aria-label="Basic example">
                       <!-- Button HTML (to Trigger Modal) -->
-                      <a href="#myModal" class="btn btn-danger" data-toggle="modal">Watch</a>
+                      <button type="button" class="btn btn-danger btn-lg modalButton" data-name="xpMpatEGU0k?si=dO--e4JR4krvqzGR" data-toggle="modal">Aula 2</button>
     
                       <!-- quiz button -->
-                      <a href="quiz001.html" class="btn btn-success">Quiz</a>
+                      <a href="quiz001.html" class="btn btn-success btn-lg">Quiz</a>
     
                       <!-- exercise button -->
-                      <a href="atv004.html" class="btn btn-primary">Exercise</a>
+                      <a href="atv002.html" class="btn btn-primary btn-lg">Exercise</a>
                       </div>
-                  
-                  <!-- Modal HTML -->
-                  <div id="myModal" class="modal fade">
-                      <div class="modal-dialog">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h5 class="modal-title">Videoaula 02 - Meeting people</h5>
-                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                              </div>
-                              <div class="modal-body">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                  <iframe id="cartoonVideo" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/CYuXZcP39YU" allowfullscreen></iframe>
-                                </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
               </div>
               </div>
             </div>
@@ -270,39 +263,20 @@ $(document).ready(function(){
             <div class="card-body">
               <h5 class="card-text">The world of work</h5>
               <p class="card-text">Present Simple I — He/she/it — Questions and negatives
-                <br>
-                <br>
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="bs-example">
                      <!--button group-->
                      <div class="btn-group" role="group" aria-label="Basic example">
                       <!-- Button HTML (to Trigger Modal) -->
-                      <a href="#myModal" class="btn btn-danger" data-toggle="modal">Watch</a>
+                      <button type="button" class="btn btn-danger btn-lg modalButton" data-name="-5H-Lfp6n2c?si=Gw1XrpIYUMtNDAVV" data-toggle="modal" >Watch</button>
     
                       <!-- quiz button -->
-                      <a href="quiz001.html" class="btn btn-success">Quiz</a>
+                      <a href="quiz001.html" class="btn btn-success btn-lg">Quiz</a>
     
                       <!-- exercise button -->
-                      <a href="atv003.html" class="btn btn-primary">Exercise</a>
+                      <a href="atv003.html" class="btn btn-primary btn-lg">Exercise</a>
                       </div>
-                  
-                  <!--Video Modal -->
-                  <div id="myModal" class="modal fade">
-                      <div class="modal-dialog">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h5 class="modal-title">Videoaula 03 - The world of work</h5>
-                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                              </div>
-                              <div class="modal-body">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                  <iframe id="cartoonVideo" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/CYuXZcP39YU" allowfullscreen></iframe>
-                                </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
               </div>
               </div>
             </div>
@@ -317,9 +291,7 @@ $(document).ready(function(){
             <div class="card-body">
               <h5 class="card-text">Take it easy!</h5>
               <p class="card-text">Present Simple 2 — I/you/we/they / Questions and negatives
-                <br>
-                <br>
-              </p></p>
+              </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="bs-example">
            <!--button group-->
@@ -328,28 +300,11 @@ $(document).ready(function(){
             <a href="#myModal" class="btn btn-danger" data-toggle="modal">Watch</a>
 
             <!-- quiz button -->
-            <a href="quiz001.html" class="btn btn-success">Quiz</a>
+            <a href="quiz001.html" class="btn btn-success btn-lg">Quiz</a>
 
             <!-- exercise button -->
-            <a href="atv003.html" class="btn btn-primary">Exercise</a>
+            <a href="atv003.html" class="btn btn-primary btn-lg">Exercise</a>
             </div>
-                  
-                  <!-- Modal HTML -->
-                  <div id="myModal" class="modal fade">
-                      <div class="modal-dialog">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h5 class="modal-title">Videoaula 04 - Take it easy!</h5>
-                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                              </div>
-                              <div class="modal-body">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                  <iframe id="cartoonVideo" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/CYuXZcP39YU" allowfullscreen></iframe>
-                                </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
               </div>
               </div>
             </div>
@@ -364,8 +319,6 @@ $(document).ready(function(){
             <div class="card-body">
               <h5 class="card-text">Where do you live?</h5>
               <p class="card-text">There is/are— Prepositions — Some/any— This/that/these/those
-                <br>
-                <br>
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="bs-example">
@@ -375,28 +328,11 @@ $(document).ready(function(){
         <a href="#myModal" class="btn btn-danger" data-toggle="modal">Watch</a>
 
         <!-- quiz button -->
-        <a href="quiz001.html" class="btn btn-success">Quiz</a>
+        <a href="quiz001.html" class="btn btn-success btn-lg">Quiz</a>
 
         <!-- exercise button -->
-        <a href="atv003.html" class="btn btn-primary">Exercise</a>
+        <a href="atv003.html" class="btn btn-primary btn-lg">Exercise</a>
         </div>
-                  
-                  <!-- Modal HTML -->
-                  <div id="myModal" class="modal fade">
-                      <div class="modal-dialog">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h5 class="modal-title">Videoaula 05 - Where do you live?</h5>
-                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                              </div>
-                              <div class="modal-body">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                  <iframe id="cartoonVideo" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/CYuXZcP39YU" allowfullscreen></iframe>
-                                </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
               </div>
               </div>
             </div>
@@ -411,8 +347,6 @@ $(document).ready(function(){
             <div class="card-body">
               <h5 class="card-text">Can you speak English?</h5>
               <p class="card-text"> Past tense - can/can't / could / couldn't / was/were / wasn't / weren't
-                <br>
-                <br>
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="bs-example">
@@ -422,34 +356,57 @@ $(document).ready(function(){
           <a href="#myModal" class="btn btn-danger" data-toggle="modal">Watch</a>
 
           <!-- quiz button -->
-          <a href="quiz001.html" class="btn btn-success">Quiz</a>
+          <a href="quiz001.html" class="btn btn-success btn-lg">Quiz</a>
 
           <!-- exercise button -->
-          <a href="atv003.html" class="btn btn-primary">Exercise</a>
+          <a href="atv003.html" class="btn btn-primary btn-lg">Exercise</a>
           </div>
-                  <!-- Modal HTML -->
-                  <div id="myModal" class="modal fade">
-                      <div class="modal-dialog">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h5 class="modal-title">Videoaula 06 - Can you speak English?</h5>
-                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                              </div>
-                              <div class="modal-body">
-                                <div class="embed-responsive embed-responsive-16by9">
-                                  <iframe id="cartoonVideo" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/CYuXZcP39YU" allowfullscreen></iframe>
-                                </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
               </div>
               </div>
             </div>
           </div>
         </div>
+    </div>
 </main>
+
+
 
 
   </body>
 </html>
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+     <div class="modal-content">
+        <div class="modal-header">
+           <h4 class="modal-title"> Beginner</h4>
+           <button type="button" class="btn-close" data-dismiss="modal" aria-label="close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="embed-responsive embed-responsive-16by9">
+           <!--Aula 01-->
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/CYuXZcP39YU" allowfullscreen></iframe>
+            <!--Aula 02-->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xpMpatEGU0k?si=dO--e4JR4krvqzGR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+           <!--Aula 03-->
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/-5H-Lfp6n2c?si=Gw1XrpIYUMtNDAVV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+     </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    // Close modal on esc key
+    $(document).on('keydown', function(event) {
+      if (event.keyCode === 27) {
+        $('#myModal').modal('hide');
+      }
+    });
+
+    // Close modal on close button of modal body
+    $('#myModal .modal-body button.close').on('click', function() {
+      $('#myModal').modal('hide');
+    });
+  });
+</script>
