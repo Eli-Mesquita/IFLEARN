@@ -147,65 +147,208 @@
 
     <div style="height: 100px;"></div>
 
-                  <!-- Modal -->
-                  <div class="w3-container">
-
-                    <div id="id01" class="w3-modal">
-                     <div class="w3-modal-content w3-card-4 w3-animate-zoom">
-                      <header class="w3-container w3-blue"> 
-                       <span onclick="document.getElementById('id01').style.display='none'" 
-                       class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
-                       <h2>Grammar Review</h2>
-                      </header>
-                    
-                      <div class="w3-bar w3-border-bottom">
-                       <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Oxford')">Affirmative</button>
-                       <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'book')">Negative</button>
-                       <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'author')">Question</button>
-                      </div>
-                    
-                      <div id="Oxford" class="w3-container city">
-                       <h1>present simple
-                        with 'be'</h1>
-                       <p>
-                        subject + am / is / are <br>
-                        I am hungry. <br>
-                        She is in a cafe. <br>
-                        You are a student. <br>
-                        </p>
-                      </div>
-                    
-                      <div id="book" class="w3-container city">
-                        <h1>present simple
-                            with 'be'</h1>
-                           <p>
-                            subject + am / is / are + <span style="color:red; font-weight:bold;">not</span> <br>
-                            I'm not hungry. <br>
-                            She isn't in a cafe. <br>
-                            You aren't a student. <br>
-                            </p>
-                      </div>
-          
-                      <div id="author" class="w3-container city">
-                        <h1>present simple
-                            with 'be'</h1>
-                        <p>(question word +) am / is / are +
-                            subject…? <br>
-                            Is he at home? <br>
-                            Why are you hungry? <br>
-                            Where is she from? <br>
-                         </p><br>
-                       </div>
+              <!-- Modal -->
+              <div class="w3-container">
+                <!--modal header-->
+                  <div id="id01" class="w3-modal">
+                   <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+                    <header class="w3-container w3-blue"> 
+                     <span onclick="document.getElementById('id01').style.display='none'" 
+                     class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
+                     <h2>Present Simple - To be</h2>
+                    </header>
+                  <!--modal tabs-->
+                    <div class="w3-bar w3-border-bottom">
+                     <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Affirmative')">Affirmative</button>
+                     <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Negative')">Negative</button>
+                     <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Question')">Question</button>
+                    </div>
+                  <!-- Affirmative Tab -->
+                    <div id="Affirmative" class="w3-container city" style="text-align: center;">
                       
-                    
-                      <div class="w3-container w3-light-grey w3-padding">
-                       <button class="w3-button w3-right w3-white w3-border" 
-                       onclick="document.getElementById('id01').style.display='none'">Close</button>
+  <div class="clearfix">
+    <div class="col-md-6 float-md-end mb-3 ms-md-1" style="display:inline-block">
+      <table class="table table-bordered table-striped">
+        <tbody>
+          <tr>
+            <td><strong>Affirmative</strong></td>
+            <td><strong>Contracted form</strong> </td>
+          </tr>
+          <tr>
+            <td>I am</td>
+            <td>I'm</td>
+    
+          </tr>
+          <tr>
+            <td>you are</td>
+            <td>you're</td>
+          </tr>
+  
+          <tr>
+            <td>he is</td>
+            <td>he's</td>
+          </tr>
+  
+          <tr>
+            <td>she is</td>
+            <td>she's</td>
+          </tr>
+  
+          <tr>
+            <td>it is</td>
+            <td>it's</td>
+  
+          </tr>
+  
+          <tr>
+            <td>we are</td>
+            <td>we're</td>
+          </tr> 
+  
+          <tr>
+            <td>they are</td>
+            <td>they're</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+      <div style=" width: fit-content; border: solid; padding: 5px; text-align: center;">
+        <p>
+          Subject + am / is / are </p>
+      </div>
+        <p><em>I am hungry.</em></p>
+        <p><em>She is in a cafe.</em></p>
+        <p><em>You are a student.</em></p>   
+  </div>
+  
+                    </div>
+                  <!-- Negative Tab -->
+                    <div id="Negative" class="w3-container city" style="text-align: center;">
+                      <div class="clearfix">
+                        <div class="col-md-6 float-md-end mb-3 ms-md-1" style="display:inline-block">
+                          <table class="table table-bordered table-striped">
+                            <tbody>
+                              <tr>
+                                    <td><strong>Negative</strong></td>
+                                    <td><strong>Contracted form</strong> </td>
+                                  </tr>
+                                  <tr>
+                                    <td>I am not</td>
+                                    <td>I'm not</td>
+                            
+                                  </tr>
+                                  <tr>
+                                    <td>you are not</td>
+                                    <td>you aren't</td>
+                                  </tr>
+                          
+                                  <tr>
+                                    <td>he is not</td>
+                                    <td>he isn't</td>
+                                  </tr>
+                          
+                                  <tr>
+                                    <td>she is not</td>
+                                    <td>she isn't</td>
+                                  </tr>
+                          
+                                  <tr>
+                                    <td>it is not</td>
+                                    <td>it isn't</td>
+                          
+                                  </tr>
+                          
+                                  <tr>
+                                    <td>we are not</td>
+                                    <td>we aren't</td>
+                                  </tr> 
+                          
+                                  <tr>
+                                    <td>they are not</td>
+                                    <td>they aren't</td>
+                                  </tr>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                          <div style=" width: fit-content; border: solid; padding: 5px; text-align: center;">
+                            <p>
+                                Subject + am / is / are + <span style="color:red">not</span> </p>
+                          </div>
+                              <p><em>I'm not hungry.</em></p>
+                              <p><em>She isn't in a cafe.</em></p>
+                              <p><em>You aren't a student.</em></p>   
                       </div>
+                    </div>
+                  <!-- Question Tab -->
+                    <div id="Question" class="w3-container city" style="text-align: center;">
+                      <div class="clearfix">
+                        <div class="col-md-6 float-md-end mb-3 ms-md-1" style="display:inline-block">
+                          <table class="table table-bordered table-striped">
+                            <tbody>
+                              <tr>
+                                          <td><strong>Question words</strong></td>
+                                          <td><strong>Yes/No question</strong> </td>
+                                        </tr>
+                                        <tr>
+                                          <td>Where</td>
+                                          <td>Am I?</td>
+                                  
+                                        </tr>
+                                        <tr>
+                                          <td>What</td>
+                                          <td>Are you?</td>
+                                        </tr>
+                                
+                                        <tr>
+                                          <td>Why</td>
+                                          <td>Is he?</td>
+                                        </tr>
+                                
+                                        <tr>
+                                          <td>Who</td>
+                                          <td>Is she?</td>
+                                        </tr>
+                                
+                                        <tr>
+                                          <td>When</td>
+                                          <td>Is it?</td>
+                                
+                                        </tr>
+                                
+                                        <tr>
+                                          <td>How</td>
+                                          <td>Are we?</td>
+                                        </tr> 
+                                
+                                        <tr>
+                                          <td>How old</td>
+                                          <td>Are they?</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                    <div style=" width: fit-content; border: solid; padding: 5px; text-align: center;">
+                                      <p>
+                                        <span style="color: red;">WH</span> + am / is / are + Subject?
+                                      </p>
+                                    </div>
+                                      <p><em>Am I hungry?</em></p>
+                                      <p><em>Is she in a cafe?</em></p>
+                                      <p><em>Are you a student?</em></p>   
+                                </div>
                      </div>
+                  <!-- botton Modal -->
+                    <div class="w3-container w3-light-grey w3-padding">
+                    <!--botton close button-->
+                     <button class="w3-button w3-right w3-white w3-border" 
+                     onclick="document.getElementById('id01').style.display='none'">Close</button>
                     </div>
-                    
-                    </div>
+                   </div>
+                  </div>
+                  
+                  </div>
+
                 <!-- modal JS-->
                     <script>
                     document.getElementsByClassName("tablink")[0].click();

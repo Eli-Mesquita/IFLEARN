@@ -1,79 +1,93 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IFlearn</title>
-    
-    <link rel="stylesheet" href="style.css">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Video gallery</title> 
 
-    <!-- navbar Bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <!-- navbar Bootstrap js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>>
+<style>
+    .bs-example{
+    	margin: auto;
+    }
+    .modal-dialog iframe{
+        margin: auto;
+        display: block;
+    }
+</style>
     <style>
-        .exerciseButton {
-            background-color: rgb(25, 135, 84);
-            border-radius: 5px;
-            font-size: 15px;
-            padding: 5px 10px;
-            color: white;
-            font-weight: bold;
-            margin-right: 5px;
-            margin-bottom: 5px;
-            border: none;
-            margin-left: 5%;
-            transition: all 0.3s ease-in-out;
-            width: 90%;
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
         }
+      }
 
-        .exerciseButton:hover {
-            background-color: #2ecc71;
-            cursor: pointer;
-        }
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
 
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
 
-        #exercise {
-          margin-top: 10px;
-          margin-bottom: 10px;
-          width: 100%;
-        }
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+    </style>
 
-        tbody {
-          display: block;
-          width: 100%;
-          
-        }
-        
-        
-        #more {
-          display: none;
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+    </script>
 
-        }
-        .city {
-          display:none
+ <!-- modal js -->
+<script>
+  $(document).ready(function(e) {
+     $('#myModal').modal({
+         backdrop: 'static',
+         keyboard: false,
+         show: false,
+     });
+     $(document).on("click", ".modalButton", function() {
+         var ClickedButton = $(this).data("name");
+         $(".modal-body").html('<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/'+ClickedButton+'" allowfullscreen></iframe></div>');
+         $('#myModal').modal('show');
+     });
+ 
+     $('#myModal').on('hidden.bs.modal', function (e) {
+         $('#myModal iframe').attr("src", $("#myModal iframe").attr("src"));
+     });
+ 
+     $('.modal').click(function(e) {
+         if( e.target == this ) {
+             $(this).modal('hide');
+         }
+     });
+ 
+ });
+ 
+ </script>
 
-        }
-
-        .tablink:hover {
-          background-color: #555;
-        }
-
-      
-      </style>
-
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
-</head>
-<body>
+  </head>
+  <body>
     
-  <!-- NAVBAR -->
+<!--navbar-->
   <nav class="navbar navbar-dark text-bg-success fixed-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="Index.html"><img src="images/Logo IFCE - white.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-top"></a>
@@ -141,406 +155,260 @@
     </div>
 </nav>
 
-
-
-    <div style="height: 100px;"></div>
-
-              <!-- Modal -->
-              <div class="w3-container">
-
-                <div id="id01" class="w3-modal">
-                 <div class="w3-modal-content w3-card-4 w3-animate-zoom">
-                  <header class="w3-container w3-blue"> 
-                   <span onclick="document.getElementById('id01').style.display='none'" 
-                   class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
-                   <h2>Grammar Review</h2>
-                  </header>
-                
-                  <div class="w3-bar w3-border-bottom">
-                   <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Oxford')">Affirmative</button>
-                   <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'book')">Negative</button>
-                   <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'author')">Question</button>
-                  </div>
-                
-                  <div id="Oxford" class="w3-container city">
-                   <h1>present simple
-                    with 'be'</h1>
-                   <p>
-                    subject + am / is / are <br>
-                    I am hungry. <br>
-                    She is in a cafe. <br>
-                    You are a student. <br>
-                    </p>
-                  </div>
-                
-                  <div id="book" class="w3-container city">
-                    <h1>present simple
-                        with 'be'</h1>
-                       <p>
-                        subject + am / is / are + <span style="color:red; font-weight:bold;">not</span> <br>
-                        I'm not hungry. <br>
-                        She isn't in a cafe. <br>
-                        You aren't a student. <br>
-                        </p>
-                  </div>
-      
-                  <div id="author" class="w3-container city">
-                    <h1>present simple
-                        with 'be'</h1>
-                    <p>(question word +) am / is / are +
-                        subject…? <br>
-                        Is he at home? <br>
-                        Why are you hungry? <br>
-                        Where is she from? <br>
-                     </p><br>
-                   </div>
-                  
-                
-                  <div class="w3-container w3-light-grey w3-padding">
-                   <button class="w3-button w3-right w3-white w3-border" 
-                   onclick="document.getElementById('id01').style.display='none'">Close</button>
-                  </div>
-                 </div>
-                </div>
-                
-                </div>
-        <!-- modal JS-->
-                <script>
-                document.getElementsByClassName("tablink")[0].click();
-        
-                function openCity(evt, cityName) {
-                  var i, x, tablinks;
-                  x = document.getElementsByClassName("city");
-                  for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";
-                  }
-                  tablinks = document.getElementsByClassName("tablink");
-                  for (i = 0; i < x.length; i++) {
-                    tablinks[i].classList.remove("w3-light-grey");
-                  }
-                  document.getElementById(cityName).style.display = "block";
-                  evt.currentTarget.classList.add("w3-light-grey");
-                }
-                
-                </script>
-
-
-      
-    <div style="border: 1px solid #ced4da; border-radius: 5px; box-shadow: 2px 2px 5px #999; padding: 10px;">
-            <h1 style="text-align: center;">PRESENT SIMPLE</h1>
-            
-            <!--review btn-->
-            <div style="text-align: center;">
-                <a href="#" data-toggle="tooltip" title="Info"  data-placement="auto">
-                    <button class="btn btn-primary btn-md px-4" onclick="document.getElementById('id01').style.display='block'">Grammar Review</button></a>
-            </div>
-
-            <section id="main-content">
-                <div id="exercise"></div>
-            </section>
-            <!--exercise-->
-            <script id="sourceData" type="application/json">
-                {
-                    "title": "'Be' Questions and Negatives",
-                    "description": "write the correct form of 'am/are/is'",
-                    "questions": [{
-                        "isQuestion": false,
-                        "isTwoPart": false,
-                        "parts": [{
-                            "type": "text",
-                            "value": "I"
-                        }, {
-                            "type": "input",
-                            "answer": "'m not",
-                            "answerList": ["'m not", "am not"],
-                            "verb": "                        "
-                        }, {
-                            "type": "text",
-                            "value": "(not/be) cold."
-                        }]
-                    }, {
-                        "isQuestion": false,
-                        "isTwoPart": false,
-                        "parts": [{
-                            "type": "text",
-                            "value": "She"
-                        }, {
-                            "type": "input",
-                            "answer": "isn't",
-                            "answerList": ["isn't", "is not"],
-                            "verb": "                        "
-                        }, {
-                            "type": "text",
-                            "value": "(not/be) French."
-                        }]
-                    }, {
-                        "isQuestion": false,
-                        "isTwoPart": false,
-                        "parts": [{
-                            "type": "text",
-                            "value": "You"
-                        }, {
-                            "type": "input",
-                            "answer": "aren't",
-                            "answerList": ["aren't", "are not"],
-                            "verb": "                        "
-                        }, {
-                            "type": "text",
-                            "value": "(not/be) an accountant."
-                        }]
-                    }, {
-                        "isQuestion": false,
-                        "isTwoPart": false,
-                        "parts": [{
-                            "type": "text",
-                            "value": "John"
-                        }, {
-                            "type": "input",
-                            "answer": "isn't",
-                            "answerList": ["isn't", "is not"],
-                            "verb": "                        "
-                        }, {
-                            "type": "text",
-                            "value": "(not/be) my brother."
-                        }]
-                    }, {
-                        "isQuestion": false,
-                        "isTwoPart": false,
-                        "parts": [{
-                            "type": "text",
-                            "value": "They"
-                        }, {
-                            "type": "input",
-                            "answer": "aren't",
-                            "answerList": ["aren't", "are not"],
-                            "verb": "                        "
-                        }, {
-                            "type": "text",
-                            "value": "(not/be) from Berlin."
-                        }]
-                    }, {
-                        "isQuestion": false,
-                        "isTwoPart": false,
-                        "parts": [{
-                            "type": "text",
-                            "value": "We"
-                        }, {
-                            "type": "input",
-                            "answer": "aren't",
-                            "answerList": ["aren't", "are not"],
-                            "verb": "                        "
-                        }, {
-                            "type": "text",
-                            "value": "(not/be) late."
-                        }]
-                    }, {
-                        "isQuestion": false,
-                        "isTwoPart": false,
-                        "parts": [{
-                            "type": "text",
-                            "value": "It"
-                        }, {
-                            "type": "input",
-                            "answer": "isn't",
-                            "answerList": ["isn't", "is not"],
-                            "verb": "                        "
-                        }, {
-                            "type": "text",
-                            "value": "(not/be) warm outside."
-                        }]
-                    }, {
-                        "isQuestion": false,
-                        "isTwoPart": false,
-                        "parts": [{
-                            "type": "text",
-                            "value": "I"
-                        }, {
-                            "type": "input",
-                            "answer": "'m not",
-                            "answerList": ["'m not", "am not"],
-                            "verb": "                        "
-                        }, {
-                            "type": "text",
-                            "value": "(not/be) hungry."
-                        }]
-                    }, {
-                        "isQuestion": false,
-                        "isTwoPart": false,
-                        "parts": [{
-                            "type": "text",
-                            "value": "Ian and Jill"
-                        }, {
-                            "type": "input",
-                            "answer": "aren't",
-                            "answerList": ["aren't", "are not"],
-                            "verb": "                        "
-                        }, {
-                            "type": "text",
-                            "value": "(not/be) on the bus."
-                        }]
-                    }, {
-                        "isQuestion": false,
-                        "isTwoPart": false,
-                        "parts": [{
-                            "type": "text",
-                            "value": "She"
-                        }, {
-                            "type": "input",
-                            "answer": "isn't",
-                            "answerList": ["isn't", "is not"],
-                            "verb": "                        "
-                        }, {
-                            "type": "text",
-                            "value": "(not/be) Spanish."
-                        }]
-                    }, {
-                        "isQuestion": false,
-                        "isTwoPart": true,
-                        "parts": [{
-                            "type": "text",
-                            "value": "They / hungry?"
-                        }, {
-                            "type": "input",
-                            "answer": "Are they hungry?",
-                            "answerList": ["Are they hungry?"],
-                            "verb": "                                                                           "
-                        }]
-                    }, {
-                        "isQuestion": false,
-                        "isTwoPart": true,
-                        "parts": [{
-                            "type": "text",
-                            "value": "We / late?"
-                        }, {
-                            "type": "input",
-                            "answer": "Are we late?",
-                            "answerList": ["Are we late?"],
-                            "verb": "                                                                           "
-                        }]
-                    }, {
-                        "isQuestion": false,
-                        "isTwoPart": true,
-                        "parts": [{
-                            "type": "text",
-                            "value": "You / tired?"
-                        }, {
-                            "type": "input",
-                            "answer": "Are you tired?",
-                            "answerList": ["Are you tired?"],
-                            "verb": "                                                                           "
-                        }]
-                    }, {
-                        "isQuestion": false,
-                        "isTwoPart": true,
-                        "parts": [{
-                            "type": "text",
-                            "value": "He / French??"
-                        }, {
-                            "type": "input",
-                            "answer": "Is he French?",
-                            "answerList": ["Is he French?"],
-                            "verb": "                                                                           "
-                        }]
-                    }, {
-                        "isQuestion": false,
-                        "isTwoPart": true,
-                        "parts": [{
-                            "type": "text",
-                            "value": "She / a teacher?"
-                        }, {
-                            "type": "input",
-                            "answer": "Is she a teacher?",
-                            "answerList": ["Is she a teacher?"],
-                            "verb": "                                                                           "
-                        }]
-                    }, {
-                        "isQuestion": false,
-                        "isTwoPart": true,
-                        "parts": [{
-                            "type": "text",
-                            "value": "Harry and Lucy / from London?"
-                        }, {
-                            "type": "input",
-                            "answer": "Are Harry and Lucy from London?",
-                            "answerList": ["Are Harry and Lucy from London?"],
-                            "verb": "                                                                           "
-                        }]
-                    }, {
-                        "isQuestion": false,
-                        "isTwoPart": true,
-                        "parts": [{
-                            "type": "text",
-                            "value": "I / early?"
-                        }, {
-                            "type": "input",
-                            "answer": "Am I early?",
-                            "answerList": ["Am I early?"],
-                            "verb": "                                                                           "
-                        }]
-                    }, {
-                        "isQuestion": false,
-                        "isTwoPart": true,
-                        "parts": [{
-                            "type": "text",
-                            "value": "You / thirsty?"
-                        }, {
-                            "type": "input",
-                            "answer": "Are you thirsty?",
-                            "answerList": ["Are you thirsty?"],
-                            "verb": "                                                                           "
-                        }]
-                    }, {
-                        "isQuestion": false,
-                        "isTwoPart": true,
-                        "parts": [{
-                            "type": "text",
-                            "value": "She / on the bus?"
-                        }, {
-                            "type": "input",
-                            "answer": "Is she on the bus?",
-                            "answerList": ["Is she on the bus?"],
-                            "verb": "                                                                           "
-                        }]
-                    }, {
-                        "isQuestion": false,
-                        "isTwoPart": true,
-                        "parts": [{
-                            "type": "text",
-                            "value": "We / on time?"
-                        }, {
-                            "type": "input",
-                            "answer": "Are we on time?",
-                            "answerList": ["Are we on time??"],
-                            "verb": "                                                                           "
-                        }]
-                    }]
-                }
-            </script>
-            <!--Exercise JS-->
-            <script>
-                var json = document.getElementById('sourceData').innerHTML;
-                console.log(json);
-                window.initialData = JSON.parse(json);
-            </script>
-            <!--Exercise Js link-->
-            <script src="https://www.perfect-english-grammar.com/support-files/bundle.js.pagespeed.jm.pc9JhvPNqA.js"></script>
-        
-            </div>
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center" style="margin: 5%;">
-              <a onclick="history.back()">
-              <button type="button" class="btn btn-outline-danger btn-lg px-4 gap-3">Voltar</button></a>
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+     <div class="modal-content">
+        <div class="modal-header">
+           <h4 class="modal-title">Beginner videos</h4>
+           <button type="button" class="btn-close btn btn-danger" data-bs-dismiss="modal" aria-label="close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="embed-responsive embed-responsive-16by9">
+           <!--Aula 01-->
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/CYuXZcP39YU" allowfullscreen></iframe>
+            <!--Aula 02-->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xpMpatEGU0k?si=dO--e4JR4krvqzGR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+           <!--Aula 03-->
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/-5H-Lfp6n2c?si=Gw1XrpIYUMtNDAVV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
-
-        <div style="height: 100px;"></div>
-<!--Footer-->
-<div class="footer fixed-bottom"> 
-  <a href="https://ifce.edu.br/" target="_blank" rel="external" ><img width="130" src="images/Logo IFCE (2).png" alt="logo IFCE"></a>
-  
-<!--Google translator-->
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-  <a href="https://ifce.edu.br/fortaleza/profept" target="_blank" rel="external"><img width="130" src="images/profept logo.png" alt=""></a>
+        </div>
+     </div>
+  </div>
 </div>
-</body>
 
+
+<main>
+
+  <div class="album py-5">
+    <div class="container">
+
+      <!--intro-->
+      <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">Beginner</h1>
+            <p class="lead text-muted">Nesse espaço você poderá assistir à videoaulas do nível básico para te ajudar a revisar os conceitos que você viu em sala de aula. Escolha uma das aulas e depois faça um pequeno quiz para verificar a sua aprendizagem. </p>
+            <p>
+               <!--buttons-->
+              <a href="galery.html" class="btn btn-outline-danger btn-lg my-2">Voltar</a>
+              <a href="ex001.html" class="btn btn-outline-success btn-lg my-2">Atividades</a>
+            </p>
+          </div>
+        </div>
+      </section>
+ <!--gallery-->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" style="padding-top: 2%;">
+        <div class="col">
+          <div class="card shadow-sm">
+             <!--image -->
+            <a class="modalButton" data-name="CYuXZcP39YU" data-toggle="modal"><img src="images/video_begin_001.png" alt="" class="bd-placeholder-img card-img-top" width="100%" ></a>
+
+            <div class="card-body">
+              <h5 class="card-text">Hello, Everybody!</h5>
+              <p class="card-text">Present Simple - To be / affirmative sentences / Contractions / personal pronouns </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="bs-example">
+                  
+                  <!--button group-->
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                  <!-- Button HTML (to Trigger Modal) -->
+                  <button type="button" class="btn btn-danger btn-lg modalButton" data-name="CYuXZcP39YU" data-toggle="modal">Watch</button>
+
+                  <!-- quiz button -->
+                  <a href="quiz001.html" class="btn btn-success btn-lg">Quiz</a>
+
+                  <!-- exercise button -->
+                  <a href="atv001.html" class="btn btn-primary btn-lg">Exercise</a>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+ <!--card 2-->
+<div class="col">
+          <div class="card shadow-sm">
+             <!--image-->
+            <a class="modalButton" data-name="xpMpatEGU0k?" data-toggle="modal"><img src="images/video_begin_002.png" alt="" class="bd-placeholder-img card-img-top" width="100%" ></a>
+            
+
+            <div class="card-body">
+              <h5 class="card-text">Meeting people</h5>
+              <p class="card-text">Present Simple - To be / questions and negatives / short answers / possesion 
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="bs-example">
+                     <!--button group-->
+                     <div class="btn-group" role="group" aria-label="Basic example">
+                      <!-- Button HTML (to Trigger Modal) -->
+                      <button type="button" class="btn btn-danger btn-lg modalButton" data-name="xpMpatEGU0k?si=dO--e4JR4krvqzGR" data-toggle="modal">Watch</button>
+    
+                      <!-- quiz button -->
+                      <a href="quiz001.html" class="btn btn-success btn-lg">Quiz</a>
+    
+                      <!-- exercise button -->
+                      <a href="atv002b.html" class="btn btn-primary btn-lg">Exercise</a>
+                      </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+              <!--image-->
+            <a class="modalButton" data-name="-5H-Lfp6n2c?si=Gw1XrpIYUMtNDAVV"data-toggle="modal"><img src="images/video_begin_003.png" alt="" class="bd-placeholder-img card-img-top" width="100%" ></a>
+              <!--class info-->
+            <div class="card-body">
+              <h5 class="card-text">The world of work</h5>
+              <p class="card-text">Present Simple I — He/she/it — Questions and negatives
+                <br>
+                <br>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="bs-example">
+                     <!--button group-->
+                     <div class="btn-group" role="group" aria-label="Basic example">
+                      <!-- Button HTML (to Trigger Modal) -->
+                      <button type="button" class="btn btn-danger btn-lg modalButton" data-name="-5H-Lfp6n2c?si=Gw1XrpIYUMtNDAVV" data-toggle="modal" >Watch</button>
+    
+                      <!-- quiz button -->
+                      <a href="quiz001.html" class="btn btn-success btn-lg">Quiz</a>
+    
+                      <!-- exercise button -->
+                      <a href="atv003.html" class="btn btn-primary btn-lg">Exercise</a>
+                      </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+              <!--image-->
+            <a href="galery_begin.html"><img src="images/video_begin_004.png" alt="" class="bd-placeholder-img card-img-top" width="100%" ></a>
+            <!--class info-->
+            <div class="card-body">
+              <h5 class="card-text">Take it easy!</h5>
+              <p class="card-text">Present Simple 2 — I/you/we/they / Questions and negatives
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="bs-example">
+           <!--button group-->
+           <div class="btn-group" role="group" aria-label="Basic example">
+            <!-- Button HTML (to Trigger Modal) -->
+            <a href="#myModal" class="btn btn-danger" data-toggle="modal">Watch</a>
+
+            <!-- quiz button -->
+            <a href="quiz001.html" class="btn btn-success btn-lg">Quiz</a>
+
+            <!-- exercise button -->
+            <a href="atv003.html" class="btn btn-primary btn-lg">Exercise</a>
+            </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+              <!--image-->
+            <a href="galery_begin.html"><img src="images/video_begin_005.png" alt="" class="bd-placeholder-img card-img-top" width="100%" ></a>
+              <!--class info-->
+            <div class="card-body">
+              <h5 class="card-text">Where do you live?</h5>
+              <p class="card-text">There is/are— Prepositions — Some/any— This/that/these/those
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="bs-example">
+      <!--button group-->
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <!-- Button HTML (to Trigger Modal) -->
+        <a href="#myModal" class="btn btn-danger" data-toggle="modal">Watch</a>
+
+        <!-- quiz button -->
+        <a href="quiz001.html" class="btn btn-success btn-lg">Quiz</a>
+
+        <!-- exercise button -->
+        <a href="atv003.html" class="btn btn-primary btn-lg">Exercise</a>
+        </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+              <!--image--> 
+            <a href="galery_begin.html"><img src="images/video_begin_006.png" alt="" class="bd-placeholder-img card-img-top" width="100%" ></a>
+            <!--class info-->
+            <div class="card-body">
+              <h5 class="card-text">Can you speak English?</h5>
+              <p class="card-text"> Past tense - can/can't / could / couldn't / was/were / wasn't / weren't
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="bs-example">
+        <!--button group-->
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <!-- Button HTML (to Trigger Modal) -->
+          <a href="#myModal" class="btn btn-danger" data-toggle="modal">Watch</a>
+
+          <!-- quiz button -->
+          <a href="quiz001.html" class="btn btn-success btn-lg">Quiz</a>
+
+          <!-- exercise button -->
+          <a href="atv003.html" class="btn btn-primary btn-lg">Exercise</a>
+          </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</main>
+
+
+
+
+  </body>
 </html>
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+     <div class="modal-content">
+        <div class="modal-header">
+           <h4 class="modal-title"> Beginner</h4>
+           <button type="button" class="btn-close" data-dismiss="modal" aria-label="close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="embed-responsive embed-responsive-16by9">
+           <!--Aula 01-->
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/CYuXZcP39YU" allowfullscreen></iframe>
+            <!--Aula 02-->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xpMpatEGU0k?si=dO--e4JR4krvqzGR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+           <!--Aula 03-->
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/-5H-Lfp6n2c?si=Gw1XrpIYUMtNDAVV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+     </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    // Close modal on esc key
+    $(document).on('keydown', function(event) {
+      if (event.keyCode === 27) {
+        $('#myModal').modal('hide');
+      }
+    });
+
+    // Close modal on close button of modal body
+    $('#myModal .modal-body button.close').on('click', function() {
+      $('#myModal').modal('hide');
+    });
+  });
+</script>
