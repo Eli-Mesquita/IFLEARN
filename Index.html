@@ -130,12 +130,14 @@
   <!-- Define the buttons that will  
   change the language of the page  
   and reload it -->
-  <div style="padding-bottom: 20px;" >
-    <button class="btn btn-sm btn-outline-dark" onclick="changeLanguage('eng')">
-      Português</button>
-    <button class="btn btn-sm btn-outline-dark" onclick="changeLanguage('es')">
-      English
+  <div class="dropdown py-3">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      Language
     </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><a class="dropdown-item" style="font-weight: bold; color: green;" onclick="changeLanguage('eng')">Portuguese</a></li>
+      <li><a class="dropdown-item" style="font-weight: bold; color: red;" onclick="changeLanguage('es')">English</a></li>
+    </ul>
   </div>
 
   

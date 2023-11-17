@@ -21,7 +21,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-</head>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.14.0/css/flag-icons.min.css"/>
+
+  </head>
 
 <body>
     
@@ -106,26 +109,14 @@
         <div class="container-fluid">
           <div class="px-4 py-5 my-1 text-center">
             <!-- text -->
-            <div class="col-lg-6 mx-auto">
-              <!-- Define the buttons that will  
-              change the language of the page  
-              and reload it -->
-              <div class="dropdown py-3">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  Language
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" style="font-weight: bold; color: red;" onclick="changeLanguage('eng')">English</a></li>
-                  <li><a class="dropdown-item" style="font-weight: bold; color: green;" onclick="changeLanguage('es')">Portuguese</a></li>
-                </ul>
-              </div>
-              
-              <!-- Define the content of the page 
-              that would be changed -->
-              <p id="siteContent"> 
-                You turn to the right and the plane hits the trees. There is an explosion.
-              </p> 
-            
+            <div class="dropdown py-3">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Language
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" style="font-weight: bold; color: red;" onclick="changeLanguage('eng')">English  <span class="fi fi-us"></span></a> </li>
+                <li><a class="dropdown-item" style="font-weight: bold; color: green;" onclick="changeLanguage('es')">Portuguese <span class="fi fi-br"></span></a> </li>
+              </ul>
             </div>
               
             <!-- translation script  -->
