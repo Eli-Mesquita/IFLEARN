@@ -92,6 +92,9 @@
     </div>
 </nav>
 
+<!-- spacer -->
+<div style="height: 80px;"></div>
+
     <!-- CONTENT -->
     <h1 class="display-6" style="text-decoration: underline;padding-top: 8%;">Survive!</h1>  
     <hr>
@@ -100,12 +103,65 @@
         <audio src="audio/sur_aud_010.mov" class="px-1 py-1 my-1" controls></audio>
 
         <div class="container-fluid">
-        <div class="px-4 py-5 my-1 text-center">
+          <div class="px-4 py-5 my-1 text-center">
+            <!-- text -->
             <div class="col-lg-6 mx-auto">
-        <p> It is now afternoon. You begin to feel very ill. 
-            Perhaps the fruit is poisonous. You sit down in 
-            the snow. You cannot walk. You sit in the snow and get colder and colder.  
-        </p>
+              <!-- Define the buttons that will  
+              change the language of the page  
+              and reload it -->
+              <div class="dropdown py-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  Language
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" style="font-weight: bold; color: red;" onclick="changeLanguage('eng')">English</a></li>
+                  <li><a class="dropdown-item" style="font-weight: bold; color: green;" onclick="changeLanguage('es')">Portuguese</a></li>
+                </ul>
+              </div>
+              
+              <!-- Define the content of the page 
+              that would be changed -->
+              <p id="siteContent"> 
+                It is now afternoon. You begin to feel very ill. Perhaps the fruit is poisonous. You sit down in the snow. You cannot walk. You sit in the snow and get colder and colder.
+              </p> 
+            
+            </div>
+              
+            <!-- translation script  -->
+              <script> 
+                // Create a function to change 
+                // the hash value of the page 
+                function changeLanguage(lang) { 
+                  location.hash = lang; 
+                  location.reload(); 
+                } 
+              
+                // Define the language reload anchors 
+                var language = { 
+                  eng: { 
+                    welcome: "It is now afternoon. You begin to feel very ill. Perhaps the fruit is poisonous. You sit down in the snow. You cannot walk. You sit in the snow and get colder and colder." 
+                  }, 
+                  es: { 
+                    welcome: "Agora é de tarde. Você começa a se sentir muito mal. Talvez a fruta seja venenosa. Você se senta na neve. Você não consegue andar. Você senta na neve e fica com mais e mais frio."
+                  }
+                }; 
+              
+                // Check if a hash value exists in the URL 
+                if (window.location.hash) { 
+              
+                  // Set the content of the webpage  
+                  // depending on the hash value 
+                  if (window.location.hash == "#es") { 
+                    siteContent.textContent = 
+                      language.es.welcome; 
+                  } 
+                  else if (window.location.hash == "#hin") { 
+                    siteContent.textContent = 
+                      language.hin.welcome; 
+                  } 
+                } 
+              </script>
+
         <h2 id="choice">YOUR CHOICE</h2>
         
         <br>
@@ -114,19 +170,21 @@
             <a href="s001.html"><button type="button" class="btn btn-outline-primary btn-lg">Sorry... Try again </button></a>
             <br>
         </div>
+        <img  class="pic" src="images/Survive_img017.png" alt="">
     </div>
         
         <br>
 
-        <img  class="pic" src="images/Survive_img017.png" alt="">
+       
 
         <div class="bookbuttons" style="padding-bottom: 05%;">
             <a onclick="history.back()"><button class="button" style="vertical-align:middle"><span>página anterior</span></button></a>
 
             <a href="capa2.html"><button class="button" style="vertical-align:middle"><span>Voltar para capa</span></button></a></div>
     
+<!-- spacer -->
+<div style="height: 80px;"></div>
 
-    <br>
     <!-- FOOTER -->
           <div class="footer fixed-bottom" style="width: 100%;"> 
           <a href="https://ifce.edu.br/" target="_blank" rel="external" ><img width="130" src="images/Logo IFCE (2).png" alt="logo IFCE"></a>

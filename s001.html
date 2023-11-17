@@ -93,6 +93,9 @@
     </div>
 </nav>
 
+<!-- spacer -->
+<div style="height: 80px;"></div>
+
 <!--Content-->
 <h1 class="display-6" style="text-decoration: underline;padding-top: 8%;">Survive!</h1>
         <hr>
@@ -102,15 +105,62 @@
 
         <div class="container-fluid">
           <div class="px-4 py-5 my-1 text-center">
+            <!-- text -->
             <div class="col-lg-6 mx-auto">
-              <p>Your name is Chris, 
-                and you are in a small 
-                plane, going across the Rocky 
-                Mountains. Suddenly the engine 
-                starts to make strange noises and the 
-                plane begins to go down into one of the mountains. Your radio does not work, and nobody knows where you are. </p>
-                
-            </div>
+  <!-- Define the buttons that will  
+  change the language of the page  
+  and reload it -->
+  <div class="dropdown py-3">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      Language
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><a class="dropdown-item" style="font-weight: bold; color: red;" onclick="changeLanguage('eng')">English</a></li>
+      <li><a class="dropdown-item" style="font-weight: bold; color: green;" onclick="changeLanguage('es')">Portuguese</a></li>
+    </ul>
+  </div>
+  <!-- Define the content of the page 
+  that would be changed -->
+  <p id="siteContent"> 
+    Your name is Chris, and you are in a small plane, going across the Rocky Mountains. Suddenly the engine starts to make strange noises and the plane begins to go down into one of the mountains. Your radio does not work, and nobody knows where you are.
+  </p> 
+
+              </div>
+  
+            <!-- translation script  -->
+            <script> 
+    // Create a function to change 
+    // the hash value of the page 
+    function changeLanguage(lang) { 
+      location.hash = lang; 
+      location.reload(); 
+    } 
+  
+    // Define the language reload anchors 
+    var language = { 
+      eng: { 
+        welcome: "Your name is Chris, and you are in a small plane, going across the Rocky Mountains. Suddenly the engine starts to make strange noises and the plane begins to go down into one of the mountains. Your radio does not work, and nobody knows where you are." 
+      }, 
+      es: { 
+        welcome: "Seu nome é Chris, e você está em um pequeno avião, atravessando as Montanhas Rochosas. De repente, o motor começa a fazer barulhos estranhos e o avião começa a descer em uma das montanhas. Seu rádio não funciona e ninguém sabe onde você está." 
+      }
+    }; 
+  
+    // Check if a hash value exists in the URL 
+    if (window.location.hash) { 
+  
+      // Set the content of the webpage  
+      // depending on the hash value 
+      if (window.location.hash == "#es") { 
+        siteContent.textContent = 
+          language.es.welcome; 
+      } 
+      else if (window.location.hash == "#hin") { 
+        siteContent.textContent = 
+          language.hin.welcome; 
+      } 
+    } 
+              </script> 
     
         <h2 id="choice">YOUR CHOICE</h2>
 
@@ -122,8 +172,11 @@
         
         <img class="pic" src="images/Survive_img001.png" style="padding: 5%;" alt="">
 
-        <div class="bookbuttons" style="padding-bottom: 05%;"><a href="capa2.html"><button class="button" style="vertical-align:middle"><span>Voltar para capa</span></button></a></div>
+        <div class="bookbuttons"><a href="capa2.html"><button class="button" style="vertical-align:middle"><span>Voltar para capa</span></button></a></div>
       <br>
+      
+      <!-- spacer -->
+<div style="height: 25px;"></div>
 
 <!--Footer-->
         <div class="footer fixed-bottom"> 

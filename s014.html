@@ -21,6 +21,8 @@
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
 
@@ -92,6 +94,9 @@
     </div>
 </nav>
 
+<!-- spacer -->
+<div style="height: 80px;"></div>
+
     <!-- CONTENT -->
     <h1 class="display-6" style="text-decoration: underline;padding-top: 8%;">Survive!</h1>  
     <hr>
@@ -100,10 +105,64 @@
         <audio src="audio/sur_aud_014.mov" class="px-1 py-1 my-1" controls></audio>
 
         <div class="container-fluid">
-        <div class="px-4 py-5 my-1 text-center">
+          <div class="px-4 py-3 my-1 text-center">
+            <!-- text -->
             <div class="col-lg-6 mx-auto">
-        <p> There is ice over the river, but there are holes in 
-            it. You see that there are fish in the river. Perhaps you can catch a fish and eat it.</p>
+              <!-- Define the buttons that will  
+              change the language of the page  
+              and reload it -->
+              <div class="dropdown py-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  Language
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" style="font-weight: bold; color: red;" onclick="changeLanguage('eng')">English</a></li>
+                  <li><a class="dropdown-item" style="font-weight: bold; color: green;" onclick="changeLanguage('es')">Portuguese</a></li>
+                </ul>
+              </div>
+              <!-- Define the content of the page 
+              that would be changed -->
+              <p id="siteContent"> 
+                There is ice over the river, but there are holes in it. You see that there are fish in the river. Perhaps you can catch a fish and eat it.
+              </p> 
+            
+            </div>
+              
+            <!-- translation script  -->
+              <script> 
+                // Create a function to change 
+                // the hash value of the page 
+                function changeLanguage(lang) { 
+                  location.hash = lang; 
+                  location.reload(); 
+                } 
+              
+                // Define the language reload anchors 
+                var language = { 
+                  eng: { 
+                    welcome: "There is ice over the river, but there are holes in it. You see that there are fish in the river. Perhaps you can catch a fish and eat it." 
+                  }, 
+                  es: { 
+                    welcome: "Há gelo sobre o rio, mas há buracos nele. Você vê que há peixes no rio. Talvez você possa pegar um peixe e comê-lo."
+                  }
+                }; 
+              
+                // Check if a hash value exists in the URL 
+                if (window.location.hash) { 
+              
+                  // Set the content of the webpage  
+                  // depending on the hash value 
+                  if (window.location.hash == "#es") { 
+                    siteContent.textContent = 
+                      language.es.welcome; 
+                  } 
+                  else if (window.location.hash == "#hin") { 
+                    siteContent.textContent = 
+                      language.hin.welcome; 
+                  } 
+                } 
+              </script>
+
         <h2 id="choice">YOUR CHOICE</h2>
         
         <br>
@@ -114,11 +173,11 @@
             <br>
             <a href="s021.html"><button type="button" class="btn btn-outline-success btn-lg">Fishing in the river is dangerous. You walk on.  </button></a>
         </div>
+        <!-- image -->
+        <img  class="pic" src="images/Survive_img014.png" alt="">
     </div>
         
-        <br>
-
-        <img  class="pic" src="images/Survive_img014.png" alt="">
+      
 
         <div class="bookbuttons" style="padding-bottom: 05%;">
             <a onclick="history.back()"><button class="button" style="vertical-align:middle"><span>página anterior</span></button></a>
@@ -126,7 +185,9 @@
             <a href="capa2.html"><button class="button" style="vertical-align:middle"><span>Voltar para capa</span></button></a></div>
     
 
-    <br>
+<!-- spacer -->
+<div style="height: 80px;"></div>
+
     <!-- FOOTER -->
           <div class="footer fixed-bottom" style="width: 100%;"> 
           <a href="https://ifce.edu.br/" target="_blank" rel="external" ><img width="130" src="images/Logo IFCE (2).png" alt="logo IFCE"></a>

@@ -120,14 +120,68 @@
         </div>
     </nav>
     
-
-
     <div class="container-fluid">
       <div class="px-4 py-5 my-5 text-center">
         <img class="d-block mx-auto mt-5 mb-4" src="images/Logo IFCE learn.png" alt="" width="150" height="80">
         <h1 class="display-6 fw-bold">Welcome, everybody!</h1>
-        <div class="col-lg-6 mx-auto">
-          <p class="lead mb-4">Sejam muito bem vindos ao <strong class="text-danger">IFlearn</strong>! Este ambiente virtual de aprendizagem foi desenvolvido com o intuito de ajudar professores e alunos das mais diversas modalidades de cursos ofertados na rede de Institutos Federais a sistematizar e tornar mais eficientes e interativos os estudos em língua inglesa. Vamos aprender Inglês juntos, de qualquer lugar, através de livros interativos, videoaulas, atividades online e jogos para testar e ampliar o seu vocabulário.</p>
+        <div class="container-fluid">
+          <div class="px-4 py-3 my-1 text-center">
+            <div class="col-lg-6 mx-auto">
+  <!-- Define the buttons that will  
+  change the language of the page  
+  and reload it -->
+  <div style="padding-bottom: 20px;" >
+    <button class="btn btn-sm btn-outline-dark" onclick="changeLanguage('eng')">
+      Português</button>
+    <button class="btn btn-sm btn-outline-dark" onclick="changeLanguage('es')">
+      English
+    </button>
+  </div>
+
+  
+  <!-- Define the content of the page 
+  that would be changed -->
+  
+  <p class="lead mb-4" id="siteContent"> 
+    Sejam muito bem vindos ao <strong class="text-danger">IFlearn</strong>! Este ambiente virtual de aprendizagem foi desenvolvido com o intuito de ajudar professores e alunos das mais diversas modalidades de cursos ofertados na rede de Institutos Federais a sistematizar e tornar mais eficientes e interativos os estudos em língua inglesa. Vamos aprender Inglês juntos, de qualquer lugar, através de livros interativos, videoaulas, atividades online e jogos para testar e ampliar o seu vocabulário.
+  </p> 
+
+</div>
+  
+  
+  <script> 
+    // Create a function to change 
+    // the hash value of the page 
+    function changeLanguage(lang) { 
+      location.hash = lang; 
+      location.reload(); 
+    } 
+  
+    // Define the language reload anchors 
+    var language = { 
+      eng: { 
+        welcome: "Sejam muito bem vindos ao IFlearn! Este ambiente virtual de aprendizagem foi desenvolvido com o intuito de ajudar professores e alunos das mais diversas modalidades de cursos ofertados na rede de Institutos Federais a sistematizar e tornar mais eficientes e interativos os estudos em língua inglesa. Vamos aprender Inglês juntos, de qualquer lugar, através de livros interativos, videoaulas, atividades online e jogos para testar e ampliar o seu vocabulário." 
+      }, 
+      es: { 
+        welcome: "Welcome, everybody! This virtual learning environment was developed to help teachers and students from various courses offered in the Federal Institutes network to systematize and make language studies more efficient and interactive. Let's learn English together, from anywhere, through interactive books, video lessons, online activities, and games to test and expand your vocabulary." 
+      }
+    }; 
+  
+    // Check if a hash value exists in the URL 
+    if (window.location.hash) { 
+  
+      // Set the content of the webpage  
+      // depending on the hash value 
+      if (window.location.hash == "#es") { 
+        siteContent.textContent = 
+          language.es.welcome; 
+      } 
+      else if (window.location.hash == "#hin") { 
+        siteContent.textContent = 
+          language.hin.welcome; 
+      } 
+    } 
+  </script> 
           <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
             <a href="saiba_mais.html"><button type="button" class="btn btn-outline-success btn-lg px-4 gap-3 fw-bold">saiba mais</button></a>
           </div>

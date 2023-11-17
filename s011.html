@@ -93,6 +93,9 @@
     </div>
 </nav>
 
+<!-- spacer -->
+<div style="height: 80px;"></div>
+
 <!--Content-->
 <h1 class="display-6" style="text-decoration: underline;padding-top: 8%;">Survive!</h1>
         <hr>
@@ -102,9 +105,63 @@
 
         <div class="container-fluid">
           <div class="px-4 py-5 my-1 text-center">
+            <!-- text -->
             <div class="col-lg-6 mx-auto">
-              <p>You turn to the right and the plane hits the trees. There is an explosion. </p>  
+              <!-- Define the buttons that will  
+              change the language of the page  
+              and reload it -->
+              <div class="dropdown py-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  Language
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" style="font-weight: bold; color: red;" onclick="changeLanguage('eng')">English</a></li>
+                  <li><a class="dropdown-item" style="font-weight: bold; color: green;" onclick="changeLanguage('es')">Portuguese</a></li>
+                </ul>
+              </div>
+              
+              <!-- Define the content of the page 
+              that would be changed -->
+              <p id="siteContent"> 
+                You turn to the right and the plane hits the trees. There is an explosion.
+              </p> 
+            
             </div>
+              
+            <!-- translation script  -->
+              <script> 
+                // Create a function to change 
+                // the hash value of the page 
+                function changeLanguage(lang) { 
+                  location.hash = lang; 
+                  location.reload(); 
+                } 
+              
+                // Define the language reload anchors 
+                var language = { 
+                  eng: { 
+                    welcome: "You turn to the right and the plane hits the trees. There is an explosion." 
+                  }, 
+                  es: { 
+                    welcome: "Você vira para a direita e o avião bate nas árvores. Há uma explosão."
+                  }
+                }; 
+              
+                // Check if a hash value exists in the URL 
+                if (window.location.hash) { 
+              
+                  // Set the content of the webpage  
+                  // depending on the hash value 
+                  if (window.location.hash == "#es") { 
+                    siteContent.textContent = 
+                      language.es.welcome; 
+                  } 
+                  else if (window.location.hash == "#hin") { 
+                    siteContent.textContent = 
+                      language.hin.welcome; 
+                  } 
+                } 
+              </script>
     
         <h2 id="choice">YOUR CHOICE</h2>
 
@@ -117,7 +174,9 @@
         <img class="pic" src="images/Survive_img011.png" style="padding: 2%;" alt="">
 
         <div class="bookbuttons" style="padding-bottom: 05%;"><a href="capa2.html"><button class="button" style="vertical-align:middle"><span>Voltar para capa</span></button></a></div>
-      <br>
+
+        <!-- spacer -->
+<div style="height: 80px;"></div>
 
 <!--Footer-->
         <div class="footer fixed-bottom"> 
