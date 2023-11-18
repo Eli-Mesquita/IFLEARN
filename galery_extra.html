@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Video gallery</title> 
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>>
+<style>
+    .bs-example{
+    	margin: auto;
+    }
+    .modal-dialog iframe{
+        margin: auto;
+        display: block;
+    }
+</style>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+    </style>
+
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+    </script>
+
+ <!-- modal js -->
+<script>
+  $(document).ready(function(e) {
+     $('#myModal').modal({
+         backdrop: 'static',
+         keyboard: false,
+         show: false,
+     });
+     $(document).on("click", ".modalButton", function() {
+         var ClickedButton = $(this).data("name");
+         $(".modal-body").html('<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/'+ClickedButton+'" allowfullscreen></iframe></div>');
+         $('#myModal').modal('show');
+     });
+ 
+     $('#myModal').on('hidden.bs.modal', function (e) {
+         $('#myModal iframe').attr("src", $("#myModal iframe").attr("src"));
+     });
+ 
+     $('.modal').click(function(e) {
+         if( e.target == this ) {
+             $(this).modal('hide');
+         }
+     });
+ 
+ });
+ 
+ </script>
+
+  </head>
+  <body>
+    
+<!--navbar-->
+  <nav class="navbar navbar-dark text-bg-success fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="Index.html"><img src="images/Logo IFCE - white.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-top"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+            <a class="navbar-brand" href="Index.html"><img src="images/Logo IFCE - white.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-top"></a>
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Conteúdo
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="biblioteca.html">Biblioteca interativa</a></li>
+                <li><a class="dropdown-item" href="atv002.html">Videoaulas</a></li>
+                <li><a class="dropdown-item" href="ex001.html">Teste seu conhecimento</a></li>
+                <li><a class="dropdown-item" href="games.html">Amplie seu vocabulário</a></li>
+                <li><a class="dropdown-item" href="downloads.html">Materiais para baixar</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Ferramentas
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="https://www.oxfordlearnersdictionaries.com" target="_blank">Oxford Learner's Dictionary </a></li>
+                  <li><a class="dropdown-item" href="https://lyricstraining.com/" target="_blank">Lyrics Trainning</a></li>
+                  <li><a class="dropdown-item" href="https://writeandimprove.com/workbooks#/wi-workbooks/7485eb41-a047-4d23-ae25-5afb7387eba9" target="_blank">Write & Improve</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Questionário
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="Quest001.html">Professor</a></li>
+                  <li><a class="dropdown-item" href="Quest002.html">Aluno</a></li>
+                </ul>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contato.html">Sobre o Autor</a>
+              </li>
+              <li><hr></li>
+              <li><div id="google_translate_element"></div>
+    
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script></li>
+                <li><hr></li>
+          </ul>
+          <br>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success" type="submit">Pesquisar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+</nav>
+
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+     <div class="modal-content">
+        <div class="modal-header">
+           <h4 class="modal-title">Extr@</h4>
+           <button type="button" class="btn-close btn btn-danger" data-bs-dismiss="modal" aria-label="close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="embed-responsive embed-responsive-16by9">
+           <!--Aula 01-->
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/CYuXZcP39YU" allowfullscreen></iframe>
+            <!--Aula 02-->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xpMpatEGU0k?si=dO--e4JR4krvqzGR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+           <!--Aula 03-->
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/-5H-Lfp6n2c?si=Gw1XrpIYUMtNDAVV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+     </div>
+  </div>
+</div>
+
+
+<main>
+
+  <div class="album py-5">
+    <div class="container">
+
+      <!--intro-->
+      <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+          <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">English with TV</h1>
+            <p class="lead text-muted">Nesse espaço você poderá assistir à episódios de seriados de TV do nível básico para te ajudar a desenvolver suas habilidades de compreensão auditiva e interpretação de textos orais. Escolha um dos episódios e depois faça um pequeno quiz para verificar a sua aprendizagem. </p>
+            <p>
+               <!--buttons-->
+              <a onclick="history.back()" class="btn btn-outline-danger btn-lg my-2">Voltar</a>
+              <a href="ex001.html" class="btn btn-outline-success btn-lg my-2">Atividades</a>
+            </p>
+          </div>
+        </div>
+      </section>
+ <!--gallery-->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" style="padding-top: 2%;">
+        <div class="col">
+          <div class="card shadow-sm">
+             <!--image -->
+            <a class="modalButton" data-name="k89GF-i_Eyg?si=C76MIJUWuoTkTVSy" data-toggle="modal"><img src="images/video_extra_001.png" alt="" class="bd-placeholder-img card-img-top" width="100%" ></a>
+
+            <div class="card-body">
+              <h5 class="card-text">Extr@</h5>
+              <p class="card-text">Extra English episode 01 Hectors arrival (part 01)</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="bs-example">
+                  
+                  <!--button group-->
+                  <div class="btn-group" role="group" aria-label="Basic example">
+                  <!-- Button HTML (to Trigger Modal) -->
+                  <button type="button" class="btn btn-danger btn-sm modalButton" data-name="k89GF-i_Eyg?si=C76MIJUWuoTkTVSy" data-toggle="modal">Watch</button>
+
+                  <!-- quiz button -->
+                  <a href="quiz_extra_001.html" class="btn btn-success btn-sm">Quiz</a>
+
+                  <!-- exercise button -->
+                  <a href="atv_extra_001.html" class="btn btn-primary btn-sm">Exercise</a>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+ <!--card 2-->
+<div class="col">
+          <div class="card shadow-sm">
+             <!--image-->
+            <a class="modalButton" data-name="mGCpd2908Ys?si=2arm5Xfb9UuY3iT4" data-toggle="modal"><img src="images/video_extra_002.png" alt="" class="bd-placeholder-img card-img-top" width="100%" ></a>
+            
+
+            <div class="card-body">
+              <h5 class="card-text">Extr@</h5>
+              <p class="card-text">Extra English episode 01 Hectors arrival (part 02)
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="bs-example">
+                     <!--button group-->
+                     <div class="btn-group" role="group" aria-label="Basic example">
+                      <!-- Button HTML (to Trigger Modal) -->
+                      <button type="button" class="btn btn-danger btn-sm modalButton" data-name="mGCpd2908Ys?si=2arm5Xfb9UuY3iT4" data-toggle="modal">Watch</button>
+    
+                      <!-- quiz button -->
+                      <a href="quiz_extra_002.html" class="btn btn-success btn-sm">Quiz</a>
+    
+                      <!-- exercise button -->
+                      <a href="atv_extra_002.html" class="btn btn-primary btn-sm">Exercise</a>
+                      </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<!-- card 3 -->
+        <div class="col">
+          <div class="card shadow-sm">
+              <!--image-->
+            <a class="modalButton" data-name="S060IB-OvL4?si=u-g42aLlp9VohxpV"data-toggle="modal"><img src="images/video_extra_003.png" alt="" class="bd-placeholder-img card-img-top" width="100%" ></a>
+              <!--class info-->
+            <div class="card-body">
+              <h5 class="card-text">Extr@</h5>
+              <p class="card-text">Episode 02 Hector goes shopping (part 01)
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="bs-example">
+                     <!--button group-->
+                     <div class="btn-group" role="group" aria-label="Basic example">
+                      <!-- Button HTML (to Trigger Modal) -->
+                      <button type="button" class="btn btn-danger btn-sm modalButton" data-name="S060IB-OvL4?si=u-g42aLlp9VohxpV" data-toggle="modal" >Watch</button>
+    
+                      <!-- quiz button -->
+                      <a href="quiz_extra_003.html" class="btn btn-success btn-sm">Quiz</a>
+    
+                      <!-- exercise button -->
+                      <a href="atv003.html" class="btn btn-primary btn-sm">Exercise</a>
+                      </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<!-- card 4 -->
+        <div class="col">
+          <div class="card shadow-sm">
+              <!--image-->
+            <a class="modalButton" data-name="j3aT65UFBUs?si=HghRW8_BuAGxj0bT"data-toggle="modal"><img src="images/video_extra_004.png" alt="" class="bd-placeholder-img card-img-top" width="100%" ></a>
+            <!--class info-->
+            <div class="card-body">
+              <h5 class="card-text">Extr@</h5>
+              <p class="card-text">Episode 02 Hector goes shopping (part 02)
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="bs-example">
+           <!--button group-->
+           <div class="btn-group" role="group" aria-label="Basic example">
+            <!-- Button HTML (to Trigger Modal) -->
+              <!-- Button HTML (to Trigger Modal) -->
+              <button type="button" class="btn btn-danger btn-sm modalButton" data-name="j3aT65UFBUs?si=HghRW8_BuAGxj0bT" data-toggle="modal" >Watch</button>
+
+            <!-- quiz button -->
+            <a href="quiz_extra_004.html" class="btn btn-success btn-sm">Quiz</a>
+
+            <!-- exercise button -->
+            <a href="atv004.html" class="btn btn-primary btn-sm">Exercise</a>
+            </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<!-- card 5 -->
+        <div class="col">
+          <div class="card shadow-sm">
+              <!--image-->
+            <a class="modalButton" data-name="5IJ0Br-wABI?si=pFfuZUtqZ6Jlljus"data-toggle="modal"><img src="images/video_extra_005.png" alt="" class="bd-placeholder-img card-img-top" width="100%" ></a>
+              <!--class info-->
+            <div class="card-body">
+              <h5 class="card-text">Extr@</h5>
+              <p class="card-text">Extra English Episode 3 Hector has a date (part 1)
+                <br>
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="bs-example">
+      <!--button group-->
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <!-- Button HTML (to Trigger Modal) -->
+         <button type="button" class="btn btn-danger btn-sm modalButton" data-name="5IJ0Br-wABI?si=pFfuZUtqZ6Jlljus" data-toggle="modal" >Watch</button>
+
+        <!-- quiz button -->
+        <a href="quiz_extra_005.html" class="btn btn-success btn-sm">Quiz</a>
+
+        <!-- exercise button -->
+        <a href="atv005.html" class="btn btn-primary btn-sm">Exercise</a>
+        </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<!-- card 6 -->
+        <div class="col">
+          <div class="card shadow-sm">
+              <!--image--> 
+            <a class="modalButton" data-name="_KM6TiASSnk?si=y_DFVgvBVILVI2n2"data-toggle="modal"><img src="images/video_extra_006.png" alt="" class="bd-placeholder-img card-img-top" width="100%" ></a>
+            <!--class info-->
+            <div class="card-body">
+              <h5 class="card-text">Extr@</h5>
+              <p class="card-text">Extra English Episode 3 Hector has a date (part 2)
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="bs-example">
+        <!--button group-->
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <!-- Button HTML (to Trigger Modal) -->
+          <button type="button" class="btn btn-danger btn-sm modalButton" data-name="_KM6TiASSnk?si=y_DFVgvBVILVI2n2" data-toggle="modal" >Watch</button>
+
+          <!-- quiz button -->
+          <a href="quiz_extra_006.html" class="btn btn-success btn-sm">Quiz</a>
+
+          <!-- exercise button -->
+          <a href="atv006.html" class="btn btn-primary btn-sm">Exercise</a>
+          </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</main>
+
+
+
+
+  </body>
+</html>
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+     <div class="modal-content">
+        <div class="modal-header">
+           <h4 class="modal-title"> Beginner</h4>
+           <button type="button" class="btn-close" data-dismiss="modal" aria-label="close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="embed-responsive embed-responsive-16by9">
+           <!--Aula 01-->
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/k89GF-i_Eyg?si=C76MIJUWuoTkTVSy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <!--Aula 02-->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/mGCpd2908Ys?si=2arm5Xfb9UuY3iT4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+           <!--Aula 03-->
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/S060IB-OvL4?si=u-g42aLlp9VohxpV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+           <!--Aula 04-->
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/j3aT65UFBUs?si=HghRW8_BuAGxj0bT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <!-- Aula 05 -->
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/5IJ0Br-wABI?si=pFfuZUtqZ6Jlljus" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+           <!--Aula 06 -->
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/_KM6TiASSnk?si=y_DFVgvBVILVI2n2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+     </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    // Close modal on esc key
+    $(document).on('keydown', function(event) {
+      if (event.keyCode === 27) {
+        $('#myModal').modal('hide');
+      }
+    });
+
+    // Close modal on close button of modal body
+    $('#myModal .modal-body button.close').on('click', function() {
+      $('#myModal').modal('hide');
+    });
+  });
+</script>

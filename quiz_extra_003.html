@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFlearn - Quiz</title>
+    <link rel="stylesheet" href="style_quiz.css">
+</head>
+<body>
+
+    <div class="start-screen">
+        <h1>Extra - Episode 2 (part 1)</h1>
+        <br>
+        <button id="start-button">Start</button>
+    </div>
+    <div id="display-container">
+        <div class="header">
+            <div class="number-of-count">
+                <span class="number-of-question">1 of 3 questions</span>
+            </div>
+            <div class="timer-div">
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/time-and-date/stopwatch-icon.png"
+                    width="20px" />
+                <span class="time-left">60s</span>
+            </div>
+        </div>
+        <div id="container">
+            <!-- questions and options will be displayed here -->
+        </div>
+        <button id="next-button">Next</button>
+    </div>
+    <div class="score-container hide">
+        <div id="user-score">Demo Score</div>
+        <button id="restart">Restart</button>
+        <br>
+        <a onclick="history.back()"><button id="back">Return</button></a>
+    </div>
+       
+ 
+      
+    <script>
+        //References
+let timeLeft = document.querySelector(".time-left");
+let quizContainer = document.getElementById("container");
+let nextBtn = document.getElementById("next-button");
+let countOfQuestion = document.querySelector(".number-of-question");
+let displayContainer = document.getElementById("display-container");
+let scoreContainer = document.querySelector(".score-container");
+let restart = document.getElementById("restart");
+let userScore = document.getElementById("user-score");
+let startScreen = document.querySelector(".start-screen");
+let startButton = document.getElementById("start-button");
+let questionCount;
+let scoreCount = 0;
+let count = 11;
+let countdown;
+
+//Questions and Options array
+
+const quizArray = [
+    {
+        id: "0",
+        question: "Hector wants to buy some clothes for ___________.",
+        options: ["Nick.", "Annie", "Bridget", "himself"],
+        correct: "himself",
+    },
+    {
+        id: "1",
+        question: "Don't answer the phone, it might be ___________.",
+        options: ["The tarantula", "Charley", "Annie", "Hector"],
+        correct: "The tarantula",
+    },
+    {
+        id: "2",
+        question: "Who is going shopping _________?",
+        options: ["Nick.", "Annie", "Bridget", "all Hector's friends"],
+        correct: "all Hector's friends",
+    },
+    {
+        id: "3",
+        question: "Hector needs ____________.",
+        options: ["new clothes", "dog food", "a car", "a cat"],
+        correct: "new clothes",
+    },
+    {
+        id: "4",
+        question: "Annie and Bridget have ____________.",
+        options: ["a boyfriend", "a problem", "a cold", "a cat"],
+        correct: "a cold",
+    },
+    {
+        id: "5",
+        question: "Nick thinks that Hector should dress like __________.",
+        options: ["a businessman", "a cowboy", "a rich person", "a biker"],
+        correct: "a biker",
+    }, {
+        id: "6",
+        question: "Annie thinks that Hector should dress like __________.",
+        options: ["a businessman", "a cowboy", "a rich person", "a biker"],
+        correct: "a cowboy",
+    },
+    {
+        id: "7",
+        question: "Annie is going to buy eggs, lemons and dog food ____________.",
+        options: ["from a magazine", "on the phone", "at a supermarket", "on the internet"],
+        correct: "on the internet",
+    },
+    {
+        id: "8",
+        question: "Hector's pyjamas are ____________.",
+        options: ["green", "brown", "red", "blue"],
+        correct: "brown",
+    },
+    {
+        id: "9",
+        question: "Bridget thinks that Hector should dress __________.",
+        options: ["in designer clothes", "like a biker", "like a cowboy", "like a businessman"],
+        correct: "in designer clothes",
+    },
+];
+
+//Restart Quiz
+restart.addEventListener("click", () => {
+    initial();
+    displayContainer.classList.remove("hide");
+    scoreContainer.classList.add("hide");
+});
+
+//Next Button
+nextBtn.addEventListener(
+    "click",
+    (displayNext = () => {
+        //increment questionCount
+        questionCount += 1;
+        //if last question
+        if (questionCount == quizArray.length) {
+            //hide question container and display score
+            displayContainer.classList.add("hide");
+            scoreContainer.classList.remove("hide");
+            //user score
+            userScore.innerHTML =
+                "Your score is " + scoreCount + " out of " + questionCount;
+        } else {
+            //display questionCount
+            countOfQuestion.innerHTML =
+                questionCount + 1 + " of " + quizArray.length + " Question";
+            //display quiz
+            quizDisplay(questionCount);
+            count = 61;
+            clearInterval(countdown);
+            timerDisplay();
+        }
+    })
+);
+
+//Timer
+const timerDisplay = () => {
+    countdown = setInterval(() => {
+        count--;
+        timeLeft.innerHTML = `${count}s`;
+        if (count == 0) {
+            clearInterval(countdown);
+            displayNext();
+        }
+    }, 1000);
+};
+
+//Display quiz
+const quizDisplay = (questionCount) => {
+    let quizCards = document.querySelectorAll(".container-mid");
+    //Hide other cards
+    quizCards.forEach((card) => {
+        card.classList.add("hide");
+    });
+    //display current question card
+    quizCards[questionCount].classList.remove("hide");
+};
+
+//Quiz Creation
+function quizCreator() {
+    //randomly sort questions
+    quizArray.sort(() => Math.random() - 0.5);
+    //generate quiz
+    for (let i of quizArray) {
+        //randomly sort options
+        i.options.sort(() => Math.random() - 0.5);
+        //quiz card creation
+        let div = document.createElement("div");
+        div.classList.add("container-mid", "hide");
+        //question number
+        countOfQuestion.innerHTML = 1 + " of " + quizArray.length + " Question";
+        //question
+        let question_DIV = document.createElement("p");
+        question_DIV.classList.add("question");
+        question_DIV.innerHTML = i.question;
+        div.appendChild(question_DIV);
+        //options
+        div.innerHTML += `
+    <button class="option-div" onclick="checker(this)">${i.options[0]}</button>
+     <button class="option-div" onclick="checker(this)">${i.options[1]}</button>
+      <button class="option-div" onclick="checker(this)">${i.options[2]}</button>
+       <button class="option-div" onclick="checker(this)">${i.options[3]}</button>
+    `;
+        quizContainer.appendChild(div);
+    }
+}
+
+//Checker Function to check if option is correct or not
+function checker(userOption) {
+    let userSolution = userOption.innerText;
+    let question =
+        document.getElementsByClassName("container-mid")[questionCount];
+    let options = question.querySelectorAll(".option-div");
+
+    //if user clicked answer == correct option stored in object
+    if (userSolution === quizArray[questionCount].correct) {
+        userOption.classList.add("correct");
+        scoreCount++;
+    } else {
+        userOption.classList.add("incorrect");
+        //For marking the correct option
+        options.forEach((element) => {
+            if (element.innerText == quizArray[questionCount].correct) {
+                element.classList.add("correct");
+            }
+        });
+    }
+
+    //clear interval(stop timer)
+    clearInterval(countdown);
+    //disable all options
+    options.forEach((element) => {
+        element.disabled = true;
+    });
+}
+
+//initial setup
+function initial() {
+    quizContainer.innerHTML = "";
+    questionCount = 0;
+    scoreCount = 0;
+    count = 61;
+    clearInterval(countdown);
+    timerDisplay();
+    quizCreator();
+    quizDisplay(questionCount);
+}
+
+//when user click on start button
+startButton.addEventListener("click", () => {
+    startScreen.classList.add("hide");
+    displayContainer.classList.remove("hide");
+    initial();
+});
+
+//hide quiz and display start screen
+window.onload = () => {
+    startScreen.classList.remove("hide");
+    displayContainer.classList.add("hide");
+};
+    </script>
+
+    
+
+</body>
+</html>

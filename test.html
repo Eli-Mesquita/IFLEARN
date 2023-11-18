@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+    <div style="border: 1px solid #ced4da; border-radius: 5px; box-shadow: 2px 2px 5px #999; padding: 10px; text-align: left; width: fit-content;">
+    <article>
+        <h1>True or False Quiz</h1>
+        <p>Are the following statements TRUE (correct) or FALSE (wrong)?</p>
+        <form name="quiz" id="quiz">
+        <p>1. A RIVER is bigger than a STREAM.<br>
+        <select name="q1">
+        <option value>???</option>
+        <option value="TRUE">TRUE</option>
+        <option value="FALSE">FALSE</option>
+        </select>
+        </p>
+        <p>2. There are one thousand years in a CENTURY.<br>
+        <select name="q2">
+        <option value>???</option>
+        <option value="TRUE">TRUE</option>
+        <option value="FALSE">FALSE</option>
+        </select>
+        </p>
+        <p>3. FOUNDED is the past tense of FOUND.<br>
+        <select name="q3">
+        <option value>???</option>
+        <option value="TRUE">TRUE</option>
+        <option value="FALSE">FALSE</option>
+        </select>
+        </p>
+        <p>4. ANSWER can be used as a noun and a verb.<br>
+        <select name="q4">
+        <option value>???</option>
+        <option value="TRUE">TRUE</option>
+        <option value="FALSE">FALSE</option>
+        </select>
+        </p>
+        <p>5. SCARLET is a brilliant red colour.<br>
+        <select name="q5">
+        <option value>???</option>
+        <option value="TRUE">TRUE</option>
+        <option value="FALSE">FALSE</option>
+        </select>
+        </p>
+        <p>6. USED TO DOING and USED TO DO mean the same thing.<br>
+        <select name="q6">
+        <option value>???</option>
+        <option value="TRUE">TRUE</option>
+        <option value="FALSE">FALSE</option>
+        </select>
+        </p>
+        <p>7. You can use IMPROVE as a noun and as a verb.<br>
+        <select name="q7">
+        <option value>???</option>
+        <option value="TRUE">TRUE</option>
+        <option value="FALSE">FALSE</option>
+        </select>
+        </p>
+        <p>8. DOZEN is equivalent to 20.<br>
+        <select name="q8">
+        <option value>???</option>
+        <option value="TRUE">TRUE</option>
+        <option value="FALSE">FALSE</option>
+        </select>
+        </p>
+        <p>9. The past tense of FIND is FOUND.<br>
+        <select name="q9">
+        <option value>???</option>
+        <option value="TRUE">TRUE</option>
+        <option value="FALSE">FALSE</option>
+        </select>
+        </p>
+        <p>10. EQUIVALENT TO is (more or less) the same as EQUAL TO.<br>
+        <select name="q10">
+        <option value>???</option>
+        <option value="TRUE">TRUE</option>
+        <option value="FALSE">FALSE</option>
+        </select>
+        </p>
+        <p><input type="button" value="Check Answer" onclick="getScore(this.form)"> Your score is: <input type="text" name="percentage" style="font-size:125%; width: 50px"></p>
+        <p>Correct answers:<br>
+        <textarea name="solutions" wrap="virtual" rows="12"></textarea></p>
+        <p><input type="reset" value="Start Again"></p>
+        </form>
+        </article>
+
+        <script language="JavaScript" type="text/javascript">
+            var numQues = 10;
+            var answers = new Array(10);
+            answers[0] = "TRUE";
+            answers[1] = "FALSE";
+            answers[2] = "TRUE";
+            answers[3] = "TRUE";
+            answers[4] = "TRUE";
+            answers[5] = "FALSE";
+            answers[6] = "FALSE";
+            answers[7] = "FALSE";
+            answers[8] = "TRUE";
+            answers[9] = "TRUE";
+            function getScore(form) {
+              var score = 0;
+              var currElt;
+              var currSelection;
+              for (i=0; i<numQues; i++) {
+                currElt = form.elements[i];
+                currSelection = currElt.selectedIndex;
+                if (currElt.options[currSelection].value == answers[i]) {
+                  score++;
+                }
+              }
+              score = Math.round(score/numQues*100);
+              form.percentage.value = score + "%";
+              var correctAnswers = "";
+              for (i=1; i<=numQues; i++) {
+                correctAnswers += i + ". " + answers[i-1] + "\r\n";
+              }
+              form.solutions.value = correctAnswers;
+            }
+            </script>
+    
+</body>
+</html>
