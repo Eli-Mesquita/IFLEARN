@@ -2,9 +2,13 @@ var swiper = new Swiper(".slide-content", {
     slidesPerView: 3,
     spaceBetween: 25,
     loop: true,
-    centerSlide: 'true',
-    fade: 'true',
-    grabCursor: 'true',
+    centerSlide: true,
+    fade: true,
+    grabCursor: true,
+    autoplay: {
+      delay: 3000, // Autoplay delay in milliseconds
+      disableOnInteraction: false, // Autoplay will not be disabled after user interactions
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -14,7 +18,6 @@ var swiper = new Swiper(".slide-content", {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-
     breakpoints:{
         0: {
             slidesPerView: 1,
@@ -26,4 +29,4 @@ var swiper = new Swiper(".slide-content", {
             slidesPerView: 3,
         },
     },
-  });
+});
