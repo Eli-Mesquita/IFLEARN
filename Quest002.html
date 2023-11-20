@@ -5,54 +5,133 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IFlearn</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="myscripts.js"></script>
+      <!-- CSS -->
+      <link rel="stylesheet" href="css/style.css">
+
+      <link rel="stylesheet" href="style.css">
     
+    <script src="myscripts.js"></script>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.14.0/css/flag-icons.min.css"/>
 </head>
+
+<!-- flag icon css -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.14.0/css/flag-icons.min.css"/>
+
 <body>
-  <div class="header"><a href="Index.html"><img width="100" src="images/Logo IFCE learn.png" alt="logo IFCE"></a></div>
-        
-  <ul>
-      <li><a class="active" href="Index.html">Home</a></li>
-      
-      <li class="dropdown">
-          <a href="javascript:void(0)" class="dropbtn">Conteúdo</a>
-          <div class="dropdown-content">
-            <a href="capa.html">Livro interativo</a>
-            <a href="atv002.html">Videoaulas</a>
-            <a href="ex001.html">Online Quiz</a>
-            <a href="games.html">Games</a>
-          </div>
-        </li>
-        <li><a href="https://www.oxfordlearnersdictionaries.com/" target="_blank" rel="external" >Dicionário</a></li>
-      <li><a href="contato.html">Contato</a></li>
-      <li class="dropdown">
-          <a href="javascript:void(0)" class="dropbtn">Questionário</a>
-          <div class="dropdown-content">
-            <a href="Quest001.html">Professor</a>
-            <a href="Quest002.html">Aluno</a>
-            
-          </div>
-        </li>
-    </ul>
+    
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-dark text-bg-success fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="Index.html"><img src="images/Logo IFCE - white.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-top"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+            <a class="navbar-brand" href="Index.html"><img src="images/Logo IFCE - white.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-top"></a>
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Conteúdo
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="biblioteca.html">Biblioteca interativa</a></li>
+                <li><a class="dropdown-item" href="atv002.html">Videoaulas</a></li>
+                <li><a class="dropdown-item" href="ex001.html">Teste seu conhecimento</a></li>
+                <li><a class="dropdown-item" href="games.html">Amplie seu vocabulário</a></li>
+                <li><a class="dropdown-item" href="downloads.html">Materiais para baixar</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Ferramentas
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="https://www.oxfordlearnersdictionaries.com" target="_blank">Oxford Learner's Dictionary </a></li>
+                  <li><a class="dropdown-item" href="https://lyricstraining.com/" target="_blank">Lyrics Trainning</a></li>
+                  <li><a class="dropdown-item" href="https://writeandimprove.com/workbooks#/wi-workbooks/7485eb41-a047-4d23-ae25-5afb7387eba9" target="_blank">Write & Improve</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Questionário
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="Quest001.html">Professor</a></li>
+                  <li><a class="dropdown-item" href="Quest002.html">Aluno</a></li>
+                </ul>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contato.html">Sobre o Autor</a>
+              </li>
+              <li><hr></li>
+              <li><div id="google_translate_element"></div>
+    
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script></li>
+                <li><hr></li>
+          </ul>
+          <br>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success" type="submit">Pesquisar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+</nav>
 
-    <br>
+<!-- spacer -->
+<div style="height: 60px;"></div>
 
-        <main class="box">
+       
+  <section class="py-5 mt-5 text-center container">
+		<div class="row py-lg-5 px-3">
+		  <div class="col-lg-6 col-md-8 mx-auto">
             <h3>Questionário do aluno</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+            
+            <p>Este questionário tem o propósito de auxiliar o professor mestrando Elielson Benigno de Mesquita Ramalho em seu projeto de elaboração de um produto educacional para o programa de Pós-graduação em Educação Profissional e Tecnológica - PROFEPT, a partir da análise das TICs (Tecnologias de Informação e Comunicação) utilizadas no IFCE - Campus Umirim.<span id="dots">...</span><span id="more"> TICs são um conjunto de recursos tecnológicos que podem ser integrados entre si. Ou seja, são tecnologias usadas para reunir, distribuir e compartilhar informações, como: sites da web, hardware e software. O objetivo principal deste questionário é identificar as TICs mais utilizadas por alunos no ensino-aprendizagem de Língua Inglesa no IFCE - Campus Umirim - CE e, a partir da identificação, a criação de uma plataforma didática digital que reúna atividades desenvolvidas pelo professor e hiperlinks para sites/softwares/aplicativos que possam ser utilizados para ajudar a sistematizar os estudos em língua inglesa e desenvolver as habilidades comunicativas dos aprendizes. </span></p>
 
-            <button href="javascript:void(0)" onclick="myFunction()" id="myBtn">read more</button> 
-        </main>
+            <div class="btn btn-lg btn-danger" href="javascript:void(0)" onclick="myFunction()" id="myBtn">Saiba mais</div> 
         
-        <br>
+    <!-- spacer -->
+<div style="height: 20px;"></div>    
+      
         
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeWBxwnQgJtZ8YXT5fZkNEF7dszALMoKt9MaVwVf70vHJglXg/viewform?embedded=true" width="640" height="549" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+        </section>
+        </div>
+        </div>
 
-        <br>
-
-        <div class="footer">
-            <a href="https://ifce.edu.br/" target="_blank" rel="external" ><img width="130" src="images/Logo IFCE (2).png" alt="logo IFCE"></a><a href="https://ifce.edu.br/fortaleza/profept" target="_blank" rel="external"><img width="130" src="images/profept logo.png" alt=""></a></div>
-
+        <div style="height: 100px;"></div>
+        <!--footer-->
+        <div class="footer fixed-bottom shadow " style="width: 100%; height: 80px; background-color: white;" > 
+        <a href="https://ifce.edu.br/" target="_blank" rel="external" ><img width="200" src="images/Logo IFCE (2).png" alt="logo IFCE" class="float-lg-left px-3 py-3"></a>
+        
+        <!--Google translator-->
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        
+        <a href="https://ifce.edu.br/fortaleza/profept" target="_blank" rel="external"><img width="150" src="images/profept logo.png" alt="" class="float-end px-3 py-3"></a>
+        </div>
+        
 </body>
 </html>
