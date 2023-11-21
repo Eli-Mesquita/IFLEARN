@@ -47,7 +47,7 @@
 
     
   </head>
-  <body>
+  <body style="background-color: white;">
     
 
   <nav class="navbar navbar-dark text-bg-success fixed-top">
@@ -120,80 +120,87 @@
 
 <div style="height: 50px;"></div>
 
-<main>
-
-  <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Videoaulas</h1>
-        <p class="lead text-muted">Nesse espaço você pode assistir ao conteúdo criado para te ajudar a revisar os conceitos que você viu em sala de aula. Escolha o nível que deseja ou teste seus conhecimentos na seção de atividades</p>
-        <p>
-          <a onclick="history.back()" class="btn btn-lg btn-outline-danger my-2">Voltar</a>
-          <a href="ex001.html" class="btn btn-lg btn-outline-success my-2">Atividades</a>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <div class="album py-5">
-    <div class="container">
-
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col">
-          <div class="card shadow-sm">
-            <a href="galery_begin.html"><img src="images/videothumb01.png" alt="" class="bd-placeholder-img card-img-top" width="100%" ></a>
-            
-
-            <div class="card-body">
-              <h5 class="card-text">Beginner</h5>
-              <p class="card-text">Aulas e atividades do nível iniciante</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a href="galery_begin.html"><button type="button" class="btn btn-lg btn-outline-danger">Study</button></a>
+<!-- swiper -->
+<div class="slide-container swiper">
+  <h1 class="display-6 fw-bold text-success text-center">Videoaulas</h1>
+  <p class="lead text-center">Nesse espaço você pode assistir ao conteúdo criado para te ajudar a revisar os conceitos que você viu em sala de aula. Escolha o nível que deseja ou teste seus conhecimentos na seção de atividades</p>
+  <p class="text-center">
+    <a onclick="history.back()" class="btn btn-lg btn-outline-danger my-2">Voltar</a>
+    <a href="ex001.html" class="btn btn-lg btn-outline-success my-2">Atividades</a>
+  </p>
+    <div class="slide-content">
+        <div class="card-wrapper swiper-wrapper">
+            <div class="card swiper-slide" id="card">
+                <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                        <a href="galery_extra.html"><img src="images/videothumb_extra.png" alt="" class="card-img"></a>
+                    </div>
                 </div>
-                <small class="text-muted">06 classes</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <a href="galery_extra.html"><img src="images/videothumb_extra.png" alt="" class="bd-placeholder-img card-img-top" width="100%" ></a>
-            
-
-            <div class="card-body">
-              <h5 class="card-text">English with TV </h5>
-              <p class="card-text">Episódios e atividades baseadas em séries.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <a href="galery_extra.html"><button type="button" class="btn btn-lg btn-outline-danger">Study</button></a>
+                <div class="card-content">
+                    <h2 class="name">English with TV</h2>
+                    <p class="description">Quiz e atividades baseadas em séries.
+                    </p>
+                    <div>
+                        <a href="galery_extra.html"><button class="btn btn-success" style="vertical-align:middle"><span>Study</span></button></a>
+                    </div>
                 </div>
-                <small class="text-muted">06 classes</small>
-              </div>
             </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <img src="images/videothumb0.png" alt="" class="bd-placeholder-img card-img-top" width="100%">
-            
-
-            <div class="card-body">
-              <h5 class="card-text">Advanced</h5>
-              <p class="card-text">Aulas e atividades do nível avançado</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-lg btn-outline-danger">Study</button>
+            <div class="card swiper-slide" id="card">
+                <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                        <a href="galery_begin.html"><img src="images/video_begin_001.png" alt="" class="card-img"></a>
+                    </div>
                 </div>
-                <small class="text-muted">06 classes</small>
-              </div>
+                <div class="card-content">
+                    <h2 class="name">Beginner</h2>
+                    <p class="description"> Aulas e atividades do nível iniciante</p>
+                    <div><a href="galery_begin.html"><button class="btn btn-success" style="vertical-align:middle"><span>Study</span></button></a></div>
+                </div>
             </div>
-          </div>
+            <div class="card swiper-slide" id="card">
+                <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                        <a href=""><img src="images/videothumb02.png" alt="" class="card-img"></a>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h2 class="name">Intermediate</h2>
+                    <p class="description"> Aulas e atividades do nível intermediário</p>
+                    <div><a href=""><button class="btn btn-success" style="vertical-align:middle"><span>Study</span></button></a></div>
+                </div>
+            </div>
+            <div class="card swiper-slide" id="card">
+                <div class="image-content">
+                    <span class="overlay"></span>
+                    <div class="card-image">
+                        <a href=""><img src="images/videothumb0.png" alt="" class="card-img"></a>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h2 class="name">Advanced</h2>
+                    <p class="description">  Aulas e atividades do nível avançado</p>
+                    <div><a href=""><button class="btn btn-success" style="vertical-align:middle"><span>Study</span></button></a></div>
+                </div>
+            </div>
         </div>
     </div>
-  </div>
+    <div class="swiper-button-next swiper-navBtn"></div>
+    <div class="swiper-button-prev swiper-navBtn"></div>
+    <div class="swiper-pagination"></div>
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+        <!-- Swiper CSS -->
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
+            <!-- CSS -->
+            <link rel="stylesheet" href="css/style.css">
 
-</main>
+    
+</div>
 
 <div style="height: 100px;"></div>
 <!--footer-->
