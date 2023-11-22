@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFlearn</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <!-- navbar Bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- navbar Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+<script type='text/javascript'>
+    //<![CDATA[
+    var iaw = iaw || {};
+    iaw.que = iaw.que || [];
+    iaw.cmd = iaw.cmd || [];
+    iaw.que.push(function() {
+        iaw.setPageLabels(["wprod"]);
+        iaw.setPageLayout("default");
+        iaw.setPageCriteria({
+            "l": "en",
+            "pr": "free",
+            "pc": "exercise",
+            "sfr": "old_quiz",
+            "dc": "english"
+        });
+        iaw.setDfpCollapseEmptyDivs(false);
+        iaw.setCountry("BR");
+        iaw.enableBlockthrough();
+        iaw.enablePrebidAnalytics();
+
+
+
+    });
+    //]]>
+</script>
+
+
+<link href="https://www.oxfordlearnersdictionaries.com/external/styles/interface.css?version=2.3.52" rel="stylesheet" type="text/css" />
+
+
+<link href="https://www.oxfordlearnersdictionaries.com/external/styles/responsive.css?version=2.3.52" rel="stylesheet" type="text/css" />
+<link href="https://www.oxfordlearnersdictionaries.com/external/styles/adserver.css?version=2.3.52" rel="stylesheet" type="text/css">
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:700i" rel="stylesheet" type='text/css'>
+<link rel="icon" type="image/x-icon" href="https://www.oxfordlearnersdictionaries.com/external/images/favicon.ico?version=2.3.52" />
+
+<style>
+    .exercise {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+
+.exercise .exercise-choice input[type='radio'] {
+    display: none;
+}
+
+.exercise .exercise-choice input[type='radio']:checked+label,
+.exercise .exercise-group .exercise-item {
+    background: #92b2dc;
+}
+
+.exercise .exercise-choice input[type='radio'].error+label,
+.exercise .exercise-item.error,
+.exercise .exercise-group .exercise-item.error,
+.exercise .exercise-gap-item.error {
+    background: #E61928;
+}
+
+.exercise .exercise-choice input[type='radio'].correct:checked+label,
+.exercise .exercise-item.correct,
+.exercise .exercise-group .exercise-item.correct,
+.exercise .exercise-gap-item.correct {
+    background: #4e7d19;
+}
+
+.exercise .exercise-qtext {
+    font-size: 1.2em;
+}
+
+.exercise .exercise-audioAsset {
+    color: #da0000;
+    font-size: 1.5em;
+}
+
+.exercise .exercise-choice {
+    display: inline-block;
+}
+
+.exercise .exercise-group {
+    margin: 2px 0 2px 0;
+    line-height: 3em;
+    background: #f7f7f7;
+}
+
+.exercise-gap-drag, .exercise-sequence-drag {
+    background: #f7f7f7;
+    padding: 2px;
+}
+
+.exercise-gap-drag {
+    padding: 0px;
+    width: 10em;
+    vertical-align: middle;
+    border: 1px dashed;
+    border-radius: 10px;
+    margin-bottom: 1px;
+    margin-top: 1px;
+}
+
+.undropped.exercise-gap-drag {
+    height: 44px;
+    display: inline-block;
+}
+
+.dropped.exercise-gap-drag {
+    height: auto;
+    min-height: 44px;
+    width: auto;
+    min-width: 160px;
+}
+
+.currentMove{
+    position:fixed;
+    z-index:50000;
+}
+
+.exercise-sequence-drag {
+    min-height: 3em;
+}
+
+.exercise .exercise-group-title, .exercise-gap-item {
+    margin-right: 1em;
+    margin: 5px;
+    display: inline-block;
+    padding: 2px 4px;
+}
+
+.exercise .exercise-footer {
+    margin: 40px auto;
+    max-width: 342px;
+}
+
+.exercise-context .exercise-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #f2f2f2;
+    font-weight: normal;
+    border-radius: 3px;
+    margin: 32px 0;
+}
+
+.exercise-context .exercise-div span {
+    margin: 10px;
+}
+
+.exercise-rubric div,
+.exercise-mc,
+.exercise-mc div,
+.exercise-gapfill div,
+.exercise-audioAsset,
+.gapfill-drag div,
+.result{
+    display: inline-block;
+}
+
+.exercise-mc {
+    text-align: center;
+    width: 100%;
+}
+
+.exercise-rubric {
+    font-weight: bold;
+}
+
+.view {
+    overflow: hidden;
+    position: relative;
+    width:1px;
+    background-color: white;
+    margin-top: 20px;
+}
+
+.round-button {
+    display:block;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 10%;
+    border: 1px solid black;
+}
+img.contextImage {
+    float: none;
+    width: auto;
+}
+
+.select-question, .exercise-gap-input {
+    margin: 2px;
+    width: 180px;
+    height: 32px;
+    padding-left: 0.5em;
+    background-color: #e6f0f8;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: #0069B4;
+}
+
+.select-question, .exercise-gap-input:hover {
+    border-color: #94aed0;
+}
+
+.select-question, .exercise-gap-input:focus {
+    border-color: #94aed0;
+    background-color: #ffffff
+}
+
+.select-question.correct, .exercise-gap-input.correct {
+    border-color: #38A867;
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-image: url(https://img.icons8.com/emoji/48/check-mark-emoji.png);
+    background-size: 16px;
+    background-position: 96% center;
+}
+
+.select-question.error, .exercise-gap-input.error {
+	display: inline-block;
+    background-color: #ffffff;
+    border-color: #CA2567;
+    background-repeat: no-repeat;
+    background-image: url(https://img.icons8.com/ios-glyphs/30/FA5252/multiply.png);
+    background-size: 16px;
+    background-position: 96% center;
+}
+
+.select-question.correct,.select-question.error {
+    -moz-appearance: none; /* for Firefox */
+    -webkit-appearance: none; /* for Chrome */
+}
+
+.select-question.correct::-ms-expand, .select-question.error::-ms-expand {
+    display: none; /* for IE10 */
+}
+
+#tocTitle {
+    font-weight: 650;
+    font-style: normal;
+    font-size: 28px;
+    color: #0D3880;
+    text-align: left;
+}
+
+.mainToc {
+    margin-top: 30px;
+}
+
+.mainToc span .toc-level1 {
+    font-style: normal;
+    font-size: 18px;
+    color: #0D3880;
+    text-align: left;
+    line-height: 42px;
+}
+
+.tocLink {
+    float: right;
+}
+
+ .tocContent h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.tocContent hr {
+    border-bottom: 1px solid #cccdc9;
+    color: #ffffff;
+    border-style: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.tocContent hr.hidden {
+    display: none;
+}
+
+.prep {
+    margin-left: 3em;
+}
+
+.bottom-fixed-bar {
+    position: fixed;
+    bottom: 0;
+    background-color: rgba(180, 183, 189, 0.53);
+    left: 0;
+}
+
+.exercise-reading p {
+    text-align: left;
+}
+
+.inline-div {
+    display: inline-block;
+}
+
+.auto-div .exercise-sequence-drag{
+    height: auto;
+}
+.opt_content {
+    width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+.items_content {
+    display: none;
+    margin: auto;
+    margin-left: 22px;
+    padding: 0 10px;
+}
+.items_title {
+    font-weight: bold;
+    color: #000000;
+}
+#rightcolumn .mainToc .items_title {
+    font-weight: normal;
+    color: #000000;
+}
+.items_title:hover {
+    font-weight: bold;
+    cursor: pointer;
+    color: #004aac;
+    text-decoration: none;
+}
+.items_title:before {
+    width: 14px;
+    height: 14px;
+    background-image: url(../images/grammar/icon-plus-minus-blue.png);
+    background-size: 100% auto;
+    background-position: center bottom;
+    content: "";
+    display: inline-block;
+    margin-right: 12px;
+    position: relative;
+    top: 1px;
+}
+
+.items_title.is-active:before {
+    background-position: center top;
+}
+
+.items_elem {
+    margin: 10px 0;
+}
+
+#dot {
+    font-size: 14px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.exercise .exercise-choice label, .exercise .exercise-footer a.button,
+.exercise-item, .exercise-gap-item, .exercise .exercise-group .exercise-item {
+    background: #416cd0;
+    margin: 5px 1px 5px 1px;
+    display: inline-block;
+    padding: 5px 8px;
+    cursor: pointer;
+    color: white;
+}
+
+.exercise-gap-item {
+    margin: 4px;
+}
+
+.exercise .exercise-choice label{
+    border-radius: 5px;
+}
+
+.inline{
+    display: inline-block;
+}
+.margin1{
+    margin-top: 1em;
+    white-space: initial;
+}
+.b1{
+    vertical-align: middle;
+    padding-right: 10px;
+}
+
+.exercise-question {
+    display: inline-block;
+    vertical-align: top;
+    white-space: initial;
+    padding-left: 12px;
+    padding: 10px 0;
+}
+
+.exercise-exercise .view {
+    white-space: nowrap;
+}
+.exercise-exercise .container {
+    position: relative;
+}
+
+.exercise-gapfill-drag {
+    margin-top: 1em;
+}
+
+.exercise-gapfill-drag-bag {
+    white-space: initial;
+}
+
+.exercise-gapfill b {
+    font-weight: bold;
+}
+
+.exercise-gap-item, .exercise-item {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
+.exercise-footer div {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.exercise-footer div button:disabled,
+.exercise-footer button:disabled {
+    color: #aca2a2;
+    border-color: #d9d9d9;
+    background-color: #ffffff;
+    cursor: default;
+}
+
+.exercise-footer .exercise-show,
+.exercise-footer .exercise-try-again {
+    font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
+  border-radius: 5px;
+  background-color: green;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 10px;
+  width: 95%;
+  transition: all 0.3s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+
+.exercise-footer .exercise-show:hover:enabled,
+.exercise-footer .exercise-try-again:hover:enabled {
+    background-color: #d9d9d9;
+}
+
+.exercise-footer .exercise-check {
+    font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #C90C0F;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 10px;
+  width: 95%;
+  transition: all 0.3s;
+  cursor: pointer;
+  margin: 5px;
+
+}
+
+ .voltar {
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #C90C0F;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 10px;
+  width: 80px;
+  transition: all 0.3s;
+  cursor: pointer;
+  margin: 5px;
+
+
+}
+
+.exercise-hidden {
+    display: none;
+}
+
+.exercise-footer .bottom-row {
+    cursor: pointer;
+    width: 100%;
+    max-width: 342px;
+    height: 43px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #004aac;
+}
+.exercise-footer .exercise-check:hover:enabled,
+.exercise-footer .bottom-row:hover:enabled {
+    background-color: #002147;
+}
+
+label .fa, .exercise-gap-item .fa, .exercise-item .fa {
+    margin-left: 10px;
+}
+
+.tab {
+  overflow: hidden;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: #ebf0f5;
+    outline: none;
+    border: none;
+    border-radius: 5px 5px 0px 0px;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    width: 49%;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #fff;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-bottom: 0px;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.tab .ref {
+    float: left;
+}
+
+.tab .practice {
+    float: right;
+}
+
+.cefrToc,
+.cefr {
+	background: #666666;
+    border-radius: 3px;
+    color: #FFF;
+    margin-right: 5px;
+    padding: 3px 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: 12px;
+}
+.cefr {
+    vertical-align: bottom;
+	background-color: grey;
+    color: white;
+}
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+  margin-top: 32px;
+}
+.tabcontent.show {
+	display: block;
+}
+a.current {
+    background-color: #b6b5b5;
+}
+
+@media screen and (min-width: 320px) and (max-width: 812px) {
+    .exercise {
+        border: 0;
+        padding: 0;
+    }
+    
+    .exercise-gapfill-drag {
+        margin-top: 0;
+    }
+    .exercise-mc div {
+    	display: block;
+   	}
+    .exercise .exercise-choice {
+    	display: block;
+	}
+	.exercise .exercise-choice label {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.hr_underline {
+    margin-top: 0;
+    border-color: #333333;
+    border-bottom-width: 0px;
+}
+#bottom_practice_button {
+    float: right;
+    width: 97px;
+    background-color: #004bac;
+    border-color: #004bac;
+    color: #ffffff;
+    line-height: 28px;
+}
+
+#bottom_practice_button:after {
+    content: "";
+    background-repeat: no-repeat;
+    background-image: url(../images/grammar/link-right-white.png);
+    background-size: contain;
+    background-position-y: center;
+    padding: 0px 3px 0px 4px;
+    margin-left: 5px;
+}
+
+#bottom_practice_button:hover {
+    background-color: #002147;
+    border-color: #002147;
+    cursor: pointer;
+}
+
+#bottom_grammar_button {
+    float: left;
+    width: 157px;
+    background-color: #ffffff;
+    border-color: #d9d9d9;
+    color: #004bac;
+    line-height: 28px;
+    text-align: center;
+    padding-right: 5px;
+}
+
+#bottom_grammar_button:before {
+    content: "";
+    background-repeat: no-repeat;
+    background-image: url(../images/grammar/link-left-blue.png);
+    background-size: contain;
+    background-position-y: center;
+    padding: 0px 3px 0px 4px;
+    margin-right: 5px;
+}
+
+#bottom_grammar_button:hover {
+    background-color: #e4e4e4;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#reference .heading span,
+#reference .heading {
+    font-style: normal;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0D3880;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.reference_bottom_button {
+    height: 30px;
+    background: inherit;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 150px;
+    box-shadow: none;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.reference {
+    margin-bottom: 30px;
+}
+
+.practice_list{
+    list-style-type:none;
+}
+
+.practice_list .practice_number {
+    font-weight: bold;
+}
+
+.exercise-progress-score .score {
+    margin-top: 32px;
+    margin-bottom: 40px;
+}
+
+.exercise-progress-score .score,
+.exercise-progress-score .score span {
+    font-size: 28px;
+    color: green;
+    text-align: center;
+}
+
+.exercise-progress-score .score span {
+    font-weight: bold;
+}
+
+.exercise-progress-score .progression {
+    margin-top: 40px;
+    margin-bottom: 32px;
+}
+
+
+
+
+/* CSS moved from templates-main/layouts/reference.html */
+
+		/* styling for embedded video */
+		iframe[src*="youtube.com"] {
+			border-style: solid; border-width: 3px;
+			display: block;
+	
+		}
+
+		
+		div[style*="max-width"] {
+			margin-bottom: 1em;
+		}
+		
+		/* end of styling for embedded video */
+
+		div.exercise
+		{
+		font-family: "Source Sans Pro", sans-serif;
+			color: #333333;
+            width: fit-content;
+		}
+
+		div.exercise [market=adult]
+		{
+		/*  background-color: #BEEEFC !important; */
+		}
+
+		div.exercise [market=secondary]
+		{
+			/*   background-color: #FCBDBD !important; */
+		}
+
+		div.exercise [market=general]
+		{
+			/*   background-color: #D2F5B0 !important; */
+		}
+
+		div.exercise .example
+		{
+		  font-style: italic;
+		}
+
+		div.exercise .gloss
+		{
+		  font-style: normal;
+		}
+
+		div.exercise .wrong_example
+		{
+		  font-style: italic;
+		  padding-left: 2mm;
+		  text-decoration: line-through;
+		}
+
+		div.exercise .heading
+		{	
+		 /*border: solid white 1mm;*/
+
+			color: #1A3561;
+		 display: block;
+			font-size: 28px;
+		 padding-top: 0.5em  ;
+		/*	padding-bottom: 0.5em; */
+
+
+		}
+
+			div.exercise .heading * {
+				 font-size: 28px;
+			}
+
+		div.exercise .use  .heading
+		{
+
+			margin-top: 1em;
+		}
+
+		div.exercise .item
+		{
+		  font-style: italic;
+		  font-weight: 600;
+		}
+
+		div.exercise  .select-question .item
+		{
+		  font-style: normal;
+
+		}
+
+		#reference	span.heading > span.item {
+				font-style: italic;
+			}
+
+
+		div.exercise .term
+		{
+		  font-weight: 600;
+		}
+
+		div.exercise a
+		{
+		  padding-left: 1mm;
+		}
+
+		div.exercise .xref-group a
+		{
+		  padding-left: 0;
+		}
+
+
+		div.exercise table
+		{ display: table;
+		  margin-left: 7mm;
+		  margin-bottom: 3mm;
+		  margin-top: 2mm;
+		}
+
+		div.exercise table, div.exercise td, div.exercise th
+		{
+		 border-collapse: collapse;
+
+		 border: solid 1px black;
+		}
+
+		div.exercise td, div.exercise th
+
+		{
+		  display: table-cell;
+		  padding: 1mm;
+		}
+
+				div.exercise th {
+					text-align:left;
+				}
+
+		div.exercise tr
+		{
+		  display: table-row;
+		}
+
+		div.exercise div.level1
+		{
+			font-weight: bold;
+			font-size: 120%;
+		margin-left: 0em;
+		}
+		div.exercise div.level2
+		{
+			font-weight: 500;
+			font-size: 110%;
+		margin-left: 1em;
+		}
+		div.exercise div.level3
+		{
+		/*margin-left: 2em;*/
+		}
+
+		div.exercise div.rule
+				{margin-top: 1em;
+				}
+
+		div.exercise  li
+		{
+			margin-left: 1em;
+			list-style-type: none;
+
+		}
+
+		div.exercise  li::before {
+			content: "â€¢";
+			padding-right: 0.5rem;
+			margin-left: -0.75rem;
+			color: rgb(111, 111, 111);
+		}
+
+		div.exercise table li
+		{
+			 margin-left: inherit;
+			list-style-type: none;
+
+		}  
+		div.exercise table li::before
+		{
+			content:none;
+
+		}
+
+		.mainToc  h2, div.mainToc h2 {
+			font-size: 18px;
+		}
+
+		div.reference th {font-weight: 600 !important} 
+
+		input.exercise-gap-input {
+			font-size: 16px; /* minimum font size to disable iPhone zooming in */
+		}
+		div.statement .xref-group:before {
+			content: " ";
+			display: block;
+			height: 1em;
+			margin-top: -1em;
+		}
+</style>
+
+</head>
+<body>    
+<!-- NAVBAR -->
+<nav class="navbar navbar-dark text-bg-success fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="Index.html"><img src="images/Logo IFCE - white.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-top"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+            <a class="navbar-brand" href="Index.html"><img src="images/Logo IFCE - white.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-top"></a>
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Conteúdo
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="biblioteca.html">Biblioteca interativa</a></li>
+                <li><a class="dropdown-item" href="atv002.html">Videoaulas</a></li>
+                <li><a class="dropdown-item" href="ex001.html">Teste seu conhecimento</a></li>
+                <li><a class="dropdown-item" href="games.html">Amplie seu vocabulário</a></li>
+                <li><a class="dropdown-item" href="downloads.html">Materiais para baixar</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Ferramentas
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="https://www.oxfordlearnersdictionaries.com" target="_blank">Oxford Learner's Dictionary </a></li>
+                  <li><a class="dropdown-item" href="https://lyricstraining.com/" target="_blank">Lyrics Trainning</a></li>
+                  <li><a class="dropdown-item" href="https://writeandimprove.com/workbooks#/wi-workbooks/7485eb41-a047-4d23-ae25-5afb7387eba9" target="_blank">Write & Improve</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Questionário
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="Quest001.html">Professor</a></li>
+                  <li><a class="dropdown-item" href="Quest002.html">Aluno</a></li>
+                </ul>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contato.html">Sobre o Autor</a>
+              </li>
+              <li><hr></li>
+              <li><div id="google_translate_element"></div>
+    
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script></li>
+                <li><hr></li>
+          </ul>
+          <br>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success" type="submit">Pesquisar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+<!--spacer-->
+    <div style="height: 50px;"></div>
+
+
+    <div id="ox-container">
+
+
+
+        <div class="responsive_container xreference ">
+
+            <div id="topslot_container" data-iaw="container">
+                <div id='ad_topslot' class='am-default '>
+                    <script type='text/javascript'>
+                        iaw.cmd.push(function() {
+                            iaw.display('ad_topslot');
+                        });
+                    </script>
+                </div>
+            </div>
+
+            <div class="responsive_row">
+                <div id="ad_leftslot_container" class="ad_leftslot_container responsive_entry_left">
+                    <div class="ac_leftslot sticky" data-iaw="container">
+                        <div id='ad_leftslot' class='am-default '>
+                            <script type='text/javascript'>
+                                iaw.cmd.push(function() {
+                                    iaw.display('ad_leftslot');
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="responsive_entry_center">
+                    <div class="responsive_entry_center_wrap">
+
+                        <div id="ox-wrapper" class="responsive_entry_center_left">
+                            <div id="main_column" class="responsive_row">
+                                <div id="main-container" class="main-container">
+
+                                    <div class="centerBlock">
+                                        <div class="exercise">
+                                            <div>
+                                                <div class="responsive_row">
+                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/84Tq-eAJIk4?si=Ton7-VP6euS4-4zf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                                
+                                                </div>
+                                            </div>
+                                            </span>
+                                          
+                                          
+                                        
+                                            <div class="tabcontent show" id="practice">
+                                                <div class="exercise-exercise" data-referenceId="present-perfect-simple-and-past-simple">
+                                                    <div>
+                                                        <div class="exercise-rubric">Complete the text with the past simple or present perfect simple form of the verbs in brackets. Use full forms (<i>I have</i>), not short forms (<i>I've</i>).</div>
+                                                    </div>
+                                                    <div class="exercise-progress-score">
+                                                        <div class="progression">
+                                                            Question: <span class="nbAnswers">1</span> / <span class="questionOutOf"></span>
+                                                        </div>
+                                                        <div class="score exercise-hidden">
+                                                            You scored <span class="goodAnswers">0</span> out of <span class="outOf"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="exercise-question">
+                                                        <div class="exercise-gapfill">
+                                                            <div class="exercise-qtext" style="text-align: center;">
+                                                                <b>Wish you were here - Pink Floyd</b>
+                                                                <br>
+                                                                <br>
+                                                                <span class="exercise-qtext-text">So, so you </span>
+                                                                <div class="exercise-gap" data-correct="think">
+                                                                    <input autocomplete="off" type="text" class="exercise-gap-input" id="choice-0" name="answer_0"><label for="0"></label>
+                                                                </div>
+                                                                <span class="exercise-qtext-text">you can tell </span><i></i><span class="exercise-qtext-text">Heaven </span>
+                                                                <div class="exercise-gap" data-correct="from">
+                                                                    <input autocomplete="off" type="text" class="exercise-gap-input" id="choice-0" name="answer_0"><label for="0"></label>
+                                                                </div>
+                                                                <span class="exercise-qtext-text"> Hell, blue skies from pain. </span><i></i><span class="exercise-qtext-text"></span>
+                                                                <br>
+                                                                <span class="exercise-qtext-text">Can you tell a</span>
+                                                                <div class="exercise-gap"
+                                                                    data-correct="green">
+                                                                    <input autocomplete="off" type="text" class="exercise-gap-input" id="choice-0" name="answer_0"><label for="0"></label>
+                                                                </div>
+                                                                <span class="exercise-qtext-text">field </span><i</i><span class="exercise-qtext-text"> from a </span>
+                                                                <div
+                                                                    class="exercise-gap" data-correct="cold">
+                                                                    <input autocomplete="off" type="text" class="exercise-gap-input" id="choice-0" name="answer_0"><label for="0"></label>
+                                                            </div>
+                                                            <span class="exercise-qtext-text"> steel rail?</span><i></i><span class="exercise-qtext-text"> A </span>
+                                                            <div class="exercise-gap" data-correct="smile">
+                                                                <input autocomplete="off" type="text" class="exercise-gap-input" id="choice-0" name="answer_0"><label for="0"></label>
+                                                            </div>
+                                                            <span class="exercise-qtext-text"> from a veil?</span><i></i>
+                                                            <br>
+                                                            <span class="exercise-qtext-text"> Do you think you can </span>
+                                                            <div class="exercise-gap" data-correct="tell">
+                                                                <input autocomplete="off" type="text" class="exercise-gap-input" id="choice-0" name="answer_0"><label for="0"></label>
+                                                            </div>
+                                                            <span class="exercise-qtext-text">? </span><br><span class="exercise-qtext-text">And did they get you to trade your</span>
+                                                            <div class="exercise-gap"
+                                                                data-correct="heros">
+                                                                <input autocomplete="off" type="text" class="exercise-gap-input" id="choice-0" name="answer_0"><label for="0"></label>
+                                                            </div>
+                                                            <span class="exercise-qtext-text"> for ghosts?</span>
+                                                            <br>
+                                                            <span class="exercise-qtext-text"> Hot ashes for trees? </span>
+                                                            <div class="exercise-gap" data-correct="Hot">
+                                                                <input autocomplete="off" type="text" class="exercise-gap-input" id="choice-0" name="answer_0"><label for="0"></label>
+                                                            </div>
+                                                            <span class="exercise-qtext-text"> air for a cool breeze?</span><i></i>
+                                                            <br>
+                                                            <span class="exercise-qtext-text"> Cold comfort for </span>
+                                                            <div
+                                                                class="exercise-gap" data-correct="change">
+                                                                <input autocomplete="off" type="text" class="exercise-gap-input" id="choice-0" name="answer_0"><label for="0"></label>
+                                                        </div>
+                                                        <span class="exercise-qtext-text"> ? </span><i></i><span class="exercise-qtext-text"> </span><br><span class="exercise-qtext-text">And did you exchange a </span>
+                                                        <div class="exercise-gap" data-correct="walk">
+                                                            <input autocomplete="off" type="text" class="exercise-gap-input" id="choice-0" name="answer_0"><label for="0"></label>
+                                                        </div>
+                                                        <span class="exercise-qtext-text"> on part in the war </span>
+                                                        <br>
+                                                        <span class="exercise-qtext-text"> for a lead role in a cage? </span>
+                                                        <br>
+                                                        <span class="exercise-qtext-text"> 
+                                                            How I wish, how I wish you</span>
+                                                        <div class="exercise-gap" data-correct="were">
+                                                            <input autocomplete="off" type="text" class="exercise-gap-input" id="choice-0" name="answer_0"><label for="0"></label>
+                                                        </div>
+                                                        <span class="exercise-qtext-text"> here.
+                                                            <br>
+                                                        </span><span class="exercise-qtext-text"> We are</span>
+                                                        <div class="exercise-gap" data-correct="just">
+                                                            <input autocomplete="off" type="text" class="exercise-gap-input" id="choice-0" name="answer_0"><label for="0"></label>
+                                                        </div>
+                                                        <span class="exercise-qtext-text"> two lost souls</span>
+                                                        <br>
+                                                        <span class="exercise-qtext-text"> swimming in a </span>
+                                                        <div class="exercise-gap" data-correct="fish">
+                                                            <input autocomplete="off" type="text" class="exercise-gap-input" id="choice-0" name="answer_0"><label for="0"></label>
+                                                        </div>
+                                                        <span class="exercise-qtext-text"> bowl,</span>
+                                                        <br>
+                                                        <span class="exercise-qtext-text"> year after year.</span>
+                                                        <br>
+                                                        <span class="exercise-qtext-text"> Running over the same</span>
+                                                        <div
+                                                            class="exercise-gap" data-correct="old">
+                                                            <input autocomplete="off" type="text" class="exercise-gap-input" id="choice-0" name="answer_0"><label for="0"></label>
+                                                    </div>
+                                                    <span class="exercise-qtext-text"> ground.</span>
+                                                    <br>
+                                                    <span class="exercise-qtext-text"> How we found the</span>
+                                                    <div class="exercise-gap" data-correct="same">
+                                                        <input autocomplete="off" type="text" class="exercise-gap-input" id="choice-0" name="answer_0"><label for="0"></label>
+                                                    </div>
+                                                    <span class="exercise-qtext-text"> old fears.</span>
+                                                    
+                                                    <span class="exercise-qtext-text"></span><br><span class="exercise-qtext-text">Wish you were </span>
+                                                    <div
+                                                        class="exercise-gap" data-correct="here">
+                                                        <input autocomplete="off" type="text" class="exercise-gap-input" id="choice-0" name="answer_0"><label for="0"></label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="exercise-footer">
+                                        <div>
+                                            <button class="exercise-try-again">Try again</button><button class="exercise-show">Show answers</button><span class="flex-filler"></span><button class="exercise-check">Check</button>
+                                        </div>
+                                        <button class="exercise-next-question bottom-row">Next</button><button class="exercise-correct bottom-row exercise-hidden">See results</button><button class="exercise-replay bottom-row exercise-hidden" data-href="">Other songs</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    </div>
+
+    </div>
+    </div>
+    </div>
+
+
+
+
+
+
+    
+    <script language="JavaScript" type="text/javascript" src="https://www.oxfordlearnersdictionaries.com/common.js?version=2.3.52"></script>
+    <script language="JavaScript" type="text/javascript" src="https://www.oxfordlearnersdictionaries.com/mainExercise.js?version=2.3.52"></script>
+    <script language="javascript" type="text/javascript" src="https://www.oxfordlearnersdictionaries.com/external/scripts/doubleclick.js?version=2.3.52"></script>
+
+    <script language="JavaScript" type="text/javascript" src="https://www.oxfordlearnersdictionaries.com/external/scripts/oxford.js?version=2.3.52"></script>
+    <script language="JavaScript" type="text/javascript" src="https://www.oxfordlearnersdictionaries.com/external/scripts/entry.js?version=2.3.52"></script>
+    <script language="JavaScript" type="text/javascript" src="https://www.oxfordlearnersdictionaries.com/external/scripts/jquery.lightbox-0.5.min.js?version=2.3.52"></script>
+
+
+
+
+
+    <script type="text/plain" class="optanon-category-C0002">
+        window._qevents = window._qevents || []; (function() { var elem = document.createElement('script'); elem.src = "https://secure.quantserve.com/quant.js"; elem.type = "text/javascript"; var scpt = document.getElementsByTagName('script')[0]; scpt.parentNode.insertBefore(elem,
+        scpt); var consentParams = "0"; if(window.isGDPRMode()) { if (typeof window.__tcfapi === "function") { window.__tcfapi("getTCData", 2, (tcData, success) => { if (success) { consentParams = "1&gdpr_consent=" + tcData.tcString; } }); } } var img=new
+        Image(1,1); img.src='https://pixel.quantserve.com/pixel/p-cfSla1Cke_iBQ.gif?gdpr='+consentParams; img.style='display:none'; if(document.body) document.body.appendChild(img); })(); window._qevents.push({qacct:"p-cfSla1Cke_iBQ"});
+    </script>
+
+    <!-- Hotjar Tracking Code -->
+    <script type="text/plain" class="optanon-category-C0002">
+        (function(h,o,t,j,a,r){ h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)}; h._hjSettings={hjid:951831,hjsv:6}; a=o.getElementsByTagName('head')[0]; r=o.createElement('script');r.async=1; r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv; a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+
+    </div>
+
+<!--back button-->
+<div class="voltar" style="margin: 5%;">
+              <a onclick="history.back()"> Voltar</a>
+  </div>
+<!--spacer-->
+<div style="height: 100px;"></div>
+<!--Footer-->
+<div class="footer fixed-bottom"> 
+  <a href="https://ifce.edu.br/" target="_blank" rel="external" ><img width="130" src="images/Logo IFCE (2).png" alt="logo IFCE"></a>
+  
+<!--Google translator-->
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <a href="https://ifce.edu.br/fortaleza/profept" target="_blank" rel="external"><img width="130" src="images/profept logo.png" alt=""></a>
+</div>
+</body>
+
+</html>
