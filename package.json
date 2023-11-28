@@ -8,5 +8,15 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
-  }
+  },
+  "name": "iflearn",
+  "description": "projeto de mestrado",
+  "version": "1.0.0",
+  "main": "myscripts.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
