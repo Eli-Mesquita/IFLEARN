@@ -2,7 +2,7 @@ const form = document.getElementById('chat-form');
 const mytextInput = document.getElementById('mytext');
 const responseTextarea = document.getElementById('response');
 
-const API_KEY = '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';
+const API_KEY = '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';
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -10,7 +10,7 @@ form.addEventListener('submit', async (e) => {
 
     if (mytext) {
         try {
-            const response = await fetch('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', {
+            const response = await fetch('https://api.openai.com/v1/chat/completions', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
