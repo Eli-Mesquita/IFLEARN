@@ -10,7 +10,7 @@ form.addEventListener('submit', async (e) => {
 
     if (mytext) {
         try {
-            const response = await fetch('https://api.openai.com/v1/chat/completions', {
+            const response = await fetch('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', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
