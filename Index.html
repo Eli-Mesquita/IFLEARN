@@ -122,6 +122,15 @@
         </div>
 </nav>
 
+  <!-- virtual assistant button -->
+<div class="sticky-top" style="left: 85%; top: 70%;">
+  <div class="text-center">
+    <img src="images/buddy-150.png" alt="" style="width: 50%;">
+    <br>
+    <button class="btn btn-danger" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Can I help you?</button>
+  </div>
+</div>
+
 <!-- welcome txt -->
 <div class="container-fluid">
 <div class="px-1 py-5 my-5 mx-1 text-center">
@@ -413,6 +422,39 @@
 
 <!-- spacer -->
 <div style="height: 100px;"></div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header">
+    <h4 id="offcanvasRightLabel">Virtual assistant</h4>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+<!--virtual assistant-->
+<div>
+  <h1></h1>
+  <form id="chat-form">
+      <label for="mytext">Enter your question:</label>
+      <br>
+      <input type="text" id="mytext" style="width: 80%;" required>
+      <button class="btn btn-danger" type="submit">ask</button>
+  </form>
+  <br>
+  <div>
+      <h2>Response:</h2> 
+      <textarea id="response" rows="20" style="width: 98%;" readonly></textarea>
+      <img src="images/favicon.ico" alt="" style="float: inline-end;">
+  </div>
+</div>
+
+<script src="script.js"></script>
+  
+  </div>
+</div>
+
+
+<!-- spacer -->
+<div style="height: 100px;"></div>
+
 
 <!--footer-->
 <div class="footer fixed-bottom" style="width: 100%;"> 
