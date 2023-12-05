@@ -214,19 +214,27 @@
 
 <!-- Modal HTML -->
 <div id="myModal" class="modal fade">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title">Vídeo Tutorial</h5>
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        </div>
-                                        <div class="modal-body">
-                                          <div class="embed-responsive embed-responsive-16by9">
-                                            <iframe id="cartoonVideo" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/watch?v=MX2Bn66pxrQ" allowfullscreen></iframe>
-                                          </div>
-                                        </div>
-                                    </div>
-                                </div>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Vídeo Tutorial</h5>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe id="videoPlayer" width="560" height="315" src="https://www.youtube.com/embed/MX2Bn66pxrQ?si=zfv6INVIUoaSI99z" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  // Close the video player and modal body when the modal is closed
+  $('#myModal').on('hidden.bs.modal', function () {
+    var videoPlayer = document.getElementById('videoPlayer');
+    videoPlayer.src = videoPlayer.src; // Stop the video playback
+  });
+</script>
 </div>
 </div>
 
