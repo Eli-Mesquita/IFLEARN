@@ -56,33 +56,6 @@
 "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
     </script>
 
- <!-- modal js -->
-<script>
-  $(document).ready(function(e) {
-     $('#myModal').modal({
-         backdrop: 'static',
-         keyboard: false,
-         show: false,
-     });
-     $(document).on("click", ".modalButton", function() {
-         var ClickedButton = $(this).data("name");
-         $(".modal-body").html('<div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/'+ClickedButton+'" allowfullscreen></iframe></div>');
-         $('#myModal').modal('show');
-     });
- 
-     $('#myModal').on('hidden.bs.modal', function (e) {
-         $('#myModal iframe').attr("src", $("#myModal iframe").attr("src"));
-     });
- 
-     $('.modal').click(function(e) {
-         if( e.target == this ) {
-             $(this).modal('hide');
-         }
-     });
- 
- });
- 
- </script>
 
   </head>
   <body>
@@ -186,43 +159,106 @@
       <section class="py-5 text-center container">
         <div class="row py-lg-5">
           <div class="col-lg-6 col-md-8 mx-auto">
-            <h1 class="fw-light">English Literature</h1>
-            <p class="lead text-muted">Nesse espaço você poderá conhecer mais sobre as bases culturais da lingua inglesa ao assistir à aulas feitas sob medida pra você. Escolha uma das aulas disponíveis e depois faça um pequeno quiz para verificar a sua aprendizagem. </p>
+            <h1 class="fw-light">English with Music</h1>
+            <p class="lead text-muted">Aprenda inglês através de músicas! Nesta seção, você encontrará uma seleção de vídeos e atividades relacionadas à música e ao aprendizado da língua inglesa. Explore as aulas, pratique seu vocabulário e divirta-se enquanto aprimora suas habilidades no idioma.</p>
             <p>
                <!--buttons-->
               <a onclick="history.back()" class="btn btn-outline-danger btn-lg my-2">Voltar</a>
-              <a href="ex001.html" class="btn btn-outline-success btn-lg my-2">Atividades</a>
+              <a href="Index.html" class="btn btn-outline-success btn-lg my-2">Home</a>
             </p>
           </div>
         </div>
       </section>
+ <!--gallery-->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" style="padding-top: 2%;">
+        <!-- card 01 -->
+        <div class="col">
+          <div class="card shadow-sm">
+             <!--image -->
+             <div class="card-image">
+                <a href="music001.html"><img src="images/music_thumb01.png" alt="" class="card-img"></a>
+            </div>
 
-
-<!--gallery-->
-
-<!-- <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" style="padding-top: 2%;">
-  <div class="col">
-    <div class="card shadow-sm">
-      <a class="modalButton" data-name="xpMpatEGU0k?si=VUh-9G8ihrK8FR_8" data-toggle="modal"><img src="images/youtube thumb.jpg" alt="" class="bd-placeholder-img card-img-top" width="100%"></a>
-      <div class="card-body">
-        <h5 class="card-text">Literatura Inglesa</h5>
-        <p class="card-text">Poesia - Aula 1 - Epopeias</p>
-        <div class="d-flex justify-content-between align-items-center">
-          <div class="bs-example">
-            <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="btn btn-danger btn-sm modalButton" data-name="xpMpatEGU0k?si=VUh-9G8ihrK8FR_8" data-toggle="modal">Watch</button>
-              <a href="quiz_extra_001.html" class="btn btn-success btn-sm">Quiz</a>
-              <a href="atv_extra_001.html" class="btn btn-primary btn-sm">Exercise</a>
+            <div class="card-body">
+              <h5 class="card-text">Wish you were here </h5>
+              <p class="card-text">Pink Floyd</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="bs-example">
+                  
+                  <!--button-->
+                  <div><a href="music001.html"><button class="btn btn-danger" style="vertical-align:middle"><span>Listen</span></button></a></div>
+              </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div> -->
 
+                <!-- card 02 -->
+                <div class="col">
+                    <div class="card shadow-sm">
+                       <!--image -->
+                       <div class="card-image">
+                          <a href="music002.html"><img src="images/music_thumb02.png" alt="" class="card-img"></a>
+                      </div>
+          
+                      <div class="card-body">
+                        <h5 class="card-text">Firework </h5>
+                        <p class="card-text">Katy Perry</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="bs-example">
+                            
+                            <!--button-->
+                            <div><a href="music002.html"><button class="btn btn-danger" style="vertical-align:middle"><span>Listen</span></button></a></div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-        <iframe src="https://iflearn.h5p.com/content/1292225669189083338/embed" aria-label="Literatura Inglesa: Poesia - Aula 01 - Epopeias" width="1088" height="637" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe><script src="https://iflearn.h5p.com/js/h5p-resizer.js" charset="UTF-8"></script>
+                          <!-- card 03 -->
+        <div class="col">
+            <div class="card shadow-sm">
+               <!--image -->
+               <div class="card-image">
+                  <a href="music003.html"><img src="images/music_thumb03.png" alt="" class="card-img"></a>
+              </div>
+  
+              <div class="card-body">
+                <h5 class="card-text">More than words </h5>
+                <p class="card-text">Extreme</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="bs-example">
+                    
+                    <!--button-->
+                    <div><a href="music003.html"><button class="btn btn-danger" style="vertical-align:middle"><span>Listen</span></button></a></div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+   
+            <!-- card 04 -->
+        <div class="col">
+            <div class="card shadow-sm">
+               <!--image -->
+               <div class="card-image">
+                  <a href="music004.html"><img src="images/music_thumb04.png" alt="" class="card-img"></a>
+              </div>
+  
+              <div class="card-body">
+                <h5 class="card-text">Dreams </h5>
+                <p class="card-text">Fleetwood Mac</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="bs-example">
+                    
+                    <!--button-->
+                    <div><a href="music004.html"><button class="btn btn-danger" style="vertical-align:middle"><span>Listen</span></button></a></div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+   
  
               </div>
               </div>
@@ -231,49 +267,6 @@
         </div>
     </div>
 </main>
-<!-- modal body -->
-<div class="modal fade" id="myModal" role="dialog">
-  <div class="modal-dialog">
-     <div class="modal-content">
-        <div class="modal-header">
-           <h4 class="modal-title"> Beginner</h4>
-           <button type="button" class="btn-close" data-dismiss="modal" aria-label="close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="embed-responsive embed-responsive-16by9">
-           <!--Aula 01-->
-           <iframe width="560" height="315" src="https://www.youtube.com/embed/xpMpatEGU0k?si=VUh-9G8ihrK8FR_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            <!--Aula 02-->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/mGCpd2908Ys?si=2arm5Xfb9UuY3iT4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-           <!--Aula 03-->
-           <iframe width="560" height="315" src="https://www.youtube.com/embed/S060IB-OvL4?si=u-g42aLlp9VohxpV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-           <!--Aula 04-->
-           <iframe width="560" height="315" src="https://www.youtube.com/embed/j3aT65UFBUs?si=HghRW8_BuAGxj0bT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          <!-- Aula 05 -->
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/5IJ0Br-wABI?si=pFfuZUtqZ6Jlljus" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-           <!--Aula 06 -->
-           <iframe width="560" height="315" src="https://www.youtube.com/embed/_KM6TiASSnk?si=y_DFVgvBVILVI2n2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
-        </div>
-     </div>
-  </div>
-</div>
-
-<script>
-  $(document).ready(function() {
-    // Close modal on esc key
-    $(document).on('keydown', function(event) {
-      if (event.keyCode === 27) {
-        $('#myModal').modal('hide');
-      }
-    });
-
-    // Close modal on close button of modal body
-    $('#myModal .modal-body button.close').on('click', function() {
-      $('#myModal').modal('hide');
-    });
-  });
-</script>
 
 <div style="height: 100px;"></div>
 <!--footer-->
