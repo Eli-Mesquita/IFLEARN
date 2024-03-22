@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFlearn</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <!-- navbar Bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- navbar Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+    <style>
+        .exerciseButton {
+            background-color: rgb(25, 135, 84);
+            border-radius: 5px;
+            font-size: 15px;
+            padding: 5px 10px;
+            color: white;
+            font-weight: bold;
+            margin: 5px;
+            border: none;
+            transition: all 0.3s ease-in-out;
+            width: 90%;
+        }
+
+        .exerciseButton:hover {
+            background-color: #2ecc71;
+            cursor: pointer;
+        }
+
+
+        #exercise {
+          margin-top: 10px;
+          margin-bottom: 10px;
+          width: 100%;
+        }
+
+        tbody  {
+          display: block;
+          width: 100%;
+        }
+
+        tbody tr {
+          border: solid 1px #ccc;
+        }
+
+        #more {
+          display: none;
+        }
+        .city {
+          display:none
+        }
+
+        .w3-container {
+          margin-top: 10%;
+          padding: 0.01em 16px;
+        }
+      
+      </style>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+      </style>
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+    
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-dark text-bg-success fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="Index.html"><img src="images/Logo IFCE - white.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-top"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+            <a class="navbar-brand" href="Index.html"><img src="images/Logo IFCE - white.png" alt="Logo" width="100" height="50" class="d-inline-block align-text-top"></a>
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Conteúdo
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="biblioteca.html">Biblioteca interativa</a></li>
+                <li><a class="dropdown-item" href="atv002.html">Videoaulas</a></li>
+                <li><a class="dropdown-item" href="ex001.html">Teste seu conhecimento</a></li>
+                <li><a class="dropdown-item" href="games.html">Amplie seu vocabulário</a></li>
+                <li><a class="dropdown-item" href="downloads.html">Materiais para baixar</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Ferramentas
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="https://www.oxfordlearnersdictionaries.com" target="_blank">Oxford Learner's Dictionary </a></li>
+                  <li><a class="dropdown-item" href="https://lyricstraining.com/" target="_blank">Lyrics Trainning</a></li>
+                  <li><a class="dropdown-item" href="https://writeandimprove.com/workbooks#/wi-workbooks/7485eb41-a047-4d23-ae25-5afb7387eba9" target="_blank">Write & Improve</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Questionário
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="Quest001.html">Professor</a></li>
+                  <li><a class="dropdown-item" href="Quest002.html">Aluno</a></li>
+                </ul>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contato.html">Sobre o Autor</a>
+              </li>
+              <li><hr></li>
+              <li><div id="google_translate_element"></div>
+    
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script></li>
+                <li><hr></li>
+          </ul>
+          <br>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success" type="submit">Pesquisar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+</nav>
+
+    <div style="height: 100px;"></div>
+
+              <!-- Modal -->
+              <div class="w3-container">
+                <!--modal header-->
+                  <div id="id01" class="w3-modal">
+                   <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+                    <header class="w3-container w3-blue"> 
+                     <span onclick="document.getElementById('id01').style.display='none'" 
+                     class="w3-button w3-blue w3-xlarge w3-display-topright">&times;</span>
+                     <h2>Present continuous</h2>
+                    </header>
+                  <!--modal tabs-->
+                    <div class="w3-bar w3-border-bottom">
+                     <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Affirmative')">Affirmative</button>
+                     <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Negative')">Negative</button>
+                     <button class="tablink w3-bar-item w3-button" onclick="openCity(event, 'Question')">Question</button>
+                    </div>
+                  <!-- Affirmative Tab -->
+                    <div id="Affirmative" class="w3-container city" style="text-align: center;">
+                      
+  <div class="clearfix">
+    <div class="col-md-6 float-md-end mb-3 ms-md-1" style="display:inline-block">
+      <table class="table table-bordered table-striped">
+        <tbody>
+          <tr>
+            <td><strong>Affirmative</strong></td>
+            <td><strong>Contracted form</strong> </td>
+          </tr>
+          <tr>
+            <td>I am</td>
+            <td>I'm</td>
+    
+          </tr>
+          <tr>
+            <td>you are</td>
+            <td>you're</td>
+          </tr>
+  
+          <tr>
+            <td>he is</td>
+            <td>he's</td>
+          </tr>
+  
+          <tr>
+            <td>she is</td>
+            <td>she's</td>
+          </tr>
+  
+          <tr>
+            <td>it is</td>
+            <td>it's</td>
+  
+          </tr>
+  
+          <tr>
+            <td>we are</td>
+            <td>we're</td>
+          </tr> 
+  
+          <tr>
+            <td>they are</td>
+            <td>they're</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+      <div style=" width: fit-content; border: solid; padding: 5px; text-align: center;">
+        <p>
+          Subject + am / is / are </p>
+      </div>
+        <p><em>I am hungry.</em></p>
+        <p><em>She is in a cafe.</em></p>
+        <p><em>You are a student.</em></p>   
+  </div>
+  
+                    </div>
+                  <!-- Negative Tab -->
+                    <div id="Negative" class="w3-container city" style="text-align: center;">
+                      <div class="clearfix">
+                        <div class="col-md-6 float-md-end mb-3 ms-md-1" style="display:inline-block">
+                          <table class="table table-bordered table-striped">
+                            <tbody>
+                              <tr>
+                                    <td><strong>Negative</strong></td>
+                                    <td><strong>Contracted form</strong> </td>
+                                  </tr>
+                                  <tr>
+                                    <td>I am not</td>
+                                    <td>I'm not</td>
+                            
+                                  </tr>
+                                  <tr>
+                                    <td>you are not</td>
+                                    <td>you aren't</td>
+                                  </tr>
+                          
+                                  <tr>
+                                    <td>he is not</td>
+                                    <td>he isn't</td>
+                                  </tr>
+                          
+                                  <tr>
+                                    <td>she is not</td>
+                                    <td>she isn't</td>
+                                  </tr>
+                          
+                                  <tr>
+                                    <td>it is not</td>
+                                    <td>it isn't</td>
+                          
+                                  </tr>
+                          
+                                  <tr>
+                                    <td>we are not</td>
+                                    <td>we aren't</td>
+                                  </tr> 
+                          
+                                  <tr>
+                                    <td>they are not</td>
+                                    <td>they aren't</td>
+                                  </tr>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                          <div style=" width: fit-content; border: solid; padding: 5px; text-align: center;">
+                            <p>
+                                Subject + am / is / are + <span style="color:red">not</span> </p>
+                          </div>
+                              <p><em>I'm not hungry.</em></p>
+                              <p><em>She isn't in a cafe.</em></p>
+                              <p><em>You aren't a student.</em></p>   
+                      </div>
+                    </div>
+                  <!-- Question Tab -->
+                    <div id="Question" class="w3-container city" style="text-align: center;">
+                      <div class="clearfix">
+                        <div class="col-md-6 float-md-end mb-3 ms-md-1" style="display:inline-block">
+                          <table class="table table-bordered table-striped">
+                            <tbody>
+                              <tr>
+                                          <td><strong>Question words</strong></td>
+                                          <td><strong>Yes/No question</strong> </td>
+                                        </tr>
+                                        <tr>
+                                          <td>Where</td>
+                                          <td>Am I?</td>
+                                  
+                                        </tr>
+                                        <tr>
+                                          <td>What</td>
+                                          <td>Are you?</td>
+                                        </tr>
+                                
+                                        <tr>
+                                          <td>Why</td>
+                                          <td>Is he?</td>
+                                        </tr>
+                                
+                                        <tr>
+                                          <td>Who</td>
+                                          <td>Is she?</td>
+                                        </tr>
+                                
+                                        <tr>
+                                          <td>When</td>
+                                          <td>Is it?</td>
+                                
+                                        </tr>
+                                
+                                        <tr>
+                                          <td>How</td>
+                                          <td>Are we?</td>
+                                        </tr> 
+                                
+                                        <tr>
+                                          <td>How old</td>
+                                          <td>Are they?</td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                    <div style=" width: fit-content; border: solid; padding: 5px; text-align: center;">
+                                      <p>
+                                        <span style="color: red;">WH</span> + am / is / are + Subject?
+                                      </p>
+                                    </div>
+                                      <p><em>Am I hungry?</em></p>
+                                      <p><em>Is she in a cafe?</em></p>
+                                      <p><em>Are you a student?</em></p>   
+                                </div>
+                     </div>
+                  <!-- botton Modal -->
+                    <div class="w3-container w3-light-grey w3-padding">
+                    <!--botton close button-->
+                     <button class="w3-button w3-right w3-white w3-border" 
+                     onclick="document.getElementById('id01').style.display='none'">Close</button>
+                    </div>
+                   </div>
+                  </div>
+                  
+                  </div>
+
+                <!-- modal JS-->
+                    <script>
+                    document.getElementsByClassName("tablink")[0].click();
+            
+                    function openCity(evt, cityName) {
+                      var i, x, tablinks;
+                      x = document.getElementsByClassName("city");
+                      for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                      }
+                      tablinks = document.getElementsByClassName("tablink");
+                      for (i = 0; i < x.length; i++) {
+                        tablinks[i].classList.remove("w3-light-grey");
+                      }
+                      document.getElementById(cityName).style.display = "block";
+                      evt.currentTarget.classList.add("w3-light-grey");
+                    }
+                    
+                    </script>
+      
+    
+            <h1 style="text-align: center;">PRESENT CONTINUOUS</h1>
+             <!--review btn-->
+             <div style="text-align: center;">
+              <a href="#" data-toggle="tooltip" title="Info"  data-placement="auto">
+                  <button class="btn btn-primary btn-md px-4" onclick="document.getElementById('id01').style.display='block'">Grammar Review</button></a>
+          </div>
+           
+                <div style="height: 25px;"></div>
+
+                <iframe src="https://iflearn.h5p.com/content/1292225798128570358/embed" aria-label="Practice 2 – Present continuous" width="1088" height="637" frameborder="0" allowfullscreen="allowfullscreen" allow="autoplay *; geolocation *; microphone *; camera *; midi *; encrypted-media *"></iframe><script src="https://iflearn.h5p.com/js/h5p-resizer.js" charset="UTF-8"></script>
+       
+            </div>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center" style="margin: 5%;">
+              <a onclick="history.back()">
+              <button type="button" class="btn btn-outline-danger btn-lg px-4 gap-3">Voltar</button></a>
+          </div>
+
+         
+        <div style="height: 100px;"></div>
+<!--Footer-->
+<div class="footer fixed-bottom"> 
+  <a href="https://ifce.edu.br/" target="_blank" rel="external" ><img width="130" src="images/Logo IFCE (2).png" alt="logo IFCE"></a>
+  
+<!--Google translator-->
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <a href="https://ifce.edu.br/fortaleza/profept" target="_blank" rel="external"><img width="130" src="images/profept logo.png" alt=""></a>
+</div>
+</body>
+
+</html>
